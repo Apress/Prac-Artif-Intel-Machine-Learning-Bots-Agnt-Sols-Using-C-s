@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{17ACC5D3-5182-41F2-9358-B2A2919E5D6B}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Practical.AI</RootNamespace>
+    <AssemblyName>Practical.AI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accord">
+      <HintPath>..\packages\Accord.3.7.0\lib\net45\Accord.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Math">
+      <HintPath>..\packages\Accord.Math.3.7.0\lib\net45\Accord.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Math.Core">
+      <HintPath>..\packages\Accord.Math.3.7.0\lib\net45\Accord.Math.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="alglibnet2, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\alglibnet2.dll</HintPath>
+    </Reference>
+    <Reference Include="FParsec">
+      <HintPath>..\packages\FParsec.1.0.3\lib\net40-client\FParsec.dll</HintPath>
+    </Reference>
+    <Reference Include="FParsecCS">
+      <HintPath>..\packages\FParsec.1.0.3\lib\net40-client\FParsecCS.dll</HintPath>
+    </Reference>
+    <Reference Include="FSharp.Core, Version=4.4.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\FSharp.Core.4.2.3\lib\net45\FSharp.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Numerics, Version=3.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MathNet.Numerics.3.8.0\lib\net40\MathNet.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Numerics.FSharp">
+      <HintPath>..\packages\MathNet.Numerics.FSharp.3.8.0\lib\net40\MathNet.Numerics.FSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="MathParser.org-mXparser.Net45">
+      <HintPath>..\packages\MathParser.org-mXparser.4.1.1\lib\net45\MathParser.org-mXparser.Net45.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Msagl">
+      <HintPath>..\packages\Microsoft.Msagl.1.0.2\lib\net40\Microsoft.Msagl.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Msagl.Drawing">
+      <HintPath>..\packages\Microsoft.Msagl.Drawing.1.0.2\lib\net40\Microsoft.Msagl.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Msagl.GraphViewerGdi">
+      <HintPath>..\packages\Microsoft.Msagl.GraphViewerGDI.1.0.2\lib\net40\Microsoft.Msagl.GraphViewerGdi.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot">
+      <HintPath>..\packages\OxyPlot.Core.1.0.0\lib\net45\OxyPlot.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot.WindowsForms">
+      <HintPath>..\packages\OxyPlot.WindowsForms.1.0.0\lib\net45\OxyPlot.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="RogueSharp">
+      <HintPath>..\packages\RogueSharp.4.0.0-pre\lib\portable-net40+sl50+win+wpa81+wp80\RogueSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="RT.Dijkstra">
+      <HintPath>..\packages\RT.Dijkstra.1.0.7\lib\net45\RT.Dijkstra.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Agents\CleaningAgent.cs" />
+    <Compile Include="Agents\GUI\MarsWorld.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agents\GUI\MarsWorld.Designer.cs">
+      <DependentUpon>MarsWorld.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Agents\MarsRover.cs" />
+    <Compile Include="GameProgramming\Board.cs" />
+    <Compile Include="GameProgramming\SlidingTilesPuzzle.cs" />
+    <Compile Include="GameProgramming\Tree.cs" />
+    <Compile Include="GameProgramming\UninformedSearch\Bfs.cs" />
+    <Compile Include="GameProgramming\UninformedSearch\Bs.cs" />
+    <Compile Include="GameProgramming\UninformedSearch\Dfs.cs" />
+    <Compile Include="GameProgramming\UninformedSearch\Dls.cs" />
+    <Compile Include="GameProgramming\UninformedSearch\Ids.cs" />
+    <Compile Include="GameProgramming\UninformedSearch\UninformedMethod.cs" />
+    <Compile Include="GameTheory\AdversarialSearch\Minimax.cs" />
+    <Compile Include="GameTheory\OthelloBoard.cs" />
+    <Compile Include="GameTheory\OthelloGui.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameTheory\OthelloGui.Designer.cs">
+      <DependentUpon>OthelloGui.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MetaHeuristics\GeneticAlgorithmTSP.cs" />
+    <Compile Include="MetaHeuristics\HillClimbing.cs" />
+    <Compile Include="Reinforcement Learning\Maze\MazeGui.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reinforcement Learning\Maze\MazeGui.Designer.cs">
+      <DependentUpon>MazeGui.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reinforcement Learning\Maze\QAgent.cs" />
+    <Compile Include="SupervisedLearning\DecisionTrees\Attribute.cs" />
+    <Compile Include="SupervisedLearning\DecisionTrees\BinaryDecisionTree.cs" />
+    <Compile Include="FOL\CleaningRobot.cs" />
+    <Compile Include="Heuristics.cs" />
+    <Compile Include="MultiAgentSystems\MasCleaningAgent.cs" />
+    <Compile Include="MultiAgentSystems\CleaningTask.cs" />
+    <Compile Include="MultiAgentSystems\Communication\Acl\FibaAcl.cs" />
+    <Compile Include="MultiAgentSystems\Communication\AgentCommunicationService.cs" />
+    <Compile Include="MultiAgentSystems\Communication\AgentCommunicationCallback.cs" />
+    <Compile Include="MultiAgentSystems\Communication\AgentCommunicationServiceClient.cs" />
+    <Compile Include="MultiAgentSystems\Communication\IAgentCommunicationCallback.cs" />
+    <Compile Include="MultiAgentSystems\Communication\IAgentCommunicationService.cs" />
+    <Compile Include="MultiAgentSystems\Communication\UpdatedListEventArgs.cs" />
+    <Compile Include="MultiAgentSystems\GUI\Messaging.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MultiAgentSystems\GUI\Messaging.Designer.cs">
+      <DependentUpon>Messaging.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultiAgentSystems\GUI\Room.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MultiAgentSystems\GUI\Room.Designer.cs">
+      <DependentUpon>Room.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultiAgentSystems\Negotiation\ContractNet.cs" />
+    <Compile Include="MultiAgentSystems\Planning\Plan.cs" />
+    <Compile Include="MultiAgentSystems\Platform\CleaningAgentPlatform.cs" />
+    <Compile Include="Predicates\Dog.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="PropositionalLogic\Formula.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Simulation\Airport\Events\AirplaneEvtArrival.cs" />
+    <Compile Include="Simulation\Airport\Events\AirplaneEvtBreakdown.cs" />
+    <Compile Include="Simulation\Airport\Events\AirplaneEvtProcessLoad.cs" />
+    <Compile Include="Simulation\Airport\Events\AirportEvent.cs" />
+    <Compile Include="Simulation\Airport\Objects\Airplane.cs" />
+    <Compile Include="Simulation\Airport\Simulation.cs" />
+    <Compile Include="SupervisedLearning\DecisionTrees\DecisionTree.cs" />
+    <Compile Include="SupervisedLearning\DecisionTrees\TrainingDataSet.cs" />
+    <Compile Include="SupervisedLearning\Extensors\ExtensionMethods.cs" />
+    <Compile Include="SupervisedLearning\NeuralNetworks\Adaline.cs" />
+    <Compile Include="SupervisedLearning\NeuralNetworks\ReLu.cs" />
+    <Compile Include="SupervisedLearning\NeuralNetworks\TanhUnit.cs" />
+    <Compile Include="SupervisedLearning\NeuralNetworks\MultiLayerNN.cs" />
+    <Compile Include="SupervisedLearning\NeuralNetworks\HandwrittenDigitRecognition\HandwrittenDigitRecognition.cs" />
+    <Compile Include="SupervisedLearning\NeuralNetworks\HandwrittenDigitRecognition\HandwrittenRecognitionGui.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupervisedLearning\NeuralNetworks\HandwrittenDigitRecognition\HandwrittenRecognitionGui.Designer.cs">
+      <DependentUpon>HandwrittenRecognitionGui.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SupervisedLearning\NeuralNetworks\SingleNeuralNetwork.cs" />
+    <Compile Include="SupervisedLearning\NeuralNetworks\Perceptron.cs" />
+    <Compile Include="SupervisedLearning\NeuralNetworks\SigmoidUnit.cs" />
+    <Compile Include="SupervisedLearning\SVM\GUI\SvmGui.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupervisedLearning\SVM\GUI\SvmGui.Designer.cs">
+      <DependentUpon>SvmGui.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SupervisedLearning\SVM\Kernel.cs" />
+    <Compile Include="SupervisedLearning\SVM\LinearSvmClassifier.cs" />
+    <Compile Include="UnsupervisedLearning\Clustering\Cluster.cs" />
+    <Compile Include="UnsupervisedLearning\Clustering\Distance.cs" />
+    <Compile Include="UnsupervisedLearning\Clustering\Methods\KMeans.cs" />
+    <Compile Include="UnsupervisedLearning\DataSet.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Agents\GUI\MarsWorld.resx">
+      <DependentUpon>MarsWorld.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameTheory\OthelloGui.resx">
+      <DependentUpon>OthelloGui.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiAgentSystems\GUI\Messaging.resx">
+      <DependentUpon>Messaging.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiAgentSystems\GUI\Room.resx">
+      <DependentUpon>Room.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reinforcement Learning\Maze\MazeGui.resx">
+      <DependentUpon>MazeGui.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupervisedLearning\NeuralNetworks\HandwrittenDigitRecognition\HandwrittenRecognitionGui.resx">
+      <DependentUpon>HandwrittenRecognitionGui.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupervisedLearning\SVM\GUI\SvmGui.resx">
+      <DependentUpon>SvmGui.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Agents\GUI\marsdirt_2.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="docs\allclasses-frame.html" />
+    <Content Include="docs\allclasses-noframe.html" />
+    <Content Include="docs\constant-values.html" />
+    <Content Include="docs\deprecated-list.html" />
+    <Content Include="docs\help-doc.html" />
+    <Content Include="docs\index-files\index-1.html" />
+    <Content Include="docs\index-files\index-10.html" />
+    <Content Include="docs\index-files\index-11.html" />
+    <Content Include="docs\index-files\index-12.html" />
+    <Content Include="docs\index-files\index-13.html" />
+    <Content Include="docs\index-files\index-14.html" />
+    <Content Include="docs\index-files\index-15.html" />
+    <Content Include="docs\index-files\index-16.html" />
+    <Content Include="docs\index-files\index-17.html" />
+    <Content Include="docs\index-files\index-18.html" />
+    <Content Include="docs\index-files\index-19.html" />
+    <Content Include="docs\index-files\index-2.html" />
+    <Content Include="docs\index-files\index-20.html" />
+    <Content Include="docs\index-files\index-21.html" />
+    <Content Include="docs\index-files\index-22.html" />
+    <Content Include="docs\index-files\index-23.html" />
+    <Content Include="docs\index-files\index-24.html" />
+    <Content Include="docs\index-files\index-25.html" />
+    <Content Include="docs\index-files\index-26.html" />
+    <Content Include="docs\index-files\index-3.html" />
+    <Content Include="docs\index-files\index-4.html" />
+    <Content Include="docs\index-files\index-5.html" />
+    <Content Include="docs\index-files\index-6.html" />
+    <Content Include="docs\index-files\index-7.html" />
+    <Content Include="docs\index-files\index-8.html" />
+    <Content Include="docs\index-files\index-9.html" />
+    <Content Include="docs\index.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\Argument.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\class-use\Argument.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\class-use\Constant.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\class-use\Expression.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\class-use\Function.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\class-use\FunctionExtension.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\class-use\mXparser.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\class-use\PrimitiveElement.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\class-use\RecursiveArgument.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\class-use\Tutorial.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\Constant.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\Expression.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\Function.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\FunctionExtension.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\AstronomicalConstants.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\BinaryRelations.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\BooleanAlgebra.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\Calculus.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\class-use\AstronomicalConstants.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\class-use\BinaryRelations.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\class-use\BooleanAlgebra.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\class-use\Calculus.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\class-use\Evaluate.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\class-use\MathConstants.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\class-use\MathFunctions.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\class-use\NumberTheory.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\class-use\PhysicalConstants.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\class-use\PrimesCache.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\class-use\ProbabilityDistributions.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\class-use\SpecialFunctions.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\class-use\Statistics.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\class-use\Units.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\Evaluate.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\MathConstants.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\MathFunctions.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\NumberTheory.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\package-frame.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\package-summary.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\package-tree.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\package-use.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\PhysicalConstants.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\PrimesCache.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\ProbabilityDistributions.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\SpecialFunctions.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\Statistics.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mathcollection\Units.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\mXparser.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\package-frame.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\package-summary.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\package-tree.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\package-use.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\BinaryRelation.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\BitwiseOperator.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\BooleanOperator.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\CalculusOperator.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\class-use\BinaryRelation.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\class-use\BitwiseOperator.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\class-use\BooleanOperator.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\class-use\CalculusOperator.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\class-use\ConstantValue.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\class-use\Function1Arg.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\class-use\Function2Arg.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\class-use\Function3Arg.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\class-use\FunctionVariadic.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\class-use\KeyWord.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\class-use\Operator.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\class-use\ParserSymbol.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\class-use\RandomVariable.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\class-use\Token.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\class-use\Unit.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\ConstantValue.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\Function1Arg.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\Function2Arg.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\Function3Arg.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\FunctionVariadic.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\KeyWord.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\Operator.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\package-frame.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\package-summary.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\package-tree.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\package-use.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\ParserSymbol.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\RandomVariable.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\Token.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\parsertokens\Unit.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\PrimitiveElement.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\RecursiveArgument.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\regressiontesting\class-use\PerformanceTests.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\regressiontesting\class-use\RegTestExpression.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\regressiontesting\class-use\RegTestExpressionAPI.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\regressiontesting\class-use\RegTestSyntax.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\regressiontesting\class-use\RunTest.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\regressiontesting\package-frame.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\regressiontesting\package-summary.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\regressiontesting\package-tree.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\regressiontesting\package-use.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\regressiontesting\PerformanceTests.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\regressiontesting\RegTestExpression.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\regressiontesting\RegTestExpressionAPI.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\regressiontesting\RegTestSyntax.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\regressiontesting\RunTest.html" />
+    <Content Include="docs\org\mariuszgromada\math\mxparser\Tutorial.html" />
+    <Content Include="docs\overview-frame.html" />
+    <Content Include="docs\overview-summary.html" />
+    <Content Include="docs\overview-tree.html" />
+    <Content Include="docs\script.js" />
+    <Content Include="docs\stylesheet.css" />
+    <Content Include="MultiAgentSystems\GUI\rock-transparency.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Accord.3.7.0\build\Accord.targets" Condition="Exists('..\packages\Accord.3.7.0\build\Accord.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

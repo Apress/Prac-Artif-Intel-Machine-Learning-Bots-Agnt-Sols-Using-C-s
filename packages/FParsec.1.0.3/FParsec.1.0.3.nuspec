@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>FParsec</id>
+    <version>1.0.3</version>
+    <title>FParsec</title>
+    <authors>Stephan Tolksdorf</authors>
+    <owners>Stephan Tolksdorf</owners>
+    <licenseUrl>http://www.quanttec.com/fparsec/license.html</licenseUrl>
+    <projectUrl>http://www.quanttec.com/fparsec/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>FParsec is a parser combinator library for F#.
+
+You can find comprehensive documentation for FParsec at http://www.quanttec.com/fparsec. The documentation includes a feature list, a tutorial, a user’s guide and an API reference.
+
+This package uses the basic “low-trust” configuration of FParsec, which does not use any unverifiable code and is optimized for maximum portability. If you need to parse very large files or if you employ FParsec for performance-critical jobs, consider using the alternate “Big Data Edition” NuGet package (see https://nuget.org/packages/fparsec-big-data-edition).</description>
+    <summary />
+    <copyright>Copyright © Stephan Tolksdorf</copyright>
+    <tags>parser combinator f# fsharp c# csharp parsec fparsec</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework4.0-Client">
+        <dependency id="FSharp.Core" version="4.0.0.1" />
+      </group>
+      <group targetFramework="Unsupported0.0">
+        <dependency id="NETStandard.Library" version="1.6.1" />
+        <dependency id="FSharp.Core" version="4.2.3" />
+      </group>
+      <group targetFramework=".NETPortable0.0-net45+win8+wp8+wpa81" />
+    </dependencies>
+  </metadata>
+</package>

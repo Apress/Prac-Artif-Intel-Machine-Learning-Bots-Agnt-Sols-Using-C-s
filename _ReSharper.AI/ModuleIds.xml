@@ -1,0 +1,5 @@
+<Modules>
+  <Module PersistentId="17ACC5D3-5182-41F2-9358-B2A2919E5D6B" ModuleId="Practical.AI" />
+  <Module PersistentId="4C174FE5-5540-4CCB-B9CE-20E9933635C6" ModuleId="AgentService" />
+  <Module PersistentId="A0F4A13B-2463-446F-B9BF-35D2A5E30155" ModuleId="AgentClient" />
+</Modules>

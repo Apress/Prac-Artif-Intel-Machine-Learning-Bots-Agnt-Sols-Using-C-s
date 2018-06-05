@@ -1,0 +1,66 @@
+﻿<RecentFiles>
+  <RecentFiles>
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:SupervisedLearning/d:NeuralNetworks/f:TanhUnit.cs" caret="165" fromTop="0" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:SupervisedLearning/d:NeuralNetworks/f:ReLu.cs" caret="831" fromTop="19" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:SupervisedLearning/d:NeuralNetworks/d:HandwrittenDigitRecognition/f:HandwrittenRecognitionGui.cs" caret="3239" fromTop="24" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:SupervisedLearning/d:NeuralNetworks/f:MultiLayerNN.cs" caret="2608" fromTop="21" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:UnsupervisedLearning/d:Clustering/f:Distance.cs" caret="482" fromTop="18" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:UnsupervisedLearning/d:Clustering/f:Cluster.cs" caret="2356" fromTop="18" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:UnsupervisedLearning/d:Clustering/d:Methods/f:KMeans.cs" caret="2327" fromTop="15" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/f:Heuristics.cs" caret="234" fromTop="11" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:docs/f:index.html" caret="613" fromTop="0" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:MetaHeuristics/f:HillClimbing.cs" caret="1372" fromTop="15" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:MetaHeuristics/f:GeneticAlgorithmTSP.cs" caret="4573" fromTop="23" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:GameProgramming/d:UninformedSearch/f:UninformedMethod.cs" caret="380" fromTop="13" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:GameProgramming/d:UninformedSearch/f:Dfs.cs" caret="785" fromTop="23" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:GameProgramming/d:UninformedSearch/f:Dls.cs" caret="428" fromTop="11" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:GameProgramming/f:SlidingTilesPuzzle.cs" caret="457" fromTop="19" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:GameProgramming/d:UninformedSearch/f:Bfs.cs" caret="482" fromTop="18" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:GameProgramming/f:Board.cs" caret="3984" fromTop="10" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:GameProgramming/d:UninformedSearch/f:Bs.cs" caret="2121" fromTop="12" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:Agents/d:GUI/f:MarsWorld.cs" caret="4219" fromTop="38" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:GameProgramming/d:UninformedSearch/f:Ids.cs" caret="0" fromTop="0" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:GameProgramming/f:Tree.cs" caret="382" fromTop="16" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:GameTheory/f:OthelloGui.Designer.cs" caret="6360" fromTop="11" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:GameTheory/d:AdversarialSearch/f:Minimax.cs" caret="1066" fromTop="11" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:GameTheory/f:OthelloBoard.cs" caret="3914" fromTop="20" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:GameTheory/f:OthelloGui.cs" caret="1706" fromTop="11" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:Reinforcement Learning/d:Maze/f:MazeGui.Designer.cs" caret="0" fromTop="0" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/f:Program.cs" caret="26154" fromTop="4" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:Reinforcement Learning/d:Maze/f:QAgent.cs" caret="6327" fromTop="6" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:Reinforcement Learning/d:Maze/f:MazeGui.cs" caret="954" fromTop="16" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:UnsupervisedLearning/f:DataSet.cs" caret="402" fromTop="7" />
+  </RecentFiles>
+  <RecentEdits>
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:SupervisedLearning/d:SVM/f:LinearSvmClassifier.cs" caret="11179" fromTop="6" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:SupervisedLearning/d:NeuralNetworks/f:ReLu.cs" caret="793" fromTop="19" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:SupervisedLearning/d:NeuralNetworks/d:HandwrittenDigitRecognition/f:HandwrittenDigitRecognition.cs" caret="5814" fromTop="7" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:SupervisedLearning/d:NeuralNetworks/d:HandwrittenDigitRecognition/f:HandwrittenRecognitionGui.Designer.cs" caret="5897" fromTop="11" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:SupervisedLearning/d:NeuralNetworks/f:MultiLayerNN.cs" caret="3045" fromTop="13" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:SupervisedLearning/d:NeuralNetworks/d:HandwrittenDigitRecognition/f:HandwrittenRecognitionGui.cs" caret="5814" fromTop="24" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:UnsupervisedLearning/d:Clustering/f:Distance.cs" caret="430" fromTop="15" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:UnsupervisedLearning/f:DataSet.cs" caret="443" fromTop="18" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:UnsupervisedLearning/d:Clustering/d:Methods/f:KMeans.cs" caret="441" fromTop="14" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:UnsupervisedLearning/d:Clustering/f:Cluster.cs" caret="886" fromTop="10" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/f:Heuristics.cs" caret="234" fromTop="11" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:MetaHeuristics/f:HillClimbing.cs" caret="3057" fromTop="14" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:MetaHeuristics/f:GeneticAlgorithmTSP.cs" caret="4058" fromTop="9" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:GameProgramming/d:UninformedSearch/f:Bfs.cs" caret="331" fromTop="13" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:GameProgramming/d:UninformedSearch/f:UninformedMethod.cs" caret="405" fromTop="14" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:GameProgramming/f:Tree.cs" caret="705" fromTop="23" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:GameProgramming/d:UninformedSearch/f:Dls.cs" caret="230" fromTop="9" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:GameProgramming/f:SlidingTilesPuzzle.cs" caret="300" fromTop="11" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:GameProgramming/d:UninformedSearch/f:Dfs.cs" caret="742" fromTop="14" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:GameProgramming/f:Board.cs" caret="493" fromTop="17" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:GameProgramming/d:UninformedSearch/f:Bs.cs" caret="2100" fromTop="11" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:GameProgramming/d:UninformedSearch/f:Ids.cs" caret="0" fromTop="0" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:GameTheory/f:OthelloGui.Designer.cs" caret="7090" fromTop="11" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:GameTheory/f:OthelloGui.cs" caret="1063" fromTop="15" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:GameTheory/f:OthelloBoard.cs" caret="6599" fromTop="20" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:GameTheory/d:AdversarialSearch/f:Minimax.cs" caret="5814" fromTop="11" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:Reinforcement Learning/d:Maze/f:MazeGui.Designer.cs" caret="0" fromTop="0" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:Reinforcement Learning/d:Maze/f:QAgent.cs" caret="3586" fromTop="11" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/f:Program.cs" caret="26420" fromTop="10" />
+    <File id="17ACC5D3-5182-41F2-9358-B2A2919E5D6B/d:Reinforcement Learning/d:Maze/f:MazeGui.cs" caret="954" fromTop="16" />
+  </RecentEdits>
+</RecentFiles>

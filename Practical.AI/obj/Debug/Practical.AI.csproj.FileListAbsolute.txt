@@ -1,0 +1,168 @@
+c:\users\arnaldo\documents\visual studio 2012\Projects\Practical.AI\Practical.AI\bin\Debug\Practical.AI.exe.config
+c:\users\arnaldo\documents\visual studio 2012\Projects\Practical.AI\Practical.AI\bin\Debug\Practical.AI.exe
+c:\users\arnaldo\documents\visual studio 2012\Projects\Practical.AI\Practical.AI\bin\Debug\Practical.AI.pdb
+c:\users\arnaldo\documents\visual studio 2012\Projects\Practical.AI\Practical.AI\obj\Debug\Practical.AI.csprojResolveAssemblyReference.cache
+c:\users\arnaldo\documents\visual studio 2012\Projects\Practical.AI\Practical.AI\obj\Debug\Practical.AI.exe
+c:\users\arnaldo\documents\visual studio 2012\Projects\Practical.AI\Practical.AI\obj\Debug\Practical.AI.pdb
+C:\Users\arnaldo\Desktop\Practical.AI\Practical.AI\bin\Debug\Practical.AI.exe.config
+C:\Users\arnaldo\Desktop\Practical.AI\Practical.AI\obj\Debug\Practical.AI.exe
+C:\Users\arnaldo\Desktop\Practical.AI\Practical.AI\obj\Debug\Practical.AI.pdb
+C:\Users\arnaldo\Desktop\Practical.AI\Practical.AI\bin\Debug\Practical.AI.exe
+C:\Users\arnaldo\Desktop\Practical.AI\Practical.AI\bin\Debug\Practical.AI.pdb
+C:\Users\Skywalker\Desktop\AI\Practical.AI\bin\Debug\Practical.AI.exe.config
+C:\Users\Skywalker\Desktop\AI\Practical.AI\obj\Debug\Practical.AI.exe
+C:\Users\Skywalker\Desktop\AI\Practical.AI\obj\Debug\Practical.AI.pdb
+C:\Users\Skywalker\Desktop\AI\Practical.AI\bin\Debug\Practical.AI.exe
+C:\Users\Skywalker\Desktop\AI\Practical.AI\bin\Debug\Practical.AI.pdb
+C:\Users\Skywalker\Desktop\AI\Practical.AI\bin\Debug\RT.Dijkstra.dll
+C:\Users\Skywalker\Desktop\AI\Practical.AI\bin\Debug\RT.Dijkstra.xml
+C:\Users\Skywalker\Desktop\AI\Practical.AI\obj\Debug\Practical.AI.Agents.GUI.MarsWorld.resources
+C:\Users\Skywalker\Desktop\AI\Practical.AI\obj\Debug\Practical.AI.csproj.GenerateResource.Cache
+C:\Users\arnaldo\Documents\Visual Studio 2012\Projects\AI\Practical.AI\bin\Debug\Practical.AI.exe.config
+C:\Users\arnaldo\Documents\Visual Studio 2012\Projects\AI\Practical.AI\bin\Debug\Practical.AI.exe
+C:\Users\arnaldo\Documents\Visual Studio 2012\Projects\AI\Practical.AI\bin\Debug\Practical.AI.pdb
+C:\Users\arnaldo\Documents\Visual Studio 2012\Projects\AI\Practical.AI\bin\Debug\RT.Dijkstra.dll
+C:\Users\arnaldo\Documents\Visual Studio 2012\Projects\AI\Practical.AI\bin\Debug\RT.Dijkstra.xml
+C:\Users\arnaldo\Documents\Visual Studio 2012\Projects\AI\Practical.AI\obj\Debug\Practical.AI.Agents.GUI.MarsWorld.resources
+C:\Users\arnaldo\Documents\Visual Studio 2012\Projects\AI\Practical.AI\obj\Debug\Practical.AI.Properties.Resources.resources
+C:\Users\arnaldo\Documents\Visual Studio 2012\Projects\AI\Practical.AI\obj\Debug\Practical.AI.csproj.GenerateResource.Cache
+C:\Users\arnaldo\Documents\Visual Studio 2012\Projects\AI\Practical.AI\obj\Debug\Practical.AI.exe
+C:\Users\arnaldo\Documents\Visual Studio 2012\Projects\AI\Practical.AI\obj\Debug\Practical.AI.pdb
+C:\Users\arnaldo\Documents\Visual Studio 2012\Projects\AI\Practical.AI\bin\Debug\RogueSharp.dll
+C:\Users\arnaldo\Documents\Visual Studio 2012\Projects\AI\Practical.AI\bin\Debug\RogueSharp.xml
+C:\Users\Skywalker\Desktop\AI\Practical.AI\bin\Debug\RogueSharp.dll
+C:\Users\Skywalker\Desktop\AI\Practical.AI\bin\Debug\RogueSharp.xml
+C:\Users\Skywalker\Desktop\AI\Practical.AI\obj\Debug\Practical.AI.Properties.Resources.resources
+C:\Users\arnaldo\Documents\Visual Studio 2012\Projects\AI\Practical.AI\obj\Debug\Practical.AI.MultiAgentSystems.GUI.Room.resources
+C:\Users\Skywalker\Desktop\AI\Practical.AI\bin\Debug\Accord.dll.config
+C:\Users\Skywalker\Desktop\AI\Practical.AI\bin\Debug\Accord.dll
+C:\Users\Skywalker\Desktop\AI\Practical.AI\bin\Debug\Accord.Math.Core.dll
+C:\Users\Skywalker\Desktop\AI\Practical.AI\bin\Debug\Accord.Math.dll
+C:\Users\Skywalker\Desktop\AI\Practical.AI\bin\Debug\Accord.xml
+C:\Users\Skywalker\Desktop\AI\Practical.AI\bin\Debug\Accord.Math.xml
+C:\Users\Skywalker\Desktop\AI\Practical.AI\bin\Debug\Accord.Math.Core.xml
+C:\Users\Skywalker\Desktop\AI\Practical.AI\obj\Debug\Practical.AI.MultiAgentSystems.GUI.Messaging.resources
+C:\Users\Skywalker\Desktop\AI\Practical.AI\obj\Debug\Practical.AI.MultiAgentSystems.GUI.Room.resources
+C:\Users\Skywalker\Desktop\AI\Practical.AI\bin\Debug\OxyPlot.dll
+C:\Users\Skywalker\Desktop\AI\Practical.AI\bin\Debug\OxyPlot.WindowsForms.dll
+C:\Users\Skywalker\Desktop\AI\Practical.AI\bin\Debug\OxyPlot.pdb
+C:\Users\Skywalker\Desktop\AI\Practical.AI\bin\Debug\OxyPlot.xml
+C:\Users\Skywalker\Desktop\AI\Practical.AI\bin\Debug\OxyPlot.WindowsForms.pdb
+C:\Users\Skywalker\Desktop\AI\Practical.AI\bin\Debug\OxyPlot.WindowsForms.xml
+C:\Users\arnaldo\Desktop\AI\Practical.AI\bin\Debug\Accord.dll.config
+C:\Users\arnaldo\Desktop\AI\Practical.AI\bin\Debug\Practical.AI.exe.config
+C:\Users\arnaldo\Desktop\AI\Practical.AI\bin\Debug\Practical.AI.exe
+C:\Users\arnaldo\Desktop\AI\Practical.AI\bin\Debug\Practical.AI.pdb
+C:\Users\arnaldo\Desktop\AI\Practical.AI\bin\Debug\Accord.dll
+C:\Users\arnaldo\Desktop\AI\Practical.AI\bin\Debug\Accord.Math.Core.dll
+C:\Users\arnaldo\Desktop\AI\Practical.AI\bin\Debug\Accord.Math.dll
+C:\Users\arnaldo\Desktop\AI\Practical.AI\bin\Debug\FParsec.dll
+C:\Users\arnaldo\Desktop\AI\Practical.AI\bin\Debug\FParsecCS.dll
+C:\Users\arnaldo\Desktop\AI\Practical.AI\bin\Debug\FSharp.Core.dll
+C:\Users\arnaldo\Desktop\AI\Practical.AI\bin\Debug\MathNet.Numerics.dll
+C:\Users\arnaldo\Desktop\AI\Practical.AI\bin\Debug\MathNet.Numerics.FSharp.dll
+C:\Users\arnaldo\Desktop\AI\Practical.AI\bin\Debug\MathParser.org-mXparser.Net45.dll
+C:\Users\arnaldo\Desktop\AI\Practical.AI\bin\Debug\Microsoft.Msagl.dll
+C:\Users\arnaldo\Desktop\AI\Practical.AI\bin\Debug\Microsoft.Msagl.Drawing.dll
+C:\Users\arnaldo\Desktop\AI\Practical.AI\bin\Debug\Microsoft.Msagl.GraphViewerGdi.dll
+C:\Users\arnaldo\Desktop\AI\Practical.AI\bin\Debug\OxyPlot.dll
+C:\Users\arnaldo\Desktop\AI\Practical.AI\bin\Debug\OxyPlot.WindowsForms.dll
+C:\Users\arnaldo\Desktop\AI\Practical.AI\bin\Debug\RogueSharp.dll
+C:\Users\arnaldo\Desktop\AI\Practical.AI\bin\Debug\RT.Dijkstra.dll
+C:\Users\arnaldo\Desktop\AI\Practical.AI\bin\Debug\Accord.xml
+C:\Users\arnaldo\Desktop\AI\Practical.AI\bin\Debug\Accord.Math.xml
+C:\Users\arnaldo\Desktop\AI\Practical.AI\bin\Debug\Accord.Math.Core.xml
+C:\Users\arnaldo\Desktop\AI\Practical.AI\bin\Debug\FParsec.xml
+C:\Users\arnaldo\Desktop\AI\Practical.AI\bin\Debug\FParsecCS.xml
+C:\Users\arnaldo\Desktop\AI\Practical.AI\bin\Debug\FSharp.Core.xml
+C:\Users\arnaldo\Desktop\AI\Practical.AI\bin\Debug\MathNet.Numerics.xml
+C:\Users\arnaldo\Desktop\AI\Practical.AI\bin\Debug\MathNet.Numerics.FSharp.xml
+C:\Users\arnaldo\Desktop\AI\Practical.AI\bin\Debug\Microsoft.Msagl.xml
+C:\Users\arnaldo\Desktop\AI\Practical.AI\bin\Debug\Microsoft.Msagl.Drawing.xml
+C:\Users\arnaldo\Desktop\AI\Practical.AI\bin\Debug\Microsoft.Msagl.GraphViewerGdi.xml
+C:\Users\arnaldo\Desktop\AI\Practical.AI\bin\Debug\OxyPlot.pdb
+C:\Users\arnaldo\Desktop\AI\Practical.AI\bin\Debug\OxyPlot.xml
+C:\Users\arnaldo\Desktop\AI\Practical.AI\bin\Debug\OxyPlot.WindowsForms.pdb
+C:\Users\arnaldo\Desktop\AI\Practical.AI\bin\Debug\OxyPlot.WindowsForms.xml
+C:\Users\arnaldo\Desktop\AI\Practical.AI\bin\Debug\RogueSharp.xml
+C:\Users\arnaldo\Desktop\AI\Practical.AI\bin\Debug\RT.Dijkstra.xml
+C:\Users\arnaldo\Desktop\AI\Practical.AI\obj\Debug\Practical.AI.Agents.GUI.MarsWorld.resources
+C:\Users\arnaldo\Desktop\AI\Practical.AI\obj\Debug\Practical.AI.MultiAgentSystems.GUI.Messaging.resources
+C:\Users\arnaldo\Desktop\AI\Practical.AI\obj\Debug\Practical.AI.MultiAgentSystems.GUI.Room.resources
+C:\Users\arnaldo\Desktop\AI\Practical.AI\obj\Debug\Practical.AI.Properties.Resources.resources
+C:\Users\arnaldo\Desktop\AI\Practical.AI\obj\Debug\Practical.AI.SupervisedLearning.NeuralNetworks.HandwrittenDigitRecognition.HandwrittenRecognitionGui.resources
+C:\Users\arnaldo\Desktop\AI\Practical.AI\obj\Debug\Practical.AI.SupervisedLearning.SVM.GUI.SvmGui.resources
+C:\Users\arnaldo\Desktop\AI\Practical.AI\obj\Debug\Practical.AI.csproj.GenerateResource.Cache
+C:\Users\arnaldo\Desktop\AI\Practical.AI\obj\Debug\Practical.AI.exe
+C:\Users\arnaldo\Desktop\AI\Practical.AI\obj\Debug\Practical.AI.pdb
+C:\Users\Skywalker\Desktop\AI\Practical.AI\obj\Debug\Practical.AI.SupervisedLearning.NeuralNetworks.HandwrittenDigitRecognition.HandwrittenRecognitionGui.resources
+C:\Users\Skywalker\Desktop\AI\Practical.AI\obj\Debug\Practical.AI.SupervisedLearning.SVM.GUI.SvmGui.resources
+C:\Users\Skywalker\Desktop\AI\Practical.AI\bin\Debug\FParsec.dll
+C:\Users\Skywalker\Desktop\AI\Practical.AI\bin\Debug\FParsecCS.dll
+C:\Users\Skywalker\Desktop\AI\Practical.AI\bin\Debug\FSharp.Core.dll
+C:\Users\Skywalker\Desktop\AI\Practical.AI\bin\Debug\MathNet.Numerics.dll
+C:\Users\Skywalker\Desktop\AI\Practical.AI\bin\Debug\MathNet.Numerics.FSharp.dll
+C:\Users\Skywalker\Desktop\AI\Practical.AI\bin\Debug\MathParser.org-mXparser.Net45.dll
+C:\Users\Skywalker\Desktop\AI\Practical.AI\bin\Debug\Microsoft.Msagl.dll
+C:\Users\Skywalker\Desktop\AI\Practical.AI\bin\Debug\Microsoft.Msagl.Drawing.dll
+C:\Users\Skywalker\Desktop\AI\Practical.AI\bin\Debug\Microsoft.Msagl.GraphViewerGdi.dll
+C:\Users\Skywalker\Desktop\AI\Practical.AI\bin\Debug\FParsec.xml
+C:\Users\Skywalker\Desktop\AI\Practical.AI\bin\Debug\FParsecCS.xml
+C:\Users\Skywalker\Desktop\AI\Practical.AI\bin\Debug\FSharp.Core.xml
+C:\Users\Skywalker\Desktop\AI\Practical.AI\bin\Debug\MathNet.Numerics.xml
+C:\Users\Skywalker\Desktop\AI\Practical.AI\bin\Debug\MathNet.Numerics.FSharp.xml
+C:\Users\Skywalker\Desktop\AI\Practical.AI\bin\Debug\Microsoft.Msagl.xml
+C:\Users\Skywalker\Desktop\AI\Practical.AI\bin\Debug\Microsoft.Msagl.Drawing.xml
+C:\Users\Skywalker\Desktop\AI\Practical.AI\bin\Debug\Microsoft.Msagl.GraphViewerGdi.xml
+C:\Users\Skywalker\Desktop\AI\Practical.AI\obj\Debug\Practical.AI.GameTheory.OthelloGui.resources
+C:\Users\arnaldo\Desktop\AI\Practical.AI\obj\Debug\Practical.AI.GameTheory.OthelloGui.resources
+E:\Installers\Apache\documentos\AI\Practical.AI\bin\Debug\Accord.dll.config
+E:\Installers\Apache\documentos\AI\Practical.AI\bin\Debug\Practical.AI.exe.config
+E:\Installers\Apache\documentos\AI\Practical.AI\bin\Debug\Practical.AI.exe
+E:\Installers\Apache\documentos\AI\Practical.AI\bin\Debug\Practical.AI.pdb
+E:\Installers\Apache\documentos\AI\Practical.AI\bin\Debug\Accord.dll
+E:\Installers\Apache\documentos\AI\Practical.AI\bin\Debug\Accord.Math.Core.dll
+E:\Installers\Apache\documentos\AI\Practical.AI\bin\Debug\Accord.Math.dll
+E:\Installers\Apache\documentos\AI\Practical.AI\bin\Debug\FParsec.dll
+E:\Installers\Apache\documentos\AI\Practical.AI\bin\Debug\FParsecCS.dll
+E:\Installers\Apache\documentos\AI\Practical.AI\bin\Debug\FSharp.Core.dll
+E:\Installers\Apache\documentos\AI\Practical.AI\bin\Debug\MathNet.Numerics.dll
+E:\Installers\Apache\documentos\AI\Practical.AI\bin\Debug\MathNet.Numerics.FSharp.dll
+E:\Installers\Apache\documentos\AI\Practical.AI\bin\Debug\MathParser.org-mXparser.Net45.dll
+E:\Installers\Apache\documentos\AI\Practical.AI\bin\Debug\Microsoft.Msagl.dll
+E:\Installers\Apache\documentos\AI\Practical.AI\bin\Debug\Microsoft.Msagl.Drawing.dll
+E:\Installers\Apache\documentos\AI\Practical.AI\bin\Debug\Microsoft.Msagl.GraphViewerGdi.dll
+E:\Installers\Apache\documentos\AI\Practical.AI\bin\Debug\OxyPlot.dll
+E:\Installers\Apache\documentos\AI\Practical.AI\bin\Debug\OxyPlot.WindowsForms.dll
+E:\Installers\Apache\documentos\AI\Practical.AI\bin\Debug\RogueSharp.dll
+E:\Installers\Apache\documentos\AI\Practical.AI\bin\Debug\RT.Dijkstra.dll
+E:\Installers\Apache\documentos\AI\Practical.AI\bin\Debug\Accord.xml
+E:\Installers\Apache\documentos\AI\Practical.AI\bin\Debug\Accord.Math.xml
+E:\Installers\Apache\documentos\AI\Practical.AI\bin\Debug\Accord.Math.Core.xml
+E:\Installers\Apache\documentos\AI\Practical.AI\bin\Debug\FParsec.xml
+E:\Installers\Apache\documentos\AI\Practical.AI\bin\Debug\FParsecCS.xml
+E:\Installers\Apache\documentos\AI\Practical.AI\bin\Debug\FSharp.Core.xml
+E:\Installers\Apache\documentos\AI\Practical.AI\bin\Debug\MathNet.Numerics.xml
+E:\Installers\Apache\documentos\AI\Practical.AI\bin\Debug\MathNet.Numerics.FSharp.xml
+E:\Installers\Apache\documentos\AI\Practical.AI\bin\Debug\Microsoft.Msagl.xml
+E:\Installers\Apache\documentos\AI\Practical.AI\bin\Debug\Microsoft.Msagl.Drawing.xml
+E:\Installers\Apache\documentos\AI\Practical.AI\bin\Debug\Microsoft.Msagl.GraphViewerGdi.xml
+E:\Installers\Apache\documentos\AI\Practical.AI\bin\Debug\OxyPlot.pdb
+E:\Installers\Apache\documentos\AI\Practical.AI\bin\Debug\OxyPlot.xml
+E:\Installers\Apache\documentos\AI\Practical.AI\bin\Debug\OxyPlot.WindowsForms.pdb
+E:\Installers\Apache\documentos\AI\Practical.AI\bin\Debug\OxyPlot.WindowsForms.xml
+E:\Installers\Apache\documentos\AI\Practical.AI\bin\Debug\RogueSharp.xml
+E:\Installers\Apache\documentos\AI\Practical.AI\bin\Debug\RT.Dijkstra.xml
+E:\Installers\Apache\documentos\AI\Practical.AI\obj\Debug\Practical.AI.Agents.GUI.MarsWorld.resources
+E:\Installers\Apache\documentos\AI\Practical.AI\obj\Debug\Practical.AI.GameTheory.OthelloGui.resources
+E:\Installers\Apache\documentos\AI\Practical.AI\obj\Debug\Practical.AI.MultiAgentSystems.GUI.Messaging.resources
+E:\Installers\Apache\documentos\AI\Practical.AI\obj\Debug\Practical.AI.MultiAgentSystems.GUI.Room.resources
+E:\Installers\Apache\documentos\AI\Practical.AI\obj\Debug\Practical.AI.Properties.Resources.resources
+E:\Installers\Apache\documentos\AI\Practical.AI\obj\Debug\Practical.AI.SupervisedLearning.NeuralNetworks.HandwrittenDigitRecognition.HandwrittenRecognitionGui.resources
+E:\Installers\Apache\documentos\AI\Practical.AI\obj\Debug\Practical.AI.SupervisedLearning.SVM.GUI.SvmGui.resources
+E:\Installers\Apache\documentos\AI\Practical.AI\obj\Debug\Practical.AI.csproj.GenerateResource.Cache
+E:\Installers\Apache\documentos\AI\Practical.AI\obj\Debug\Practical.AI.exe
+E:\Installers\Apache\documentos\AI\Practical.AI\obj\Debug\Practical.AI.pdb
+C:\Users\arnaldo\Desktop\AI\Practical.AI\obj\Debug\Practical.AI.Reinforcement_Learning.Maze.MazeGui.resources
+E:\Installers\Apache\documentos\AI\Practical.AI\obj\Debug\Practical.AI.Reinforcement_Learning.Maze.MazeGui.resources
+E:\Installers\Apache\documentos\AI\Practical.AI\obj\Debug\Practical.AI.csprojResolveAssemblyReference.cache

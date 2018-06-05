@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>OxyPlot.WindowsForms</id>
+    <version>1.0.0</version>
+    <title>OxyPlot for Windows Forms</title>
+    <authors>Oystein Bjorke</authors>
+    <owners>Oystein Bjorke</owners>
+    <licenseUrl>https://raw.githubusercontent.com/oxyplot/oxyplot/master/LICENSE</licenseUrl>
+    <projectUrl>http://oxyplot.org/</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/oxyplot/oxyplot/develop/Icons/OxyPlot_128.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>OxyPlot is a plotting library for .NET. This package targets Windows Forms applications.</description>
+    <summary />
+    <tags>winforms plotting plot charting chart</tags>
+    <dependencies>
+      <dependency id="OxyPlot.Core" version="[1.0.0]" />
+    </dependencies>
+  </metadata>
+</package>

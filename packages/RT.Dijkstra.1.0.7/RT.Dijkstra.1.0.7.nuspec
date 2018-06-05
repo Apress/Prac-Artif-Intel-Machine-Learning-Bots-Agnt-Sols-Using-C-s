@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>RT.Dijkstra</id>
+    <version>1.0.7</version>
+    <title>RT.Dijkstra</title>
+    <authors>Timwi</authors>
+    <owners>Timwi</owners>
+    <projectUrl>https://github.com/RT-Projects/RT.Dijkstra/</projectUrl>
+    <iconUrl>https://avatars0.githubusercontent.com/u/14182444?v=3&amp;s=200</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Dijkstra’s Algorithm (a generalization of breadth-first search) in C#. Declare your own Nodes and Edges to define the graph and let the algorithm find the best path to the target Node.</description>
+    <summary />
+    <copyright>Copyright 2016 RT Projects</copyright>
+    <tags>C# Dijkstra graph</tags>
+    <dependencies />
+  </metadata>
+</package>

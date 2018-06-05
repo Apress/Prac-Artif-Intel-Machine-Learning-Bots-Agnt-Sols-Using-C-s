@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.Msagl.Drawing</id>
+    <version>1.0.2</version>
+    <title>Microsoft.Msagl.Drawing</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>https://github.com/Microsoft/automatic-graph-layout/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/Microsoft/automatic-graph-layout</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>The Definitions of different drawing attributes like colors, line styles, etc. It also contains definitions of a node class, an edge class, and a graph class. By using these classes a user can create a graph object and use it later for layout, and rendering.</description>
+    <summary />
+    <copyright>Copyright © Microsoft Corporation</copyright>
+    <language>en-US</language>
+    <tags>MSAGL Graph Layout</tags>
+    <dependencies>
+      <dependency id="Microsoft.Msagl" version="1.0.2" />
+    </dependencies>
+  </metadata>
+</package>

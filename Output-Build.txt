@@ -1,0 +1,13 @@
+﻿NuGet package restore started.
+All packages are already installed and there is nothing to restore.
+NuGet package restore finished.
+1>------ Rebuild All started: Project: AgentClient, Configuration: Debug Any CPU ------
+2>------ Rebuild All started: Project: Practical.AI, Configuration: Debug Any CPU ------
+1>  AgentClient -> E:\Installers\Apache\documentos\AI\AgentClient\bin\Debug\AgentClient.exe
+3>------ Rebuild All started: Project: AgentService, Configuration: Debug Any CPU ------
+3>  AgentService -> E:\Installers\Apache\documentos\AI\AgentService\bin\Debug\AgentService.exe
+2>  No way to resolve conflict between "FSharp.Core, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" and "FSharp.Core, Version=4.3.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a". Choosing "FSharp.Core, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" arbitrarily.
+2>  Consider app.config remapping of assembly "FSharp.Core, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" from Version "4.4.0.0" [] to Version "4.4.1.0" [E:\Installers\Apache\documentos\AI\packages\FSharp.Core.4.2.3\lib\net45\FSharp.Core.dll] to solve conflict and get rid of warning.
+2>C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets(1605,5): warning MSB3247: Found conflicts between different versions of the same dependent assembly.
+2>  Practical.AI -> E:\Installers\Apache\documentos\AI\Practical.AI\bin\Debug\Practical.AI.exe
+========== Rebuild All: 3 succeeded, 0 failed, 0 skipped ==========

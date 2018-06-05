@@ -1,0 +1,3034 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RogueSharp</name>
+    </assembly>
+    <members>
+        <member name="T:RogueSharp.Algorithms.DepthFirstPaths">
+            <summary>
+            The DepthFirstPaths class represents a data type for finding paths from a source vertex to 
+            every other vertex in an undirected graph using depth-first search.
+            </summary>
+            <seealso href="http://algs4.cs.princeton.edu/41undirected/DepthFirstPaths.java.html">DepthFirstPaths class from Princeton University's Java Algorithms</seealso>
+        </member>
+        <member name="M:RogueSharp.Algorithms.DepthFirstPaths.#ctor(RogueSharp.Algorithms.Graph,System.Int32)">
+            <summary>
+            Computes a path between the specified sourceVertex and every other vertex in the Graph
+            </summary>
+            <param name="graph">The Graph</param>
+            <param name="sourceVertex">The source vertex to compute a path from</param>
+            <exception cref="T:System.ArgumentException">Thrown on null or invalid Graph</exception>
+        </member>
+        <member name="M:RogueSharp.Algorithms.DepthFirstPaths.HasPathTo(System.Int32)">
+            <summary>
+            Is there a path between the sourceVertex and the specified destinationVertex?
+            </summary>
+            <param name="destinationVertex">The destination vertex</param>
+            <returns>True if there is a path between the sourceVertex and the specified destinationVertex, false otherwise</returns>
+        </member>
+        <member name="M:RogueSharp.Algorithms.DepthFirstPaths.PathTo(System.Int32)">
+            <summary>
+            Returns a path between the sourceVertex and the specified destinationVertex or null if no such path exists
+            </summary>
+            <param name="destinationVertex">The destination vertex</param>
+            <returns>An IEnumerable sequence of vertices representing the path between the sourceVertex and the specified destinationVertex or null if no such path exists</returns>
+        </member>
+        <member name="T:RogueSharp.Algorithms.DijkstraShortestPath">
+            <summary>
+            The DijkstraShortestPath class represents a data type for solving the single-source shortest paths problem
+            in edge-weighted digraphs where the edge weights are non-negative
+            </summary>
+            <seealso href="http://algs4.cs.princeton.edu/44sp/DijkstraSP.java.html">DijkstraSP class from Princeton University's Java Algorithms</seealso>
+        </member>
+        <member name="M:RogueSharp.Algorithms.DijkstraShortestPath.#ctor(RogueSharp.Algorithms.EdgeWeightedDigraph,System.Int32)">
+            <summary>
+            Computes a shortest paths tree from the specified sourceVertex to every other vertex in the edge-weighted directed graph
+            </summary>
+            <param name="graph">The edge-weighted directed graph</param>
+            <param name="sourceVertex">The source vertex to compute the shortest paths tree from</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">Throws an ArgumentOutOfRangeException if an edge weight is negative</exception>
+            <exception cref="T:System.ArgumentNullException">Thrown if EdgeWeightedDigraph is null</exception>
+        </member>
+        <member name="M:RogueSharp.Algorithms.DijkstraShortestPath.FindPath(RogueSharp.Algorithms.EdgeWeightedDigraph,System.Int32,System.Int32)">
+            <summary>
+            Returns an IEnumerable of DirectedEdges representing a shortest path from the specified sourceVertex to the specified destinationVertex
+            This is more efficent than creating a new DijkstraShorestPath instance and calling PathTo( destinationVertex ) when we only
+            want a single path from Source to Destination and don't want many paths from the source to multiple different destinations.
+            </summary>
+            <param name="graph">The edge-weighted directed graph</param>
+            <param name="sourceVertex">The source vertext to find a shortest path from</param>
+            <param name="destinationVertex">The destination vertex to find a shortest path to</param>
+            <returns>IEnumerable of DirectedEdges representing a shortest path from the sourceVertex to the specified destinationVertex</returns>
+        </member>
+        <member name="M:RogueSharp.Algorithms.DijkstraShortestPath.DistanceTo(System.Int32)">
+            <summary>
+            Returns the length of a shortest path from the sourceVertex to the specified destinationVertex
+            </summary>
+            <param name="destinationVertex">The destination vertex to find a shortest path to</param>
+            <returns>The length of a shortest path from the sourceVertex to the specified destinationVertex or double.PositiveInfinity if no such path exists</returns>
+        </member>
+        <member name="M:RogueSharp.Algorithms.DijkstraShortestPath.HasPathTo(System.Int32)">
+            <summary>
+            Is there a path from the sourceVertex to the specified destinationVertex?
+            </summary>
+            <param name="destinationVertex">The destination vertex to see if there is a path to</param>
+            <returns>True if there is a path from the sourceVertex to the specified destinationVertex, false otherwise</returns>
+        </member>
+        <member name="M:RogueSharp.Algorithms.DijkstraShortestPath.PathTo(System.Int32)">
+            <summary>
+            Returns an IEnumerable of DirectedEdges representing a shortest path from the sourceVertex to the specified destinationVertex
+            </summary>
+            <param name="destinationVertex">The destination vertex to find a shortest path to</param>
+            <returns>IEnumerable of DirectedEdges representing a shortest path from the sourceVertex to the specified destinationVertex</returns>
+        </member>
+        <member name="M:RogueSharp.Algorithms.DijkstraShortestPath.Check(RogueSharp.Algorithms.EdgeWeightedDigraph,System.Int32)">
+            <summary>
+            check optimality conditions:
+            </summary>
+            <param name="graph">The edge-weighted directed graph</param>
+            <param name="sourceVertex">The source vertex to check optimality conditions from</param>
+            <returns>True if all optimality conditions are met, false otherwise</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown on null EdgeWeightedDigraph</exception>
+        </member>
+        <member name="T:RogueSharp.Algorithms.DirectedEdge">
+            <summary>
+            The DirectedEdge class represents a weighted edge in an edge-weighted directed graph. 
+            </summary>
+            <seealso href="http://algs4.cs.princeton.edu/44sp/DirectedEdge.java.html">DirectedEdge class from Princeton University's Java Algorithms</seealso>
+        </member>
+        <member name="M:RogueSharp.Algorithms.DirectedEdge.#ctor(System.Int32,System.Int32,System.Double)">
+            <summary>
+            Constructs a directed edge from one specified vertex to another with the given weight
+            </summary>
+            <param name="from">The start vertex</param>
+            <param name="to">The destination vertex</param>
+            <param name="weight">The weight of the DirectedEdge</param>
+        </member>
+        <member name="M:RogueSharp.Algorithms.DirectedEdge.ToString">
+            <summary>
+            Returns a string that represents the current DirectedEdge
+            </summary>
+            <returns>
+            A string that represents the current DirectedEdge
+            </returns>
+        </member>
+        <member name="P:RogueSharp.Algorithms.DirectedEdge.From">
+            <summary>
+            Returns the destination vertex of the DirectedEdge
+            </summary>
+        </member>
+        <member name="P:RogueSharp.Algorithms.DirectedEdge.To">
+            <summary>
+            Returns the start vertex of the DirectedEdge
+            </summary>
+        </member>
+        <member name="P:RogueSharp.Algorithms.DirectedEdge.Weight">
+            <summary>
+            Returns the weight of the DirectedEdge
+            </summary>
+        </member>
+        <member name="T:RogueSharp.Algorithms.EdgeWeightedDigraph">
+            <summary>
+            The EdgeWeightedDigrpah class represents an edge-weighted directed graph of vertices named 0 through V-1, where each directed edge
+            is of type DirectedEdge and has real-valued weight.
+            </summary>
+            <seealso href="http://algs4.cs.princeton.edu/44sp/EdgeWeightedDigraph.java.html">EdgeWeightedDigraph class from Princeton University's Java Algorithms</seealso>
+        </member>
+        <member name="M:RogueSharp.Algorithms.EdgeWeightedDigraph.#ctor(System.Int32)">
+            <summary>
+            Constructs an empty edge-weighted digraph with the specified number of vertices and 0 edges
+            </summary>
+            <param name="vertices">Number of vertices in the Graph</param>
+        </member>
+        <member name="M:RogueSharp.Algorithms.EdgeWeightedDigraph.AddEdge(RogueSharp.Algorithms.DirectedEdge)">
+            <summary>
+            Adds the specified directed edge to the edge-weighted digraph
+            </summary>
+            <param name="edge">The DirectedEdge to add</param>
+            <exception cref="T:System.ArgumentNullException">DirectedEdge cannot be null</exception>
+        </member>
+        <member name="M:RogueSharp.Algorithms.EdgeWeightedDigraph.Adjacent(System.Int32)">
+            <summary>
+            Returns an IEnumerable of the DirectedEdges incident from the specified vertex
+            </summary>
+            <param name="vertex">The vertex to find incident DirectedEdges from</param>
+            <returns>IEnumerable of the DirectedEdges incident from the specified vertex</returns>
+        </member>
+        <member name="M:RogueSharp.Algorithms.EdgeWeightedDigraph.Edges">
+            <summary>
+            Returns an IEnumerable of all directed edges in the edge-weighted digraph
+            </summary>
+            <returns>IEnumerable of of all directed edges in the edge-weighted digraph</returns>
+        </member>
+        <member name="M:RogueSharp.Algorithms.EdgeWeightedDigraph.OutDegree(System.Int32)">
+            <summary>
+            Returns the number of directed edges incident from the specified vertex
+            This is known as the outdegree of the vertex
+            </summary>
+            <param name="vertex">The vertex to find find the outdegree of</param>
+            <returns>The number of directed edges incident from the specified vertex</returns>
+        </member>
+        <member name="M:RogueSharp.Algorithms.EdgeWeightedDigraph.ToString">
+            <summary>
+            Returns a string that represents the current edge-weighted digraph
+            </summary>
+            <returns>
+            A string that represents the current edge-weighted digraph
+            </returns>
+        </member>
+        <member name="P:RogueSharp.Algorithms.EdgeWeightedDigraph.NumberOfVertices">
+            <summary>
+            The number of vertices in the edge-weighted digraph
+            </summary>
+        </member>
+        <member name="P:RogueSharp.Algorithms.EdgeWeightedDigraph.NumberOfEdges">
+            <summary>
+            The number of edges in the edge-weighted digraph
+            </summary>
+        </member>
+        <member name="T:RogueSharp.Algorithms.Graph">
+            <summary>
+            The Graph class represents an undirected graph of vertices named 0 through V - 1.
+            </summary>
+            <seealso href="http://algs4.cs.princeton.edu/41undirected/Graph.java.html">Graph class from Princeton University's Java Algorithms</seealso>
+        </member>
+        <member name="M:RogueSharp.Algorithms.Graph.#ctor(System.Int32)">
+            <summary>
+            Constructs a new Graph containing the specified number of vertices and 0 edges
+            </summary>
+            <param name="vertices">Number of vertices in the Graph</param>
+        </member>
+        <member name="M:RogueSharp.Algorithms.Graph.AddEdge(System.Int32,System.Int32)">
+            <summary>
+            Adds the undirected edge vertexSource-vertexDestination to the Graph
+            </summary>
+            <param name="vertexSource">First vertex in the edge</param>
+            <param name="vertexDestination">Second vertex in the edge</param>
+        </member>
+        <member name="M:RogueSharp.Algorithms.Graph.Adjacent(System.Int32)">
+            <summary>
+            Gets an IEnumerable of the vertices adjacent to the specified vertex 
+            </summary>
+            <param name="vertex">The vertex from which adjacent vertices will be located</param>
+            <returns>IEnumerable of the vertices adjacent to the specified vertex </returns>
+        </member>
+        <member name="M:RogueSharp.Algorithms.Graph.ToString">
+            <summary>
+            Returns a string that represents this Graph
+            </summary>
+            <returns>
+            A string that represents this Graph
+            </returns>
+        </member>
+        <member name="P:RogueSharp.Algorithms.Graph.NumberOfVertices">
+            <summary>
+            The number of vertices in the Graph
+            </summary>
+        </member>
+        <member name="P:RogueSharp.Algorithms.Graph.NumberOfEdges">
+            <summary>
+            The number of edges in the Graph
+            </summary>
+        </member>
+        <member name="T:RogueSharp.Algorithms.IndexMinPriorityQueue`1">
+            <summary>
+            The IndexMinPriorityQueue class represents an indexed priority queue of generic keys.
+            </summary>
+            <seealso href="http://algs4.cs.princeton.edu/24pq/IndexMinPQ.java.html">IndexMinPQ class from Princeton University's Java Algorithms</seealso>
+            <typeparam name="T">Type must implement IComparable interface</typeparam>
+        </member>
+        <member name="M:RogueSharp.Algorithms.IndexMinPriorityQueue`1.#ctor(System.Int32)">
+            <summary>
+            Constructs an empty indexed priority queue with indices between 0 and the specified maxSize - 1
+            </summary>
+            <param name="maxSize">The maximum size of the indexed priority queue</param>
+        </member>
+        <member name="M:RogueSharp.Algorithms.IndexMinPriorityQueue`1.IsEmpty">
+            <summary>
+            Is the indexed priority queue empty?
+            </summary>
+            <returns>True if the indexed priority queue is empty, false otherwise</returns>
+        </member>
+        <member name="M:RogueSharp.Algorithms.IndexMinPriorityQueue`1.Contains(System.Int32)">
+            <summary>
+            Is the specified parameter i an index on the priority queue?
+            </summary>
+            <param name="i">An index to check for on the priority queue</param>
+            <returns>True if the specified parameter i is an index on the priority queue, false otherwise</returns>
+        </member>
+        <member name="M:RogueSharp.Algorithms.IndexMinPriorityQueue`1.Insert(System.Int32,`0)">
+            <summary>
+            Associates the specified key with the specified index
+            </summary>
+            <param name="index">The index to associate the key with</param>
+            <param name="key">The key to associate with the index</param>
+        </member>
+        <member name="M:RogueSharp.Algorithms.IndexMinPriorityQueue`1.MinIndex">
+            <summary>
+            Returns an index associated with a minimum key
+            </summary>
+            <returns>An index associated with a minimum key</returns>
+        </member>
+        <member name="M:RogueSharp.Algorithms.IndexMinPriorityQueue`1.MinKey">
+            <summary>
+            Returns a minimum key
+            </summary>
+            <returns>A minimum key</returns>
+        </member>
+        <member name="M:RogueSharp.Algorithms.IndexMinPriorityQueue`1.DeleteMin">
+            <summary>
+            Removes a minimum key and returns its associated index
+            </summary>
+            <returns>An index associated with a minimum key that was removed</returns>
+        </member>
+        <member name="M:RogueSharp.Algorithms.IndexMinPriorityQueue`1.KeyAt(System.Int32)">
+            <summary>
+            Returns the key associated with the specified index
+            </summary>
+            <param name="index">The index of the key to return</param>
+            <returns>The key associated with the specified index</returns>
+        </member>
+        <member name="M:RogueSharp.Algorithms.IndexMinPriorityQueue`1.ChangeKey(System.Int32,`0)">
+            <summary>
+            Change the key associated with the specified index to the specified value
+            </summary>
+            <param name="index">The index of the key to change</param>
+            <param name="key">Change the key associated with the specified index to this key</param>
+        </member>
+        <member name="M:RogueSharp.Algorithms.IndexMinPriorityQueue`1.DecreaseKey(System.Int32,`0)">
+            <summary>
+            Decrease the key associated with the specified index to the specified value
+            </summary>
+            <param name="index">The index of the key to decrease</param>
+            <param name="key">Decrease the key associated with the specified index to this key</param>
+        </member>
+        <member name="M:RogueSharp.Algorithms.IndexMinPriorityQueue`1.IncreaseKey(System.Int32,`0)">
+            <summary>
+            Increase the key associated with the specified index to the specified value
+            </summary>
+            <param name="index">The index of the key to increase</param>
+            <param name="key">Increase the key associated with the specified index to this key</param>
+        </member>
+        <member name="M:RogueSharp.Algorithms.IndexMinPriorityQueue`1.Delete(System.Int32)">
+            <summary>
+            Remove the key associated with the specified index
+            </summary>
+            <param name="index">The index of the key to remove</param>
+        </member>
+        <member name="P:RogueSharp.Algorithms.IndexMinPriorityQueue`1.Size">
+            <summary>
+            The number of keys on this indexed priority queue
+            </summary>
+        </member>
+        <member name="T:RogueSharp.Algorithms.UnionFind">
+            <summary>
+            The UnionFind class represents a union-find data type also known as the disjoint-sets data type.
+            It models connectivity among a set of N sites named 0 through N - 1.
+            </summary>
+            <seealso href="http://algs4.cs.princeton.edu/15uf/UF.java.html">
+            UF class from Princeton University's Java Algorithms
+            </seealso>
+        </member>
+        <member name="M:RogueSharp.Algorithms.UnionFind.#ctor(System.Int32)">
+            <summary>
+            Create an empty union-find data structure with "count" isolated sets
+            </summary>
+            <param name="count">The number of isolated sets in the data structure</param>
+        </member>
+        <member name="M:RogueSharp.Algorithms.UnionFind.Find(System.Int32)">
+            <summary>
+            Returns the component identifier of the component containing site p
+            </summary>
+            <param name="p">An integer representing one object</param>
+            <returns>The component identifier of the component containing site p</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
+        <member name="M:RogueSharp.Algorithms.UnionFind.Connected(System.Int32,System.Int32)">
+            <summary>
+            Are objects p and q in the same set?
+            </summary>
+            <param name="p">An integer representing one site</param>
+            <param name="q">An integer representing the other site</param>
+            <returns>true if the two sites p and q are in the same component; false otherwise</returns>
+        </member>
+        <member name="M:RogueSharp.Algorithms.UnionFind.Union(System.Int32,System.Int32)">
+            <summary>
+            Merges the component containing site p with the component containing site q
+            </summary>
+            <param name="p">An integer representing one site</param>
+            <param name="q">An integer representing the other site</param>
+        </member>
+        <member name="P:RogueSharp.Algorithms.UnionFind.Count">
+            <summary>
+            Returns the number of components in this data structure
+            </summary>
+            <returns>The number of components in this data structure</returns>
+        </member>
+        <member name="T:RogueSharp.Cell">
+            <summary>
+            A class that defines a square on a Map with all of its associated properties
+            </summary>
+        </member>
+        <member name="T:RogueSharp.ICell">
+            <summary>
+            A class that defines a square on a Map with all of its associated properties
+            </summary>
+        </member>
+        <member name="P:RogueSharp.ICell.X">
+            <summary>
+            Gets the X location of the Cell starting with 0 as the farthest left
+            </summary>
+        </member>
+        <member name="P:RogueSharp.ICell.Y">
+            <summary>
+            Y location of the Cell starting with 0 as the top
+            </summary>
+        </member>
+        <member name="P:RogueSharp.ICell.IsTransparent">
+            <summary>
+            Get the transparency of the Cell i.e. if line of sight would be blocked by this Cell
+            </summary>
+            <example>      
+            A Cell representing an empty stone floor would be transparent 
+            A Cell representing a glass wall could be transparent (even though it may not be walkable)
+            A Cell representing a solid stone wall would not be transparent
+            </example>
+        </member>
+        <member name="P:RogueSharp.ICell.IsWalkable">
+            <summary>
+            Get the walkability of the Cell i.e. if a character could normally move across the Cell without difficulty
+            </summary>
+            <example>      
+            A Cell representing an empty stone floor would be walkable
+            A Cell representing a glass wall may not be walkable (even though it could be transparent)
+            A Cell representing a solid stone wall would not be walkable
+            </example>
+        </member>
+        <member name="P:RogueSharp.ICell.IsInFov">
+            <summary>
+            Check if the Cell is in the currently computed field-of-view
+            For newly initialized maps a field-of-view will not exist so all Cells will return false
+            Field-of-view must first be calculated by calling ComputeFov and/or AppendFov
+            </summary>
+            <remarks>
+            Field-of-view (FOV) is basically a calculation of what is observable in the Map from a given Cell with a given light radius
+            </remarks>
+            <example>
+            Field-of-view can be used to simulate a character holding a light source and exploring a Map representing a dark cavern
+            Any Cells within the FOV would be what the character could see from their current location and lighting conditions
+            </example>
+        </member>
+        <member name="P:RogueSharp.ICell.IsExplored">
+            <summary>
+            Check if the Cell is flagged as ever having been explored by the player
+            </summary>
+            <remarks>
+            The explored property of a Cell can be used to track if the Cell has ever been in the field-of-view of a character controlled by the player
+            This property will not automatically be updated based on FOV calcuations or any other built-in functions of the RogueSharp library.
+            </remarks>
+            <example>
+            As the player moves characters around a Map, Cells will enter and exit the currently computed field-of-view
+            This property can be used to keep track of those Cells that have been "seen" and could be used to show fog-of-war type effects when rendering the map
+            </example>
+        </member>
+        <member name="M:RogueSharp.Cell.#ctor(System.Int32,System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Construct a new Cell located at the specified x and y location with the specified properties
+            </summary>
+            <param name="x">X location of the Cell starting with 0 as the farthest left</param>
+            <param name="y">Y location of the Cell starting with 0 as the top</param>
+            <param name="isTransparent">Is there a clear line-of-sight through this Cell</param>
+            <param name="isWalkable">Could a character could normally walk across the Cell without difficulty</param>
+            <param name="isInFov">Is the Cell currently in the currently observable field-of-view</param>
+            <param name="isExplored">Has this Cell ever been explored by the player</param>
+        </member>
+        <member name="M:RogueSharp.Cell.#ctor(System.Int32,System.Int32,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Construct a new unexplored Cell located at the specified x and y location with the specified properties
+            </summary>
+            <param name="x">X location of the Cell starting with 0 as the farthest left</param>
+            <param name="y">Y location of the Cell starting with 0 as the top</param>
+            <param name="isTransparent">Is there a clear line-of-sight through this Cell</param>
+            <param name="isWalkable">Could a character could normally walk across the Cell without difficulty</param>
+            <param name="isInFov">Is the Cell currently in the currently observable field-of-view</param>
+        </member>
+        <member name="M:RogueSharp.Cell.ToString">
+            <summary>
+            Provides a simple visual representation of the Cell using the following symbols:
+            - `.`: `Cell` is transparent and walkable
+            - `s`: `Cell` is walkable (but not transparent)
+            - `o`: `Cell` is transparent (but not walkable)
+            - `#`: `Cell` is not transparent or walkable
+            </summary>
+            <remarks>
+            This call ignores field-of-view. If field-of-view is important use the ToString overload with a "true" parameter
+            </remarks>
+            <returns>A string represenation of the Cell using special symbols to denote Cell properties</returns>
+        </member>
+        <member name="M:RogueSharp.Cell.ToString(System.Boolean)">
+            <summary>
+            Provides a simple visual representation of the Cell using the following symbols:
+            - `%`: `Cell` is not in field-of-view
+            - `.`: `Cell` is transparent, walkable, and in field-of-view
+            - `s`: `Cell` is walkable and in field-of-view (but not transparent)
+            - `o`: `Cell` is transparent and in field-of-view (but not walkable)
+            - `#`: `Cell` is in field-of-view (but not transparent or walkable)
+            </summary>
+            <param name="useFov">True if field-of-view calculations will be used when creating the string represenation of the Cell. False otherwise</param>
+            <returns>A string representation of the Cell using special symbols to denote Cell properties</returns>
+        </member>
+        <member name="M:RogueSharp.Cell.Equals(RogueSharp.ICell)">
+            <summary>
+            Determines whether two Cell instances are equal
+            </summary>
+            <param name="other">The Cell to compare this instance to</param>
+            <returns>True if the instances are equal; False otherwise</returns>
+        </member>
+        <member name="M:RogueSharp.Cell.Equals(System.Object)">
+            <summary>
+            Determines whether two Cell instances are equal
+            </summary>
+            <param name="obj">The Object to compare this instance to</param>
+            <returns>True if the instances are equal; False otherwise</returns>
+        </member>
+        <member name="M:RogueSharp.Cell.op_Equality(RogueSharp.Cell,RogueSharp.Cell)">
+            <summary>
+            Determines whether two Cell instances are equal
+            </summary>
+            <param name="left">Cell on the left side of the equal sign</param>
+            <param name="right">Cell on the right side of the equal sign</param>
+            <returns>True if a and b are equal; False otherwise</returns>
+        </member>
+        <member name="M:RogueSharp.Cell.op_Inequality(RogueSharp.Cell,RogueSharp.Cell)">
+            <summary>
+            Determines whether two Cell instances are not equal
+            </summary>
+            <param name="left">Cell on the left side of the equal sign</param>
+            <param name="right">Cell on the right side of the equal sign</param>
+            <returns>True if a and b are not equal; False otherwise</returns>
+        </member>
+        <member name="M:RogueSharp.Cell.GetHashCode">
+            <summary>
+            Gets the hash code for this object which can help for quick checks of equality
+            or when inserting this Cell into a hash-based collection such as a Dictionary or Hashtable 
+            </summary>
+            <returns>An integer hash used to identify this Cell</returns>
+        </member>
+        <member name="P:RogueSharp.Cell.X">
+            <summary>
+            Gets the X location of the Cell starting with 0 as the farthest left
+            </summary>
+        </member>
+        <member name="P:RogueSharp.Cell.Y">
+            <summary>
+            Y location of the Cell starting with 0 as the top
+            </summary>
+        </member>
+        <member name="P:RogueSharp.Cell.IsTransparent">
+            <summary>
+            Get the transparency of the Cell i.e. if line of sight would be blocked by this Cell
+            </summary>
+            <example>      
+            A Cell representing an empty stone floor would be transparent 
+            A Cell representing a glass wall could be transparent (even though it may not be walkable)
+            A Cell representing a solid stone wall would not be transparent
+            </example>
+        </member>
+        <member name="P:RogueSharp.Cell.IsWalkable">
+            <summary>
+            Get the walkability of the Cell i.e. if a character could normally move across the Cell without difficulty
+            </summary>
+            <example>      
+            A Cell representing an empty stone floor would be walkable
+            A Cell representing a glass wall may not be walkable (even though it could be transparent)
+            A Cell representing a solid stone wall would not be walkable
+            </example>
+        </member>
+        <member name="P:RogueSharp.Cell.IsInFov">
+            <summary>
+            Check if the Cell is in the currently computed field-of-view
+            For newly initialized maps a field-of-view will not exist so all Cells will return false
+            Field-of-view must first be calculated by calling ComputeFov and/or AppendFov
+            </summary>
+            <remarks>
+            Field-of-view (FOV) is basically a calculation of what is observable in the Map from a given Cell with a given light radius
+            </remarks>
+            <example>
+            Field-of-view can be used to simulate a character holding a light source and exploring a Map representing a dark cavern
+            Any Cells within the FOV would be what the character could see from their current location and lighting conditions
+            </example>
+        </member>
+        <member name="P:RogueSharp.Cell.IsExplored">
+            <summary>
+            Check if the Cell is flagged as ever having been explored by the player
+            </summary>
+            <remarks>
+            The explored property of a Cell can be used to track if the Cell has ever been in the field-of-view of a character controlled by the player
+            This property will not automatically be updated based on FOV calcuations or any other built-in functions of the RogueSharp library.
+            </remarks>
+            <example>
+            As the player moves characters around a Map, Cells will enter and exit the currently computed field-of-view
+            This property can be used to keep track of those Cells that have been "seen" and could be used to show fog-of-war type effects when rendering the map
+            </example>
+        </member>
+        <member name="T:RogueSharp.DiceNotation.Dice">
+            <summary>
+            The Dice class is a static class that has convenience methods for parsing and rolling dice
+            </summary>
+        </member>
+        <member name="M:RogueSharp.DiceNotation.Dice.Parse(System.String)">
+            <summary>
+            Parse the specified string into a DiceExpression
+            </summary>
+            <param name="expression">The string dice expression to parse. Ex. 3d6+4</param>
+            <returns>A DiceExpression representing the parsed string</returns>
+        </member>
+        <member name="M:RogueSharp.DiceNotation.Dice.Roll(System.String,RogueSharp.Random.IRandom)">
+            <summary>
+            A convenience method for parsing a dice expression from a string, rolling the dice, and returning the total.
+            </summary>
+            <param name="expression">The string dice expression to parse. Ex. 3d6+4</param>
+            <param name="random">IRandom RNG used to perform the Roll.</param>
+            <returns>An integer result of the sum of the dice rolled including constants and scalars in the expression</returns>
+        </member>
+        <member name="M:RogueSharp.DiceNotation.Dice.Roll(System.String)">
+            <summary>
+            A convenience method for parsing a dice expression from a string, rolling the dice, and returning the total.
+            </summary>
+            <param name="expression">The string dice expression to parse. Ex. 3d6+4</param>
+            <returns>An integer result of the sum of the dice rolled including constants and scalars in the expression</returns>
+            <remarks>Uses DotNetRandom as its RNG</remarks>
+        </member>
+        <member name="T:RogueSharp.DiceNotation.DiceExpression">
+            <summary>
+            The DiceExpression class can be used to fluently add DiceTerms to a collection and then Roll them.
+            </summary>
+        </member>
+        <member name="M:RogueSharp.DiceNotation.DiceExpression.#ctor">
+            <summary>
+            Construct a new DiceExpression class with an empty list of terms
+            </summary>
+        </member>
+        <member name="M:RogueSharp.DiceNotation.DiceExpression.Die(System.Int32,System.Int32)">
+            <summary>
+            Add a single Die to this DiceExpression with the specified number of sides and scalar
+            </summary>
+            <param name="sides">The number of sides on the Die to add to this DiceExpression</param>
+            <param name="scalar">The value to multiply the result of the Roll of this Die by</param>
+            <returns>A DiceExpression representing the previous terms in this DiceExpression plus this newly added Die</returns>
+        </member>
+        <member name="M:RogueSharp.DiceNotation.DiceExpression.Die(System.Int32)">
+            <summary>
+            Add a single Die to this DiceExpression with the specified number of sides
+            </summary>
+            <param name="sides">The number of sides on the Die to add to this DiceExpression</param>
+            <returns>A DiceExpression representing the previous terms in this DiceExpression plus this newly added Die</returns>
+        </member>
+        <member name="M:RogueSharp.DiceNotation.DiceExpression.Dice(System.Int32,System.Int32)">
+            <summary>
+            Add multiple Dice to this DiceExpression with the specified parameters
+            </summary>
+            <param name="multiplicity">The number of Dice</param>
+            <param name="sides">The number of sides per Die</param>
+            <returns>A DiceExpression representing the previous terms in this DiceExpression plus these newly added Dice</returns>
+        </member>
+        <member name="M:RogueSharp.DiceNotation.DiceExpression.Dice(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Add multiple Dice to this DiceExpression with the specified parameters
+            </summary>
+            <param name="multiplicity">The number of Dice</param>
+            <param name="sides">The number of sides per Die</param>
+            <param name="scalar">The value to multiply the result of the Roll of these Dice by</param>
+            <returns>A DiceExpression representing the previous terms in this DiceExpression plus these newly added Dice</returns>
+        </member>
+        <member name="M:RogueSharp.DiceNotation.DiceExpression.Dice(System.Int32,System.Int32,System.Int32,System.Nullable{System.Int32})">
+            <summary>
+            Add multiple Dice to this DiceExpression with the specified parameters
+            </summary>
+            <param name="multiplicity">The number of Dice</param>
+            <param name="sides">The number of sides per Die</param>
+            <param name="scalar">The value to multiply the result of the Roll of these Dice by</param>
+            <param name="choose">Optional number of dice to choose out of the total rolled. The highest rolled Dice will be choosen.</param>
+            <returns>A DiceExpression representing the previous terms in this DiceExpression plus these newly added Dice</returns>
+        </member>
+        <member name="M:RogueSharp.DiceNotation.DiceExpression.Constant(System.Int32)">
+            <summary>
+            Add a constant to this DiceExpression with the specified integer value
+            </summary>
+            <param name="value">An integer constant to add to this DiceExpression</param>
+            <returns>A DiceExpression representing the previous terms in this DiceExpression plus this newly added Constant</returns>
+        </member>
+        <member name="M:RogueSharp.DiceNotation.DiceExpression.Roll(RogueSharp.Random.IRandom)">
+            <summary>
+            Roll all of the Dice that are part of this DiceExpression
+            </summary>
+            <param name="random">IRandom RNG used to perform the Roll.</param>
+            <returns>A DiceResult representing the results of this Roll</returns>
+        </member>
+        <member name="M:RogueSharp.DiceNotation.DiceExpression.Roll">
+            <summary>
+            Roll all of the Dice that are part of this DiceExpression
+            </summary>
+            <returns>A DiceResult representing the results of this Roll</returns>
+            <remarks>Uses DotNetRandom as its RNG</remarks>
+        </member>
+        <member name="M:RogueSharp.DiceNotation.DiceExpression.MinRoll">
+            <summary>
+            Roll all of the Dice that are part of this DiceExpression, but force all of the rolls to be the lowest possible result
+            </summary>
+            <returns>A DiceResult representing the results of this Roll. All dice should have rolled their minimum values</returns>
+        </member>
+        <member name="M:RogueSharp.DiceNotation.DiceExpression.MaxRoll">
+            <summary>
+            Roll all of the Dice that are part of this DiceExpression, but force all of the rolls to be the highest possible result
+            </summary>
+            <returns>A DiceResult representing the results of this Roll. All dice should have rolled their maximum values</returns>
+        </member>
+        <member name="M:RogueSharp.DiceNotation.DiceExpression.ToString">
+            <summary>
+            Returns a string that represents this DiceExpression
+            </summary>
+            <returns>A string representing this DiceExpression</returns>
+        </member>
+        <member name="T:RogueSharp.DiceNotation.DiceParser">
+            <summary>
+            The DiceParser class is used to parse a string into a DiceExpression
+            </summary>
+        </member>
+        <member name="T:RogueSharp.DiceNotation.IDiceParser">
+            <summary>
+            The DiceParser interface can be implemented to parse a string into a DiceExpression
+            </summary>
+        </member>
+        <member name="M:RogueSharp.DiceNotation.IDiceParser.Parse(System.String)">
+            <summary>
+            Create a new DiceExpression by parsing the specified string
+            </summary>
+            <param name="expression">A dice notation string expression. Ex. 3d6+3</param>
+            <returns>A DiceExpression parsed from the specified string</returns>
+        </member>
+        <member name="M:RogueSharp.DiceNotation.DiceParser.#ctor">
+            <summary>
+            Construct a new instance of the DiceParser class
+            </summary>
+        </member>
+        <member name="M:RogueSharp.DiceNotation.DiceParser.Parse(System.String)">
+            <summary>
+            Create a new DiceExpression by parsing the specified string
+            </summary>
+            <param name="expression">A dice notation string expression. Ex. 3d6+3</param>
+            <returns>A DiceExpression parsed from the specified string</returns>
+            <exception cref="T:System.ArgumentException">Invalid dice notation supplied</exception>
+        </member>
+        <member name="T:RogueSharp.DiceNotation.DiceResult">
+            <summary>
+            The DiceResult class represents the result of rolling a DiceExpression
+            </summary>
+        </member>
+        <member name="M:RogueSharp.DiceNotation.DiceResult.#ctor(System.Collections.Generic.IEnumerable{RogueSharp.DiceNotation.TermResult},RogueSharp.Random.IRandom)">
+            <summary>
+            Construct a new DiceResult from the specified values
+            </summary>
+            <param name="results">An IEnumerable of TermResult that represents one result for each DiceTerm in the DiceExpression</param>
+            <param name="randomUsed">The random number generator used to get this result</param>
+        </member>
+        <member name="P:RogueSharp.DiceNotation.DiceResult.RandomUsed">
+            <summary>
+            The random number generator used to get this result
+            </summary>
+        </member>
+        <member name="P:RogueSharp.DiceNotation.DiceResult.Results">
+            <summary>
+            A Collection of TermResults that represents one result for each DiceTerm in the DiceExpression
+            </summary>
+        </member>
+        <member name="P:RogueSharp.DiceNotation.DiceResult.Value">
+            <summary>
+            The total result of the the roll
+            </summary>
+        </member>
+        <member name="T:RogueSharp.DiceNotation.Exceptions.ImpossibleDieException">
+            <summary>
+            Exception that is thrown when a die is attempted to be constructed with an invalid number of sides
+            </summary>
+        </member>
+        <member name="M:RogueSharp.DiceNotation.Exceptions.ImpossibleDieException.#ctor">
+            <summary>
+            Initializes a new instance of the ImpossibleDieException class.
+            </summary>
+        </member>
+        <member name="M:RogueSharp.DiceNotation.Exceptions.ImpossibleDieException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the ImpossibleDieException class with a specified error message.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="M:RogueSharp.DiceNotation.Exceptions.ImpossibleDieException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the ImpossibleDieException class with a specified error message and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception. If the innerException parameter is not a null reference, the current exception is raised in a catch block that handles the inner exception.</param>
+        </member>
+        <member name="T:RogueSharp.DiceNotation.Exceptions.InvalidChooseException">
+            <summary>
+            Exception that is thrown when a dice term is constructed with a 'k' choose operation to keep an invalid number of dice.
+            </summary>
+        </member>
+        <member name="M:RogueSharp.DiceNotation.Exceptions.InvalidChooseException.#ctor">
+            <summary>
+            Initializes a new instance of the InvalidChooseException class.
+            </summary>
+        </member>
+        <member name="M:RogueSharp.DiceNotation.Exceptions.InvalidChooseException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the InvalidChooseException class with a specified error message.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="M:RogueSharp.DiceNotation.Exceptions.InvalidChooseException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the InvalidChooseException class with a specified error message and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception. If the innerException parameter is not a null reference, the current exception is raised in a catch block that handles the inner exception.</param>
+        </member>
+        <member name="T:RogueSharp.DiceNotation.Exceptions.InvalidMultiplicityException">
+            <summary>
+            Exception that is thrown when a dice term is constructed with a negative number of dice.
+            </summary>
+        </member>
+        <member name="M:RogueSharp.DiceNotation.Exceptions.InvalidMultiplicityException.#ctor">
+            <summary>
+            Initializes a new instance of the InvalidMultiplicityException class.
+            </summary>
+        </member>
+        <member name="M:RogueSharp.DiceNotation.Exceptions.InvalidMultiplicityException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the InvalidMultiplicityException class with a specified error message.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="M:RogueSharp.DiceNotation.Exceptions.InvalidMultiplicityException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the InvalidMultiplicityException class with a specified error message and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception. If the innerException parameter is not a null reference, the current exception is raised in a catch block that handles the inner exception.</param>
+        </member>
+        <member name="T:RogueSharp.DiceNotation.TermResult">
+            <summary>
+            The TermResult class represents a single result of one of the terms in a DiceExpression
+            </summary>
+        </member>
+        <member name="P:RogueSharp.DiceNotation.TermResult.Scalar">
+            <summary>
+            An integer value that could be used to multiply the result of this term by
+            </summary>
+        </member>
+        <member name="P:RogueSharp.DiceNotation.TermResult.Value">
+            <summary>
+            The integer total for this term
+            </summary>
+        </member>
+        <member name="P:RogueSharp.DiceNotation.TermResult.TermType">
+            <summary>
+            A string representing the type of this Term. Possible values are "constant" or "d(sides)"
+            In 1d6 + 5, the 1d6 term is of type "d6" and the 5 term is of type "constant"
+            </summary>
+        </member>
+        <member name="T:RogueSharp.DiceNotation.Terms.ConstantTerm">
+            <summary>
+            The ConstantTerm class represents a constant value in a DiceExpression
+            </summary>
+            <remarks>
+            In the expression "2d6+5" the integer "5" is a ConstantTerm
+            </remarks>
+        </member>
+        <member name="T:RogueSharp.DiceNotation.Terms.IDiceExpressionTerm">
+            <summary>
+            The IDiceExpressionTerm interface can be implemented to create a new term for a dice expression
+            </summary>
+        </member>
+        <member name="M:RogueSharp.DiceNotation.Terms.IDiceExpressionTerm.GetResults(RogueSharp.Random.IRandom)">
+            <summary>
+            Gets the TermResults for the implementation
+            </summary>
+            <param name="random">IRandom RNG used to perform the Roll.</param>
+            <returns>An IEnumerable of TermResult which will have one item per result</returns>
+        </member>
+        <member name="M:RogueSharp.DiceNotation.Terms.IDiceExpressionTerm.GetResults">
+            <summary>
+            Gets the TermResults for the implementation
+            </summary>
+            <returns>An IEnumerable of TermResult which will have one item per result</returns>
+            <remarks>Uses DotNetRandom as its RNG</remarks>
+        </member>
+        <member name="M:RogueSharp.DiceNotation.Terms.ConstantTerm.#ctor(System.Int32)">
+            <summary>
+            Construct a new instance of the ConstantTerm class using the specified integer
+            </summary>
+            <param name="constant">An integer representing the constant term</param>
+        </member>
+        <member name="M:RogueSharp.DiceNotation.Terms.ConstantTerm.GetResults(RogueSharp.Random.IRandom)">
+            <summary>
+            Gets the TermResult for this ConstantTerm which will always be a single result with a scalar of 1 and a value of the constant.
+            </summary>
+            <param name="random">Not used for this implementation of IDiceExpressionTerm</param>
+            <returns>An IEnumerable of TermResult which will always have a single result with a scalar of 1 and a value of the constant</returns>
+        </member>
+        <member name="M:RogueSharp.DiceNotation.Terms.ConstantTerm.GetResults">
+            <summary>
+            Gets the TermResult for this ConstantTerm which will always be a single result with a scalar of 1 and a value of the constant.
+            </summary>
+            <returns>An IEnumerable of TermResult which will always have a single result with a scalar of 1 and a value of the constant</returns>
+        </member>
+        <member name="M:RogueSharp.DiceNotation.Terms.ConstantTerm.ToString">
+            <summary>
+            Returns a string that represents this ConstantTerm
+            </summary>
+            <returns>A string representing this ConstantTerm</returns>
+        </member>
+        <member name="T:RogueSharp.DiceNotation.Terms.DiceTerm">
+            <summary>
+            The DiceTerm class represents a single "d" term in a DiceExpression
+            </summary>
+            <remarks>
+            In the expression "2d6+5" the term "2d6" is a DiceTerm
+            </remarks>
+        </member>
+        <member name="M:RogueSharp.DiceNotation.Terms.DiceTerm.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Construct a new instance of the DiceTerm class using the specified values
+            </summary>
+            <param name="multiplicity">The number of dice</param>
+            <param name="sides">The number of sides per die</param>
+            <param name="scalar">The amount to multiply the final sum of the dice by</param>
+        </member>
+        <member name="M:RogueSharp.DiceNotation.Terms.DiceTerm.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Construct a new instance of the DiceTerm class using the specified values
+            </summary>
+            <param name="multiplicity">The number of dice</param>
+            <param name="sides">The number of sides per die</param>
+            <param name="choose">Sum this many dice with the highest values out of those rolled</param>
+            <param name="scalar">The amount to multiply the final sum of the dice by</param>
+        </member>
+        <member name="M:RogueSharp.DiceNotation.Terms.DiceTerm.GetResults(RogueSharp.Random.IRandom)">
+            <summary>
+            Gets the TermResult for this DiceTerm which will include the random value rolled
+            </summary>
+            <param name="random">IRandom RNG used to perform the Roll.</param>
+            <returns>An IEnumerable of TermResult which will have one item per die rolled</returns>
+        </member>
+        <member name="M:RogueSharp.DiceNotation.Terms.DiceTerm.GetResults">
+            <summary>
+            Gets the TermResult for this DiceTerm which will include the random value rolled
+            </summary>
+            <returns>An IEnumerable of TermResult which will have one item per die rolled</returns>
+            <remarks>Uses DotNetRandom as its RNG</remarks>
+        </member>
+        <member name="M:RogueSharp.DiceNotation.Terms.DiceTerm.ToString">
+            <summary>
+            Returns a string that represents this DiceTerm
+            </summary>
+            <returns>A string representing this DiceTerm</returns>
+        </member>
+        <member name="P:RogueSharp.DiceNotation.Terms.DiceTerm.Multiplicity">
+            <summary>
+            The number of dice
+            </summary>
+        </member>
+        <member name="P:RogueSharp.DiceNotation.Terms.DiceTerm.Sides">
+            <summary>
+            The number of sides per die
+            </summary>
+        </member>
+        <member name="P:RogueSharp.DiceNotation.Terms.DiceTerm.Scalar">
+            <summary>
+            The amount to multiply the final sum of the dice by
+            </summary>
+        </member>
+        <member name="P:RogueSharp.DiceNotation.Terms.DiceTerm.Choose">
+            <summary>
+            Sum this many dice with the highest values out of those rolled
+            </summary>
+        </member>
+        <member name="T:RogueSharp.FieldOfView">
+            <summary>
+            A class for performing field-of-view calculations to determine what is observable in a Map from a given Cell within a given light radius
+            </summary>
+            <seealso href="https://sites.google.com/site/jicenospam/visibilitydetermination">Based on the visibility determination algorithm described here</seealso>
+        </member>
+        <member name="M:RogueSharp.FieldOfView.#ctor(RogueSharp.IMap)">
+            <summary>
+            Constructs a new FieldOfView class for the specified Map
+            </summary>
+            <param name="map">The Map that this FieldOfView class will use to perform its field-of-view calculations</param>
+        </member>
+        <member name="M:RogueSharp.FieldOfView.Clone">
+            <summary>
+            Create and return a deep copy of an existing FieldOfView class
+            </summary>
+            <returns>A deep copy of an existing FieldOfViewClass</returns>
+        </member>
+        <member name="M:RogueSharp.FieldOfView.IsInFov(System.Int32,System.Int32)">
+            <summary>
+            Check if the Cell is in the currently computed field-of-view
+            Field-of-view must first be calculated by calling ComputeFov and/or AppendFov
+            </summary>
+            <remarks>
+            Field-of-view (FOV) is basically a calculation of what is observable in the Map from a given Cell with a given light radius
+            </remarks>
+            <example>
+            Field-of-view can be used to simulate a character holding a light source and exploring a Map representing a dark cavern
+            Any Cells within the FOV would be what the character could see from their current location and lighting conditions
+            </example>
+            <param name="x">X location of the Cell to check starting with 0 as the farthest left</param>
+            <param name="y">Y location of the Cell to check, starting with 0 as the top</param>
+            <returns>True if the Cell is in the currently computed field-of-view, false otherwise</returns>
+        </member>
+        <member name="M:RogueSharp.FieldOfView.ComputeFov(System.Int32,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Performs a field-of-view calculation with the specified parameters.
+            Field-of-view (FOV) is basically a calculation of what is observable in the Map from a given Cell with a given light radius.
+            Any existing field-of-view calculations will be overwritten when calling this method.
+            </summary>
+            <param name="xOrigin">X location of the Cell to perform the field-of-view calculation with 0 as the farthest left</param>
+            <param name="yOrigin">Y location of the Cell to perform the field-of-view calculation with 0 as the top</param>
+            <param name="radius">The number of Cells in which the field-of-view extends from the origin Cell. Think of this as the intensity of the light source.</param>
+            <param name="lightWalls">True if walls should be included in the field-of-view when they are within the radius of the light source. False excludes walls even when they are within range.</param>
+            <returns>List of Cells representing what is observable in the Map based on the specified parameters</returns>
+        </member>
+        <member name="M:RogueSharp.FieldOfView.AppendFov(System.Int32,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Performs a field-of-view calculation with the specified parameters and appends it any existing field-of-view calculations.
+            Field-of-view (FOV) is basically a calculation of what is observable in the Map from a given Cell with a given light radius.
+            </summary>
+            <example>
+            When a character is holding a light source in a large area that also has several other sources of light such as torches along the walls
+            ComputeFov could first be called for the character and then AppendFov could be called for each torch to give us the final combined FOV given all the light sources
+            </example>
+            <param name="xOrigin">X location of the Cell to perform the field-of-view calculation with 0 as the farthest left</param>
+            <param name="yOrigin">Y location of the Cell to perform the field-of-view calculation with 0 as the top</param>
+            <param name="radius">The number of Cells in which the field-of-view extends from the origin Cell. Think of this as the intensity of the light source.</param>
+            <param name="lightWalls">True if walls should be included in the field-of-view when they are within the radius of the light source. False excludes walls even when they are within range.</param>
+            <returns>List of Cells representing what is observable in the Map based on the specified parameters</returns>
+        </member>
+        <member name="T:RogueSharp.GoalMap">
+            <summary>
+            A class for assigning weights to every cell on the Map which can then be used for finding paths or building desire-driven AI
+            </summary>
+            <remarks>
+            </remarks>
+            <seealso href="http://www.roguebasin.com/index.php?title=The_Incredible_Power_of_Dijkstra_Maps">Inspired by the article "The Incredible Power of Dijkstra Maps on roguebasin</seealso>
+        </member>
+        <member name="T:RogueSharp.IGoalMap">
+            <summary>
+            An interface for classes that assign weights to every cell on the Map and then use this for finding paths or building desire-driven AI
+            </summary>
+            <remarks>
+            </remarks>
+            <seealso href="http://www.roguebasin.com/index.php?title=The_Incredible_Power_of_Dijkstra_Maps">Inspired by the article "The Incredible Power of Dijkstra Maps on roguebasin</seealso>
+        </member>
+        <member name="M:RogueSharp.IGoalMap.AddGoal(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Add a Goal at the specified location with the specified weight
+            </summary>
+            <param name="x">X location of the Goal starting with 0 as the farthest left</param>
+            <param name="y">Y location of the Goal starting with 0 as the top</param>
+            <param name="weight">The priority of this goal with respect to other goals with lower numbers being a higher priority</param>
+        </member>
+        <member name="M:RogueSharp.IGoalMap.RemoveGoal(System.Int32,System.Int32)">
+            <summary>
+            Remove a Goal at the specified location
+            </summary>
+            <param name="x">X location of the Goal starting with 0 as the farthest left</param>
+            <param name="y">Y location of the Goal starting with 0 as the top</param>
+        </member>
+        <member name="M:RogueSharp.IGoalMap.ClearGoals">
+            <summary>
+            Remove all goals from this GoalMap
+            </summary>
+        </member>
+        <member name="M:RogueSharp.IGoalMap.AddObstacle(System.Int32,System.Int32)">
+            <summary>
+            Add an Obstacle at the specified location. Any paths found must not go through Obstacles
+            </summary>
+            <param name="x">X location of the Obstacle starting with 0 as the farthest left</param>
+            <param name="y">Y location of the Obstacle starting with 0 as the top</param>
+        </member>
+        <member name="M:RogueSharp.IGoalMap.AddObstacles(System.Collections.Generic.IEnumerable{RogueSharp.Point})">
+            <summary>
+            Add multiple obstacles from the specified enumeration of locations
+            </summary>
+            <param name="obstacles">An enumeration of points representing X, Y locations of Obstacles to avoid when pathfinding</param>
+        </member>
+        <member name="M:RogueSharp.IGoalMap.RemoveObstacle(System.Int32,System.Int32)">
+            <summary>
+            Remove an Obstacle at the specified location
+            </summary>
+            <param name="x">X location of the Obstacle starting with 0 as the farthest left</param>
+            <param name="y">Y location of the Obstacle starting with 0 as the top</param>
+        </member>
+        <member name="M:RogueSharp.IGoalMap.ClearObstacles">
+            <summary>
+            Remove all Obstacles from this GoalMap
+            </summary>
+        </member>
+        <member name="M:RogueSharp.IGoalMap.FindPaths(System.Int32,System.Int32)">
+            <summary>
+            Returns a ReadOnlyCollection of Paths representing all of the shortest paths from the specified location to the Goal or Goals determined to have the highest priority
+            This method is useful when there are multiple paths that would all work and we want to have some additional logic to pick one of the best paths
+            The FindPath( int x, int y ) method in the GoalMap class uses this method and then chooses the first path.
+            </summary>
+            <param name="x">X location of the beginning of the path, starting with 0 as the farthest left</param>
+            <param name="y">Y location of the beginning of the path, starting with 0 as the top</param>
+            <returns>A ReadOnlyCollection of Paths representing all of the shortest paths from the specified location to the Goal or Goals determined to have the highest priority</returns>
+        </member>
+        <member name="M:RogueSharp.IGoalMap.TryFindPaths(System.Int32,System.Int32)">
+            <summary>
+            Returns a ReadOnlyCollection of Paths representing all of the shortest paths from the specified location to the Goal or Goals determined to have the highest priority
+            This method is useful when there are multiple paths that would all work and we want to have some additional logic to pick one of the best paths
+            The FindPath( int x, int y ) method in the GoalMap class uses this method and then chooses the first path.
+            </summary>
+            <param name="x">X location of the beginning of the path, starting with 0 as the farthest left</param>
+            <param name="y">Y location of the beginning of the path, starting with 0 as the top</param>
+            <returns>A ReadOnlyCollection of Paths representing all of the shortest paths from the specified location to the Goal or Goals determined to have the highest priority. Returns null if no path is found.</returns>
+        </member>
+        <member name="M:RogueSharp.IGoalMap.FindPath(System.Int32,System.Int32)">
+            <summary>
+            Returns a shortest Path representing an ordered List of Points from the specified location to the Goal determined to have the highest priority
+            Distance to the goals and the weight of the goals are both used in determining the priority
+            The path must not pass through any obstacles specified in this GoalMap instance
+            </summary>
+            <param name="x">X location of the beginning of the path, starting with 0 as the farthest left</param>
+            <param name="y">Y location of the beginning of the path, starting with 0 as the top</param>
+            <returns>An ordered List of Points representing a shortest path from the specified location to the Goal determined to have the highest priority</returns>
+        </member>
+        <member name="M:RogueSharp.IGoalMap.TryFindPath(System.Int32,System.Int32)">
+            <summary>
+            Returns a shortest Path representing an ordered List of Points from the specified location to the Goal determined to have the highest priority
+            Distance to the goals and the weight of the goals are both used in determining the priority
+            The path must not pass through any obstacles specified in this GoalMap instance
+            null will be returned if a path cannot be found
+            </summary>
+            <param name="x">X location of the beginning of the path, starting with 0 as the farthest left</param>
+            <param name="y">Y location of the beginning of the path, starting with 0 as the top</param>
+            <returns>An ordered List of Points representing a shortest path from the specified location to the Goal determined to have the highest priority. null is returned if a path cannot be found</returns>
+        </member>
+        <member name="M:RogueSharp.IGoalMap.FindPathAvoidingGoals(System.Int32,System.Int32)">
+            <summary>
+            Returns a Path representing an ordered list of Points from the specified location away from Goals specified in this GoalMap instance
+            Distance to the goals and the weight of the goals are both used in determining the priority of avoiding the Goals
+            The path must not pass through any Obstacles specified in this GoalMap instance
+            </summary>
+            <exmaple>
+            In order to make the enemy AI try to flee from the player and his allies, Goals could be set on each object that the
+            AI should stay away from. Then calling this method will find a path away from those Goals
+            </exmaple>
+            <param name="x">X location of the beginning of the path, starting with 0 as the farthest left</param>
+            <param name="y">Y location of the beginning of the path, starting with 0 as the top</param>
+            <returns>A Path representing ordered List of Points from the specified location away from Goals and avoiding Obstacles</returns>
+        </member>
+        <member name="M:RogueSharp.IGoalMap.TryFindPathAvoidingGoals(System.Int32,System.Int32)">
+            <summary>
+            Returns a Path representing an ordered list of Points from the specified location away from Goals specified in this GoalMap instance
+            Distance to the goals and the weight of the goals are both used in determining the priority of avoiding the Goals
+            The path must not pass through any Obstacles specified in this GoalMap instance
+            Returns null if a Path is not found
+            </summary>
+            <exmaple>
+            In order to make the enemy AI try to flee from the player and his allies, Goals could be set on each object that the
+            AI should stay away from. Then calling this method will find a path away from those Goals
+            </exmaple>
+            <param name="x">X location of the beginning of the path, starting with 0 as the farthest left</param>
+            <param name="y">Y location of the beginning of the path, starting with 0 as the top</param>
+            <returns>A Path representing ordered List of Points from the specified location away from Goals and avoiding Obstacles. Returns null if a Path is not found</returns>
+        </member>
+        <member name="M:RogueSharp.GoalMap.#ctor(RogueSharp.IMap)">
+            <summary>
+            Constructs a new instance of a GoalMap for the specified Map that will not consider diagonal movements to be valid.
+            </summary>
+            <param name="map">The Map that this GoalMap will be created for</param>
+            <exception cref="T:System.ArgumentNullException">Thrown on null map</exception>
+        </member>
+        <member name="M:RogueSharp.GoalMap.#ctor(RogueSharp.IMap,System.Boolean)">
+            <summary>
+            Constructs a new instance of a GoalMap for the specified Map that will consider diagonal movments to be valid if allowDiagonalMovement is set to true.
+            </summary>
+            <param name="map">The Map that this GoalMap will be created for</param>
+            <param name="allowDiagonalMovement">True if diagonal movements are allowed. False otherwise</param>
+            <exception cref="T:System.ArgumentNullException">Thrown on null map</exception>
+        </member>
+        <member name="M:RogueSharp.GoalMap.AddGoal(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Add a Goal at the specified location with the specified weight
+            </summary>
+            <param name="x">X location of the Goal starting with 0 as the farthest left</param>
+            <param name="y">Y location of the Goal starting with 0 as the top</param>
+            <param name="weight">The priority of this goal with respect to other goals with lower numbers being a higher priority</param>
+        </member>
+        <member name="M:RogueSharp.GoalMap.RemoveGoal(System.Int32,System.Int32)">
+            <summary>
+            Remove a Goal at the specified location
+            </summary>
+            <param name="x">X location of the Goal starting with 0 as the farthest left</param>
+            <param name="y">Y location of the Goal starting with 0 as the top</param>
+        </member>
+        <member name="M:RogueSharp.GoalMap.ClearGoals">
+            <summary>
+            Remove all goals from this GoalMap
+            </summary>
+        </member>
+        <member name="M:RogueSharp.GoalMap.AddObstacle(System.Int32,System.Int32)">
+            <summary>
+            Add an Obstacle at the specified location. Any paths found must not go through Obstacles
+            </summary>
+            <param name="x">X location of the Obstacle starting with 0 as the farthest left</param>
+            <param name="y">Y location of the Obstacle starting with 0 as the top</param>
+        </member>
+        <member name="M:RogueSharp.GoalMap.AddObstacles(System.Collections.Generic.IEnumerable{RogueSharp.Point})">
+            <summary>
+            Add multiple obstacles from the specified enumeration of locations
+            </summary>
+            <param name="obstacles">An enumeration of points representing X, Y locations of Obstacles to avoid when pathfinding</param>
+        </member>
+        <member name="M:RogueSharp.GoalMap.RemoveObstacle(System.Int32,System.Int32)">
+            <summary>
+            Remove an Obstacle at the specified location
+            </summary>
+            <param name="x">X location of the Obstacle starting with 0 as the farthest left</param>
+            <param name="y">Y location of the Obstacle starting with 0 as the top</param>
+        </member>
+        <member name="M:RogueSharp.GoalMap.ClearObstacles">
+            <summary>
+            Remove all Obstacles from this GoalMap
+            </summary>
+        </member>
+        <member name="M:RogueSharp.GoalMap.FindPathAvoidingGoals(System.Int32,System.Int32)">
+            <summary>
+            Returns a Path representing an ordered list of Points from the specified location away from Goals specified in this GoalMap instance
+            Distance to the goals and the weight of the goals are both used in determining the priority of avoiding the Goals
+            The path must not pass through any Obstacles specified in this GoalMap instance
+            </summary>
+            <exmaple>
+            In order to make the enemy AI try to flee from the player and his allies, Goals could be set on each object that the
+            AI should stay away from. Then calling this method will find a path away from those Goals
+            </exmaple>
+            <exception cref="T:RogueSharp.PathNotFoundException">Thrown when there are no possible paths</exception>
+            <param name="x">X location of the beginning of the path, starting with 0 as the farthest left</param>
+            <param name="y">Y location of the beginning of the path, starting with 0 as the top</param>
+            <returns>A Path representing ordered List of Points from the specified location away from Goals and avoiding Obstacles</returns>
+        </member>
+        <member name="M:RogueSharp.GoalMap.TryFindPathAvoidingGoals(System.Int32,System.Int32)">
+            <summary>
+            Returns a Path representing an ordered list of Points from the specified location away from Goals specified in this GoalMap instance
+            Distance to the goals and the weight of the goals are both used in determining the priority of avoiding the Goals
+            The path must not pass through any Obstacles specified in this GoalMap instance
+            Returns null if a Path is not found
+            </summary>
+            <exmaple>
+            In order to make the enemy AI try to flee from the player and his allies, Goals could be set on each object that the
+            AI should stay away from. Then calling this method will find a path away from those Goals
+            </exmaple>
+            <param name="x">X location of the beginning of the path, starting with 0 as the farthest left</param>
+            <param name="y">Y location of the beginning of the path, starting with 0 as the top</param>
+            <returns>A Path representing ordered List of Points from the specified location away from Goals and avoiding Obstacles. Returns null if a Path is not found</returns>
+        </member>
+        <member name="M:RogueSharp.GoalMap.FindPath(System.Int32,System.Int32)">
+            <summary>
+            Returns a shortest Path representing an ordered List of Points from the specified location to the Goal determined to have the highest priority
+            Distance to the goals and the weight of the goals are both used in determining the priority
+            The path must not pass through any obstacles specified in this GoalMap instance
+            </summary>
+            <exception cref="T:RogueSharp.PathNotFoundException">Thrown when there is not a path from the Source x,y to any Goal or a Goal is not set</exception>
+            <param name="x">X location of the beginning of the path, starting with 0 as the farthest left</param>
+            <param name="y">Y location of the beginning of the path, starting with 0 as the top</param>
+            <returns>An ordered List of Points representing a shortest path from the specified location to the Goal determined to have the highest priority</returns>
+        </member>
+        <member name="M:RogueSharp.GoalMap.TryFindPath(System.Int32,System.Int32)">
+            <summary>
+            Returns a shortest Path representing an ordered List of Points from the specified location to the Goal determined to have the highest priority
+            Distance to the goals and the weight of the goals are both used in determining the priority
+            The path must not pass through any obstacles specified in this GoalMap instance
+            null will be returned if a path cannot be found
+            </summary>
+            <param name="x">X location of the beginning of the path, starting with 0 as the farthest left</param>
+            <param name="y">Y location of the beginning of the path, starting with 0 as the top</param>
+            <returns>An ordered List of Points representing a shortest path from the specified location to the Goal determined to have the highest priority. null is returned if a path cannot be found</returns>
+        </member>
+        <member name="M:RogueSharp.GoalMap.FindPaths(System.Int32,System.Int32)">
+            <summary>
+            Returns a ReadOnlyCollection of Paths representing all of the shortest paths from the specified location to the Goal or Goals determined to have the highest priority
+            This method is useful when there are multiple paths that would all work and we want to have some additional logic to pick one of the best paths
+            The FindPath( int x, int y ) method in the GoalMap class uses this method and then chooses the first path.
+            </summary>
+            <exception cref="T:RogueSharp.PathNotFoundException">Thrown when there is not a path from the Source x,y to any Goal or a Goal is not set</exception>
+            <param name="x">X location of the beginning of the path, starting with 0 as the farthest left</param>
+            <param name="y">Y location of the beginning of the path, starting with 0 as the top</param>
+            <returns>A ReadOnlyCollection of Paths representing all of the shortest paths from the specified location to the Goal or Goals determined to have the highest priority</returns>
+        </member>
+        <member name="M:RogueSharp.GoalMap.TryFindPaths(System.Int32,System.Int32)">
+            <summary>
+            Returns a ReadOnlyCollection of Paths representing all of the shortest paths from the specified location to the Goal or Goals determined to have the highest priority
+            This method is useful when there are multiple paths that would all work and we want to have some additional logic to pick one of the best paths
+            The FindPath( int x, int y ) method in the GoalMap class uses this method and then chooses the first path.
+            </summary>
+            <param name="x">X location of the beginning of the path, starting with 0 as the farthest left</param>
+            <param name="y">Y location of the beginning of the path, starting with 0 as the top</param>
+            <returns>A ReadOnlyCollection of Paths representing all of the shortest paths from the specified location to the Goal or Goals determined to have the highest priority. Returns null if no path is found.</returns>
+        </member>
+        <member name="M:RogueSharp.GoalMap.ToString">
+            <summary>
+            Returns a string representation of the current GoalMap
+            </summary>
+            <returns>A string representing the current GoalMap</returns>
+        </member>
+        <member name="T:RogueSharp.IMap">
+            <summary>
+            A Map represents a rectangular grid of Cells, each of which has a number of properties for determining walkability, field-of-view and so on
+            The upper left corner of the Map is Cell (0,0) and the X value increases to the right, as the Y value increases downward
+            </summary>
+        </member>
+        <member name="M:RogueSharp.IMap.Initialize(System.Int32,System.Int32)">
+            <summary>
+            Create a new map with the properties of all Cells set to false
+            </summary>
+            <remarks>
+            This is basically a solid stone map that would then need to be modified to have interesting features
+            </remarks>
+            <param name="width">How many Cells wide the Map will be</param>
+            <param name="height">How many Cells tall the Map will be</param>
+        </member>
+        <member name="M:RogueSharp.IMap.IsTransparent(System.Int32,System.Int32)">
+            <summary>
+            Get the transparency of the Cell i.e. if line of sight would be blocked by this Cell
+            </summary>
+            <example>      
+            A Cell representing an empty stone floor would be transparent 
+            A Cell representing a glass wall could be transparent (even though it may not be walkable)
+            A Cell representing a solid stone wall would not be transparent
+            </example>
+            <param name="x">X location of the Cell to check starting with 0 as the farthest left</param>
+            <param name="y">Y location of the Cell to check, starting with 0 as the top</param>
+            <returns>True if line-of-sight is not blocked by this Cell, false otherwise</returns>
+        </member>
+        <member name="M:RogueSharp.IMap.IsWalkable(System.Int32,System.Int32)">
+            <summary>
+            Get the walkability of the Cell i.e. if a character could normally move across the Cell without difficulty
+            </summary>
+            <example>      
+            A Cell representing an empty stone floor would be walkable
+            A Cell representing a glass wall may not be walkable (even though it could be transparent)
+            A Cell representing a solid stone wall would not be walkable
+            </example>
+            <param name="x">X location of the Cell to check starting with 0 as the farthest left</param>
+            <param name="y">Y location of the Cell to check, starting with 0 as the top</param>
+            <returns>True if a character could move across this Cell, false otherwise</returns>
+        </member>
+        <member name="M:RogueSharp.IMap.IsInFov(System.Int32,System.Int32)">
+            <summary>
+            Check if the Cell is in the currently computed field-of-view
+            For newly initialized maps a field-of-view will not exist so all Cells will return false
+            Field-of-view must first be calculated by calling ComputeFov and/or AppendFov
+            </summary>
+            <remarks>
+            Field-of-view (FOV) is basically a calculation of what is observable in the Map from a given Cell with a given light radius
+            </remarks>
+            <example>
+            Field-of-view c be used to simulate a character holding a light source and exploring a Map representing a dark cavern
+            Any Cells within the FOV would be what the character could see from their current location and lighting conditions
+            </example>
+            <param name="x">X location of the Cell to check starting with 0 as the farthest left</param>
+            <param name="y">Y location of the Cell to check, starting with 0 as the top</param>
+            <returns>True if the Cell is in the currently computed field-of-view, false otherwise</returns>
+        </member>
+        <member name="M:RogueSharp.IMap.IsExplored(System.Int32,System.Int32)">
+            <summary>
+            Check if the Cell is flagged as ever having been explored by the player
+            </summary>
+            <remarks>
+            The explored property of a Cell can be used to track if the Cell has ever been in the field-of-view of a character controlled by the player
+            This property will not automatically be updated based on FOV calculations or any other built-in functions of the RogueSharp library.
+            </remarks>
+            <example>
+            As the player moves characters around a Map, Cells will enter and exit the currently computed field-of-view
+            This property can be used to keep track of those Cells that have been "seen" and could be used to show fog-of-war type effects when rendering the map
+            </example>
+            <param name="x">X location of the Cell to check starting with 0 as the farthest left</param>
+            <param name="y">Y location of the Cell to check, starting with 0 as the top</param>
+            <returns>True if the Cell has been flagged as being explored by the player, false otherwise</returns>
+        </member>
+        <member name="M:RogueSharp.IMap.SetCellProperties(System.Int32,System.Int32,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Set the properties of a Cell to the specified values
+            </summary>
+            <remarks>
+            IsInFov cannot be set through this method as it is always calculated by calling ComputeFov and/or AppendFov
+            </remarks>
+            <param name="x">X location of the Cell to set properties on, starting with 0 as the farthest left</param>
+            <param name="y">Y location of the Cell to set properties on, starting with 0 as the top</param>
+            <param name="isTransparent">True if line-of-sight is not blocked by this Cell. False otherwise</param>
+            <param name="isWalkable">True if a character could walk across the Cell normally. False otherwise</param>
+            <param name="isExplored">Optional parameter defaults to false if not provided. True if the Cell has ever been in the field-of-view of the player. False otherwise</param>
+        </member>
+        <member name="M:RogueSharp.IMap.SetCellProperties(System.Int32,System.Int32,System.Boolean,System.Boolean)">
+            <summary>
+            Set the properties of an unexplored Cell to the specified values
+            </summary>
+            <remarks>
+            IsInFov cannot be set through this method as it is always calculated by calling ComputeFov and/or AppendFov
+            </remarks>
+            <param name="x">X location of the Cell to set properties on, starting with 0 as the farthest left</param>
+            <param name="y">Y location of the Cell to set properties on, starting with 0 as the top</param>
+            <param name="isTransparent">True if line-of-sight is not blocked by this Cell. False otherwise</param>
+            <param name="isWalkable">True if a character could walk across the Cell normally. False otherwise</param>
+        </member>
+        <member name="M:RogueSharp.IMap.Clear">
+            <summary>
+            Sets the properties of all Cells in the Map to be transparent and walkable
+            </summary>
+        </member>
+        <member name="M:RogueSharp.IMap.Clear(System.Boolean,System.Boolean)">
+            <summary>
+            Sets the properties of all Cells in the Map to the specified values
+            </summary>
+            <param name="isTransparent">Optional parameter defaults to false if not provided. True if line-of-sight is not blocked by this Cell. False otherwise</param>
+            <param name="isWalkable">Optional parameter defaults to false if not provided. True if a character could walk across the Cell normally. False otherwise</param>
+        </member>
+        <member name="M:RogueSharp.IMap.Clone">
+            <summary>
+            Create and return a deep copy of an existing Map
+            </summary>
+            <returns>IMap deep copy of the original Map</returns>
+        </member>
+        <member name="M:RogueSharp.IMap.Copy(RogueSharp.IMap)">
+            <summary>
+            Copies the Cell properties of a smaller source Map into this destination Map at location (0,0)
+            </summary>
+            <param name="sourceMap">An IMap which must be of smaller size and able to fit in this destination Map at the specified location</param>
+        </member>
+        <member name="M:RogueSharp.IMap.Copy(RogueSharp.IMap,System.Int32,System.Int32)">
+            <summary>
+            Copies the Cell properties of a smaller source Map into this destination Map at the specified location
+            </summary>
+            <param name="sourceMap">An IMap which must be of smaller size and able to fit in this destination Map at the specified location</param>
+            <param name="left">Optional parameter defaults to 0 if not provided. X location of the Cell to start copying parameters to, starting with 0 as the farthest left</param>
+            <param name="top">Optional parameter defaults to 0 if not provided. Y location of the Cell to start copying parameters to, starting with 0 as the top</param>
+        </member>
+        <member name="M:RogueSharp.IMap.ComputeFov(System.Int32,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Performs a field-of-view calculation with the specified parameters.
+            Field-of-view (FOV) is basically a calculation of what is observable in the Map from a given Cell with a given light radius.
+            Any existing field-of-view calculations will be overwritten when calling this method.
+            </summary>
+            <param name="xOrigin">X location of the Cell to perform the field-of-view calculation with 0 as the farthest left</param>
+            <param name="yOrigin">Y location of the Cell to perform the field-of-view calculation with 0 as the top</param>
+            <param name="radius">The number of Cells in which the field-of-view extends from the origin Cell. Think of this as the intensity of the light source.</param>
+            <param name="lightWalls">True if walls should be included in the field-of-view when they are within the radius of the light source. False excludes walls even when they are within range.</param>
+            <returns>List of Cells representing what is observable in the Map based on the specified parameters</returns>
+        </member>
+        <member name="M:RogueSharp.IMap.AppendFov(System.Int32,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Performs a field-of-view calculation with the specified parameters and appends it any existing field-of-view calculations.
+            Field-of-view (FOV) is basically a calculation of what is observable in the Map from a given Cell with a given light radius.
+            </summary>
+            <example>
+            When a character is holding a light source in a large area that also has several other sources of light such as torches along the walls
+            ComputeFov could first be called for the character and then AppendFov could be called for each torch to give us the final combined FOV given all the light sources
+            </example>
+            <param name="xOrigin">X location of the Cell to perform the field-of-view calculation with 0 as the farthest left</param>
+            <param name="yOrigin">Y location of the Cell to perform the field-of-view calculation with 0 as the top</param>
+            <param name="radius">The number of Cells in which the field-of-view extends from the origin Cell. Think of this as the intensity of the light source.</param>
+            <param name="lightWalls">True if walls should be included in the field-of-view when they are within the radius of the light source. False excludes walls even when they are within range.</param>
+            <returns>List of Cells representing what is observable in the Map based on the specified parameters</returns>
+        </member>
+        <member name="M:RogueSharp.IMap.GetAllCells">
+            <summary>
+            Get an IEnumerable of all Cells in the Map
+            </summary>
+            <returns>IEnumerable of all Cells in the Map</returns>
+        </member>
+        <member name="M:RogueSharp.IMap.GetCellsAlongLine(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Get an IEnumerable of Cells in a line from the Origin Cell to the Destination Cell
+            The resulting IEnumerable includes the Origin and Destination Cells
+            Uses Bresenham's line algorithm to determine which Cells are in the closest approximation to a straight line between the two Cells
+            </summary>
+            <param name="xOrigin">X location of the Origin Cell at the start of the line with 0 as the farthest left</param>
+            <param name="yOrigin">Y location of the Origin Cell at the start of the line with 0 as the top</param>
+            <param name="xDestination">X location of the Destination Cell at the end of the line with 0 as the farthest left</param>
+            <param name="yDestination">Y location of the Destination Cell at the end of the line with 0 as the top</param>
+            <returns>IEnumerable of Cells in a line from the Origin Cell to the Destination Cell which includes the Origin and Destination Cells</returns>
+        </member>
+        <member name="M:RogueSharp.IMap.GetCellsInCircle(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Get an IEnumerable of Cells in a circle around the center Cell up to the specified radius using Bresenham's midpoint circle algorithm
+            </summary>
+            <seealso href="https://en.wikipedia.org/wiki/Midpoint_circle_algorithm">Based on Bresenham's midpoint circle algorithm</seealso>
+            <param name="xCenter">X location of the center Cell with 0 as the farthest left</param>
+            <param name="yCenter">Y location of the center Cell with 0 as the top</param>
+            <param name="radius">The number of Cells to get in a radius from the center Cell</param>
+            <returns>IEnumerable of Cells in a circle around the center Cell</returns>
+        </member>
+        <member name="M:RogueSharp.IMap.GetCellsInDiamond(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Get an IEnumerable of Cells in a diamond (Rhombus) shape around the center Cell up to the specified distance
+            </summary>
+            <param name="xCenter">X location of the center Cell with 0 as the farthest left</param>
+            <param name="yCenter">Y location of the center Cell with 0 as the top</param>
+            <param name="distance">The number of Cells to get in a distance from the center Cell</param>
+            <returns>IEnumerable of Cells in a diamond (Rhombus) shape around the center Cell</returns>
+        </member>
+        <member name="M:RogueSharp.IMap.GetCellsInSquare(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Get an IEnumerable of Cells in a square area around the center Cell up to the specified distance
+            </summary>
+            <param name="xCenter">X location of the center Cell with 0 as the farthest left</param>
+            <param name="yCenter">Y location of the center Cell with 0 as the top</param>
+            <param name="distance">The number of Cells to get in each direction from the center Cell</param>
+            <returns>IEnumerable of Cells in a square area around the center Cell</returns>
+        </member>
+        <member name="M:RogueSharp.IMap.GetBorderCellsInCircle(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Get an IEnumerable of outermost border Cells in a circle around the center Cell up to the specified radius using Bresenham's midpoint circle algorithm
+            </summary>
+            <seealso href="https://en.wikipedia.org/wiki/Midpoint_circle_algorithm">Based on Bresenham's midpoint circle algorithm</seealso>
+            <param name="xCenter">X location of the center Cell with 0 as the farthest left</param>
+            <param name="yCenter">Y location of the center Cell with 0 as the top</param>
+            <param name="radius">The number of Cells to get in a radius from the center Cell</param>
+            <returns>IEnumerable of outermost border Cells in a circle around the center Cell</returns>
+        </member>
+        <member name="M:RogueSharp.IMap.GetBorderCellsInDiamond(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Get an IEnumerable of outermost border Cells in a diamond (Rhombus) shape around the center Cell up to the specified distance
+            </summary>
+            <param name="xCenter">X location of the center Cell with 0 as the farthest left</param>
+            <param name="yCenter">Y location of the center Cell with 0 as the top</param>
+            <param name="distance">The number of Cells to get in a distance from the center Cell</param>
+            <returns>IEnumerable of outermost border Cells in a diamond (Rhombus) shape around the center Cell</returns>
+        </member>
+        <member name="M:RogueSharp.IMap.GetBorderCellsInSquare(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Get an IEnumerable of outermost border Cells in a square area around the center Cell up to the specified distance
+            </summary>
+            <param name="xCenter">X location of the center Cell with 0 as the farthest left</param>
+            <param name="yCenter">Y location of the center Cell with 0 as the top</param>
+            <param name="distance">The number of Cells to get in each direction from the center Cell</param>
+            <returns>IEnumerable of outermost border Cells in a square area around the center Cell</returns>
+        </member>
+        <member name="M:RogueSharp.IMap.GetCellsInRows(System.Int32[])">
+            <summary>
+            Get an IEnumerable of all the Cells in the specified row numbers
+            </summary>
+            <param name="rowNumbers">Integer array of row numbers with 0 as the top</param>
+            <returns>IEnumerable of all the Cells in the specified row numbers</returns>
+        </member>
+        <member name="M:RogueSharp.IMap.GetCellsInColumns(System.Int32[])">
+            <summary>
+            Get an IEnumerable of all the Cells in the specified column numbers
+            </summary>
+            <param name="columnNumbers">Integer array of column numbers with 0 as the farthest left</param>
+            <returns>IEnumerable of all the Cells in the specified column numbers</returns>
+        </member>
+        <member name="M:RogueSharp.IMap.GetCell(System.Int32,System.Int32)">
+            <summary>
+            Get a Cell at the specified location
+            </summary>
+            <param name="x">X location of the Cell to get starting with 0 as the farthest left</param>
+            <param name="y">Y location of the Cell to get, starting with 0 as the top</param>
+            <returns>Cell at the specified location</returns>
+        </member>
+        <member name="M:RogueSharp.IMap.ToString(System.Boolean)">
+            <summary>
+            Provides a simple visual representation of the map using the following symbols:
+            - `%`: `Cell` is not in field-of-view
+            - `.`: `Cell` is transparent, walkable, and in field-of-view
+            - `s`: `Cell` is walkable and in field-of-view (but not transparent)
+            - `o`: `Cell` is transparent and in field-of-view (but not walkable)
+            - `#`: `Cell` is in field-of-view (but not transparent or walkable)
+            </summary>
+            <param name="useFov">True if field-of-view calculations will be used when creating the string represenation of the Map. False otherwise</param>
+            <returns>A string representation of the map using special symbols to denote Cell properties</returns>
+        </member>
+        <member name="M:RogueSharp.IMap.Save">
+            <summary>
+            Get a MapState POCO which represents this Map and can be easily serialized
+            Use Restore with the MapState to get back a full Map
+            </summary>
+            <returns>Mapstate POCO (Plain Old C# Object) which represents this Map and can be easily serialized</returns>
+        </member>
+        <member name="M:RogueSharp.IMap.Restore(RogueSharp.MapState)">
+            <summary>
+            Restore the state of this Map from the specified MapState
+            </summary>
+            <param name="state">Mapstate POCO (Plain Old C# Object) which represents this Map and can be easily serialized and deserialized</param>
+        </member>
+        <member name="M:RogueSharp.IMap.CellFor(System.Int32)">
+            <summary>
+            Get the Cell at the specified single dimensional array index using the formulas: x = index % Width; y = index / Width;
+            </summary>
+            <param name="index">The single dimensional array index for the Cell that we want to get</param>
+            <returns>Cell at the specified single dimensional array index</returns>
+        </member>
+        <member name="M:RogueSharp.IMap.IndexFor(System.Int32,System.Int32)">
+            <summary>
+            Get the single dimensional array index for a Cell at the specified location using the formula: index = ( y * Width ) + x
+            </summary>
+            <param name="x">X location of the Cell index to get starting with 0 as the farthest left</param>
+            <param name="y">Y location of the Cell index to get, starting with 0 as the top</param>
+            <returns>An index for the Cell at the specified location useful if storing Cells in a single dimensional array</returns>
+        </member>
+        <member name="M:RogueSharp.IMap.IndexFor(RogueSharp.ICell)">
+            <summary>
+            Get the single dimensional array index for the specified Cell
+            </summary>
+            <param name="cell">The Cell to get the index for</param>
+            <returns>An index for the Cell which is useful if storing Cells in a single dimensional array</returns>
+        </member>
+        <member name="P:RogueSharp.IMap.Width">
+            <summary>
+            How many Cells wide the Map is
+            </summary>
+            <remarks>
+            A Map with a Width of 10 will have Cells with X locations of 0 through 9
+            Cells with an X value of 0 will be the leftmost Cells
+            </remarks>
+        </member>
+        <member name="P:RogueSharp.IMap.Height">
+            <summary>
+            How many Cells tall the Map is
+            </summary>
+            <remarks>
+            A Map with a Height of 20 will have Cells with Y locations of 0 through 19
+            Cells with an Y value of 0 will be the topmost Cells
+            </remarks>
+        </member>
+        <member name="T:RogueSharp.MapState">
+            <summary>
+            A class representing the state of a Map which can be used to Restore a Map to a previously Saved state
+            This POCO (Plain Old C# Object) can be easily serialized and deserialized
+            </summary>
+        </member>
+        <member name="P:RogueSharp.MapState.Width">
+            <summary>
+            How many Cells wide the Map is
+            </summary>
+        </member>
+        <member name="P:RogueSharp.MapState.Height">
+            <summary>
+            How many Cells tall the Map is
+            </summary>
+        </member>
+        <member name="P:RogueSharp.MapState.Cells">
+            <summary>
+            An array of the Flags Enumeration of CellProperties for each Cell in the Map.
+            The index of the array corresponds to the location of the Cell within the Map using the forumla: index = ( y * Width ) + x
+            </summary>
+        </member>
+        <member name="T:RogueSharp.MapState.CellProperties">
+            <summary>
+            Flags Enumeration of the possible properties for any Cell in the Map
+            </summary>
+        </member>
+        <member name="F:RogueSharp.MapState.CellProperties.None">
+            <summary>
+            Not set
+            </summary>
+        </member>
+        <member name="F:RogueSharp.MapState.CellProperties.Walkable">
+            <summary>
+            A character could normally walk across the Cell without difficulty
+            </summary>
+        </member>
+        <member name="F:RogueSharp.MapState.CellProperties.Transparent">
+            <summary>
+            There is a clear line-of-sight through this Cell
+            </summary>
+        </member>
+        <member name="F:RogueSharp.MapState.CellProperties.Visible">
+            <summary>
+            The Cell is in the currently observable field-of-view
+            </summary>
+        </member>
+        <member name="F:RogueSharp.MapState.CellProperties.Explored">
+            <summary>
+            The Cell has been in the field-of-view in the player at some point during the game
+            </summary>
+        </member>
+        <member name="T:RogueSharp.MapCreation.BorderOnlyMapCreationStrategy`1">
+            <summary>
+            The BorderOnlyMapCreationStrategy creates a Map of the specified type by making an empty map with only the outermost border being solid walls
+            </summary>
+            <typeparam name="T">The type of IMap that will be created</typeparam>
+        </member>
+        <member name="T:RogueSharp.MapCreation.IMapCreationStrategy`1">
+            <summary>
+            An generic interface for creating a new IMap of a specified type
+            </summary>
+            <typeparam name="T">The type of IMap that will be created</typeparam>
+        </member>
+        <member name="M:RogueSharp.MapCreation.IMapCreationStrategy`1.CreateMap">
+            <summary>
+            Creates a new IMap of the specified type
+            </summary>
+            <returns>An IMap of the specified type</returns>
+        </member>
+        <member name="M:RogueSharp.MapCreation.BorderOnlyMapCreationStrategy`1.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Constructs a new BorderOnlyMapCreationStrategy with the specified parameters
+            </summary>
+            <param name="width">The width of the Map to be created</param>
+            <param name="height">The height of the Map to be created</param>
+        </member>
+        <member name="M:RogueSharp.MapCreation.BorderOnlyMapCreationStrategy`1.CreateMap">
+            <summary>
+            Creates a Map of the specified type by making an empty map with only the outermost border being solid walls
+            </summary>
+            <returns>An IMap of the specified type</returns>
+        </member>
+        <member name="T:RogueSharp.MapCreation.CaveMapCreationStrategy`1">
+            <summary>
+            The CaveMapCreationStrategy creates a Map of the specified type by using a cellular automata algorithm for creating a cave-like map.
+            </summary>
+            <seealso href="http://www.roguebasin.com/index.php?title=Cellular_Automata_Method_for_Generating_Random_Cave-Like_Levels">Cellular Automata Method from RogueBasin</seealso>
+            <typeparam name="T">The type of IMap that will be created</typeparam>
+        </member>
+        <member name="M:RogueSharp.MapCreation.CaveMapCreationStrategy`1.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,RogueSharp.Random.IRandom)">
+            <summary>
+            Constructs a new CaveMapCreationStrategy with the specified parameters
+            </summary>
+            <param name="width">The width of the Map to be created</param>
+            <param name="height">The height of the Map to be created</param>
+            <param name="fillProbability">Recommend int between 40 and 60. Percent chance that a given cell will be a floor when randomizing all cells.</param>
+            <param name="totalIterations">Recommend int between 2 and 5. Number of times to execute the cellular automata algorithm.</param>
+            <param name="cutoffOfBigAreaFill">Recommend int less than 4. The interation number to switch from the large area fill algorithm to a nearest neighbor algorithm</param>
+            <param name="random">A class implementing IRandom that will be used to generate pseudo-random numbers necessary to create the Map</param>
+        </member>
+        <member name="M:RogueSharp.MapCreation.CaveMapCreationStrategy`1.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Constructs a new CaveMapCreationStrategy with the specified parameters
+            </summary>
+            <param name="width">The width of the Map to be created</param>
+            <param name="height">The height of the Map to be created</param>
+            <param name="fillProbability">Recommend int between 40 and 60. Percent chance that a given cell will be a floor when randomizing all cells.</param>
+            <param name="totalIterations">Recommend int between 2 and 5. Number of times to execute the cellular automata algorithm.</param>
+            <param name="cutoffOfBigAreaFill">Recommend int less than 4. The interation number to switch from the large area fill algorithm to a nearest neighbor algorithm</param>
+            <remarks>Uses DotNetRandom as its RNG</remarks>
+        </member>
+        <member name="M:RogueSharp.MapCreation.CaveMapCreationStrategy`1.CreateMap">
+            <summary>
+            Creates a new IMap of the specified type.
+            </summary>
+            <remarks>
+            The map will be generated using cellular automata. First each cell in the map will be set to a floor or wall randomly based on the specified fillProbability.
+            Next each cell will be examined a number of times, and in each iteration it may be turned into a wall if there are enough other walls near it.
+            Once finished iterating and examining neighboring cells, any isolated map regions will be connected with paths.
+            </remarks>
+            <returns>An IMap of the specified type</returns>
+        </member>
+        <member name="T:RogueSharp.Map">
+            <summary>
+            A Map represents a rectangular grid of Cells, each of which has a number of properties for determining walkability, field-of-view and so on
+            The upper left corner of the Map is Cell (0,0) and the X value increases to the right, as the Y value increases downward
+            </summary>
+        </member>
+        <member name="M:RogueSharp.Map.#ctor">
+            <summary>
+            Constructor creates a new uninitialized Map
+            </summary>
+        </member>
+        <member name="M:RogueSharp.Map.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Constructor creates a new Map and immediately initializes it
+            </summary>
+            <param name="width">How many Cells wide the Map will be</param>
+            <param name="height">How many Cells tall the Map will be</param>
+        </member>
+        <member name="M:RogueSharp.Map.Initialize(System.Int32,System.Int32)">
+            <summary>
+            Create a new map with the properties of all Cells set to false
+            </summary>
+            <remarks>
+            This is basically a solid stone map that would then need to be modified to have interesting features
+            </remarks>
+            <param name="width">How many Cells wide the Map will be</param>
+            <param name="height">How many Cells tall the Map will be</param>
+        </member>
+        <member name="M:RogueSharp.Map.IsTransparent(System.Int32,System.Int32)">
+            <summary>
+            Get the transparency of the Cell i.e. if line of sight would be blocked by this Cell
+            </summary>
+            <example>      
+            A Cell representing an empty stone floor would be transparent 
+            A Cell representing a glass wall could be transparent (even though it may not be walkable)
+            A Cell representing a solid stone wall would not be transparent
+            </example>
+            <param name="x">X location of the Cell to check starting with 0 as the farthest left</param>
+            <param name="y">Y location of the Cell to check, starting with 0 as the top</param>
+            <returns>True if line-of-sight is not blocked by this Cell, false otherwise</returns>
+        </member>
+        <member name="M:RogueSharp.Map.IsWalkable(System.Int32,System.Int32)">
+            <summary>
+            Get the walkability of the Cell i.e. if a character could normally move across the Cell without difficulty
+            </summary>
+            <example>      
+            A Cell representing an empty stone floor would be walkable
+            A Cell representing a glass wall may not be walkable (even though it could be transparent)
+            A Cell representing a solid stone wall would not be walkable
+            </example>
+            <param name="x">X location of the Cell to check starting with 0 as the farthest left</param>
+            <param name="y">Y location of the Cell to check, starting with 0 as the top</param>
+            <returns>True if a character could move across this Cell, false otherwise</returns>
+        </member>
+        <member name="M:RogueSharp.Map.IsInFov(System.Int32,System.Int32)">
+            <summary>
+            Check if the Cell is in the currently computed field-of-view
+            For newly initialized maps a field-of-view will not exist so all Cells will return false
+            Field-of-view must first be calculated by calling ComputeFov and/or AppendFov
+            </summary>
+            <remarks>
+            Field-of-view (FOV) is basically a calculation of what is observable in the Map from a given Cell with a given light radius
+            </remarks>
+            <example>
+            Field-of-view can be used to simulate a character holding a light source and exploring a Map representing a dark cavern
+            Any Cells within the FOV would be what the character could see from their current location and lighting conditions
+            </example>
+            <param name="x">X location of the Cell to check starting with 0 as the farthest left</param>
+            <param name="y">Y location of the Cell to check, starting with 0 as the top</param>
+            <returns>True if the Cell is in the currently computed field-of-view, false otherwise</returns>
+        </member>
+        <member name="M:RogueSharp.Map.IsExplored(System.Int32,System.Int32)">
+            <summary>
+            Check if the Cell is flagged as ever having been explored by the player
+            </summary>
+            <remarks>
+            The explored property of a Cell can be used to track if the Cell has ever been in the field-of-view of a character controlled by the player
+            This property will not automatically be updated based on FOV calculations or any other built-in functions of the RogueSharp library.
+            </remarks>
+            <example>
+            As the player moves characters around a Map, Cells will enter and exit the currently computed field-of-view
+            This property can be used to keep track of those Cells that have been "seen" and could be used to show fog-of-war type effects when rendering the map
+            </example>
+            <param name="x">X location of the Cell to check starting with 0 as the farthest left</param>
+            <param name="y">Y location of the Cell to check, starting with 0 as the top</param>
+            <returns>True if the Cell has been flagged as being explored by the player, false otherwise</returns>
+        </member>
+        <member name="M:RogueSharp.Map.SetCellProperties(System.Int32,System.Int32,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Set the properties of a Cell to the specified values
+            </summary>
+            <remarks>
+            IsInFov cannot be set through this method as it is always calculated by calling ComputeFov and/or AppendFov
+            </remarks>
+            <param name="x">X location of the Cell to set properties on, starting with 0 as the farthest left</param>
+            <param name="y">Y location of the Cell to set properties on, starting with 0 as the top</param>
+            <param name="isTransparent">True if line-of-sight is not blocked by this Cell. False otherwise</param>
+            <param name="isWalkable">True if a character could walk across the Cell normally. False otherwise</param>
+            <param name="isExplored">True if the Cell has ever been in the field-of-view of the player. False otherwise</param>
+        </member>
+        <member name="M:RogueSharp.Map.SetCellProperties(System.Int32,System.Int32,System.Boolean,System.Boolean)">
+            <summary>
+            Set the properties of an unexplored Cell to the specified values
+            </summary>
+            <remarks>
+            IsInFov cannot be set through this method as it is always calculated by calling ComputeFov and/or AppendFov
+            </remarks>
+            <param name="x">X location of the Cell to set properties on, starting with 0 as the farthest left</param>
+            <param name="y">Y location of the Cell to set properties on, starting with 0 as the top</param>
+            <param name="isTransparent">True if line-of-sight is not blocked by this Cell. False otherwise</param>
+            <param name="isWalkable">True if a character could walk across the Cell normally. False otherwise</param>
+        </member>
+        <member name="M:RogueSharp.Map.Clear">
+            <summary>
+            Sets the properties of all Cells in the Map to be transparent and walkable
+            </summary>
+        </member>
+        <member name="M:RogueSharp.Map.Clear(System.Boolean,System.Boolean)">
+            <summary>
+            Sets the properties of all Cells in the Map to the specified values
+            </summary>
+            <param name="isTransparent">Optional parameter defaults to true if not provided. True if line-of-sight is not blocked by this Cell. False otherwise</param>
+            <param name="isWalkable">Optional parameter defaults to true if not provided. True if a character could walk across the Cell normally. False otherwise</param>
+        </member>
+        <member name="M:RogueSharp.Map.Clone">
+            <summary>
+            Create and return a deep copy of an existing Map
+            </summary>
+            <returns>IMap deep copy of the original Map</returns>
+        </member>
+        <member name="M:RogueSharp.Map.Copy(RogueSharp.IMap)">
+            <summary>
+            Copies the Cell properties of a smaller source Map into this destination Map at location (0,0)
+            </summary>
+            <param name="sourceMap">An IMap which must be of smaller size and able to fit in this destination Map at the specified location</param>
+        </member>
+        <member name="M:RogueSharp.Map.Copy(RogueSharp.IMap,System.Int32,System.Int32)">
+            <summary>
+            Copies the Cell properties of a smaller source Map into this destination Map at the specified location
+            </summary>
+            <param name="sourceMap">An IMap which must be of smaller size and able to fit in this destination Map at the specified location</param>
+            <param name="left">Optional parameter defaults to 0 if not provided. X location of the Cell to start copying parameters to, starting with 0 as the farthest left</param>
+            <param name="top">Optional parameter defaults to 0 if not provided. Y location of the Cell to start copying parameters to, starting with 0 as the top</param>
+            <exception cref="T:System.ArgumentNullException">Thrown on null source map</exception>
+            <exception cref="T:System.ArgumentException">Thrown on invalid source map dimensions</exception>
+        </member>
+        <member name="M:RogueSharp.Map.ComputeFov(System.Int32,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Performs a field-of-view calculation with the specified parameters.
+            Field-of-view (FOV) is basically a calculation of what is observable in the Map from a given Cell with a given light radius.
+            Any existing field-of-view calculations will be overwritten when calling this method.
+            </summary>
+            <param name="xOrigin">X location of the Cell to perform the field-of-view calculation with 0 as the farthest left</param>
+            <param name="yOrigin">Y location of the Cell to perform the field-of-view calculation with 0 as the top</param>
+            <param name="radius">The number of Cells in which the field-of-view extends from the origin Cell. Think of this as the intensity of the light source.</param>
+            <param name="lightWalls">True if walls should be included in the field-of-view when they are within the radius of the light source. False excludes walls even when they are within range.</param>
+            <returns>List of Cells representing what is observable in the Map based on the specified parameters</returns>
+        </member>
+        <member name="M:RogueSharp.Map.AppendFov(System.Int32,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Performs a field-of-view calculation with the specified parameters and appends it any existing field-of-view calculations.
+            Field-of-view (FOV) is basically a calculation of what is observable in the Map from a given Cell with a given light radius.
+            </summary>
+            <example>
+            When a character is holding a light source in a large area that also has several other sources of light such as torches along the walls
+            ComputeFov could first be called for the character and then AppendFov could be called for each torch to give us the final combined FOV given all the light sources
+            </example>
+            <param name="xOrigin">X location of the Cell to perform the field-of-view calculation with 0 as the farthest left</param>
+            <param name="yOrigin">Y location of the Cell to perform the field-of-view calculation with 0 as the top</param>
+            <param name="radius">The number of Cells in which the field-of-view extends from the origin Cell. Think of this as the intensity of the light source.</param>
+            <param name="lightWalls">True if walls should be included in the field-of-view when they are within the radius of the light source. False excludes walls even when they are within range.</param>
+            <returns>List of Cells representing what is observable in the Map based on the specified parameters</returns>
+        </member>
+        <member name="M:RogueSharp.Map.GetAllCells">
+            <summary>
+            Get an IEnumerable of all Cells in the Map
+            </summary>
+            <returns>IEnumerable of all Cells in the Map</returns>
+        </member>
+        <member name="M:RogueSharp.Map.GetCellsAlongLine(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Get an IEnumerable of Cells in a line from the Origin Cell to the Destination Cell
+            The resulting IEnumerable includes the Origin and Destination Cells
+            Uses Bresenham's line algorithm to determine which Cells are in the closest approximation to a straight line between the two Cells
+            </summary>
+            <param name="xOrigin">X location of the Origin Cell at the start of the line with 0 as the farthest left</param>
+            <param name="yOrigin">Y location of the Origin Cell at the start of the line with 0 as the top</param>
+            <param name="xDestination">X location of the Destination Cell at the end of the line with 0 as the farthest left</param>
+            <param name="yDestination">Y location of the Destination Cell at the end of the line with 0 as the top</param>
+            <returns>IEnumerable of Cells in a line from the Origin Cell to the Destination Cell which includes the Origin and Destination Cells</returns>
+        </member>
+        <member name="M:RogueSharp.Map.GetCellsInCircle(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Get an IEnumerable of Cells in a circle around the center Cell up to the specified radius using Bresenham's midpoint circle algorithm
+            </summary>
+            <seealso href="https://en.wikipedia.org/wiki/Midpoint_circle_algorithm">Based on Bresenham's midpoint circle algorithm</seealso>
+            <param name="xCenter">X location of the center Cell with 0 as the farthest left</param>
+            <param name="yCenter">Y location of the center Cell with 0 as the top</param>
+            <param name="radius">The number of Cells to get in a radius from the center Cell</param>
+            <returns>IEnumerable of Cells in a circle around the center Cell</returns>
+        </member>
+        <member name="M:RogueSharp.Map.GetCellsInDiamond(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Get an IEnumerable of Cells in a diamond (Rhombus) shape around the center Cell up to the specified distance
+            </summary>
+            <param name="xCenter">X location of the center Cell with 0 as the farthest left</param>
+            <param name="yCenter">Y location of the center Cell with 0 as the top</param>
+            <param name="distance">The number of Cells to get in a distance from the center Cell</param>
+            <returns>IEnumerable of Cells in a diamond (Rhombus) shape around the center Cell</returns>
+        </member>
+        <member name="M:RogueSharp.Map.GetCellsInSquare(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Get an IEnumerable of Cells in a square area around the center Cell up to the specified distance
+            </summary>
+            <param name="xCenter">X location of the center Cell with 0 as the farthest left</param>
+            <param name="yCenter">Y location of the center Cell with 0 as the top</param>
+            <param name="distance">The number of Cells to get in each direction from the center Cell</param>
+            <returns>IEnumerable of Cells in a square area around the center Cell</returns>
+        </member>
+        <member name="M:RogueSharp.Map.GetBorderCellsInCircle(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Get an IEnumerable of outermost border Cells in a circle around the center Cell up to the specified radius using Bresenham's midpoint circle algorithm
+            </summary>
+            <seealso href="https://en.wikipedia.org/wiki/Midpoint_circle_algorithm">Based on Bresenham's midpoint circle algorithm</seealso>
+            <param name="xCenter">X location of the center Cell with 0 as the farthest left</param>
+            <param name="yCenter">Y location of the center Cell with 0 as the top</param>
+            <param name="radius">The number of Cells to get in a radius from the center Cell</param>
+            <returns>IEnumerable of outermost border Cells in a circle around the center Cell</returns>
+        </member>
+        <member name="M:RogueSharp.Map.GetBorderCellsInDiamond(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Get an IEnumerable of outermost border Cells in a diamond (Rhombus) shape around the center Cell up to the specified distance
+            </summary>
+            <param name="xCenter">X location of the center Cell with 0 as the farthest left</param>
+            <param name="yCenter">Y location of the center Cell with 0 as the top</param>
+            <param name="distance">The number of Cells to get in a distance from the center Cell</param>
+            <returns>IEnumerable of outermost border Cells in a diamond (Rhombus) shape around the center Cell</returns>
+        </member>
+        <member name="M:RogueSharp.Map.GetBorderCellsInSquare(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Get an IEnumerable of outermost border Cells in a square area around the center Cell up to the specified distance
+            </summary>
+            <param name="xCenter">X location of the center Cell with 0 as the farthest left</param>
+            <param name="yCenter">Y location of the center Cell with 0 as the top</param>
+            <param name="distance">The number of Cells to get in each direction from the center Cell</param>
+            <returns>IEnumerable of outermost border Cells in a square area around the center Cell</returns>
+        </member>
+        <member name="M:RogueSharp.Map.GetCellsInRows(System.Int32[])">
+            <summary>
+            Get an IEnumerable of all the Cells in the specified row numbers
+            </summary>
+            <param name="rowNumbers">Integer array of row numbers with 0 as the top</param>
+            <returns>IEnumerable of all the Cells in the specified row numbers</returns>
+        </member>
+        <member name="M:RogueSharp.Map.GetCellsInColumns(System.Int32[])">
+            <summary>
+            Get an IEnumerable of all the Cells in the specified column numbers
+            </summary>
+            <param name="columnNumbers">Integer array of column numbers with 0 as the farthest left</param>
+            <returns>IEnumerable of all the Cells in the specified column numbers</returns>
+        </member>
+        <member name="M:RogueSharp.Map.GetCell(System.Int32,System.Int32)">
+            <summary>
+            Get a Cell at the specified location
+            </summary>
+            <param name="x">X location of the Cell to get starting with 0 as the farthest left</param>
+            <param name="y">Y location of the Cell to get, starting with 0 as the top</param>
+            <returns>Cell at the specified location</returns>
+        </member>
+        <member name="M:RogueSharp.Map.ToString(System.Boolean)">
+            <summary>
+            Provides a simple visual representation of the map using the following symbols:
+            - `%`: `Cell` is not in field-of-view
+            - `.`: `Cell` is transparent, walkable, and in field-of-view
+            - `s`: `Cell` is walkable and in field-of-view (but not transparent)
+            - `o`: `Cell` is transparent and in field-of-view (but not walkable)
+            - `#`: `Cell` is in field-of-view (but not transparent or walkable)
+            </summary>
+            <param name="useFov">True if field-of-view calculations will be used when creating the string represenation of the Map. False otherwise</param>
+            <returns>A string representation of the map using special symbols to denote Cell properties</returns>
+        </member>
+        <member name="M:RogueSharp.Map.Save">
+            <summary>
+            Get a MapState POCO which represents this Map and can be easily serialized
+            Use Restore with the MapState to get back a full Map
+            </summary>
+            <returns>Mapstate POCO (Plain Old C# Object) which represents this Map and can be easily serialized</returns>
+        </member>
+        <member name="M:RogueSharp.Map.Restore(RogueSharp.MapState)">
+            <summary>
+            Restore the state of this Map from the specified MapState
+            </summary>
+            <param name="state">Mapstate POCO (Plain Old C# Object) which represents this Map and can be easily serialized and deserialized</param>
+            <exception cref="T:System.ArgumentNullException">Thrown on null map state</exception>
+        </member>
+        <member name="M:RogueSharp.Map.Create(RogueSharp.MapCreation.IMapCreationStrategy{RogueSharp.Map})">
+            <summary>
+            Static factory method which creates a new Map using the specified IMapCreationStrategy
+            </summary>
+            <remarks>
+            Several classes implementing IMapCreationStrategy are included with RogueSharp but they are very basic
+            It recommended that you create your own class implementing this interface to create more interesting Maps
+            </remarks>
+            <param name="mapCreationStrategy">A class that implements IMapCreationStrategy and has CreateMap method which defines algorithms for creating interesting Maps</param>
+            <returns>Map created by calling CreateMap from the specified IMapCreationStrategy</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown on null map creation strategy</exception>
+        </member>
+        <member name="M:RogueSharp.Map.CellFor(System.Int32)">
+            <summary>
+            Get the Cell at the specified single dimensional array index using the formulas: x = index % Width; y = index / Width;
+            </summary>
+            <param name="index">The single dimensional array index for the Cell that we want to get</param>
+            <returns>Cell at the specified single dimensional array index</returns>
+        </member>
+        <member name="M:RogueSharp.Map.IndexFor(System.Int32,System.Int32)">
+            <summary>
+            Get the single dimensional array index for a Cell at the specified location using the formula: index = ( y * Width ) + x
+            </summary>
+            <param name="x">X location of the Cell index to get starting with 0 as the farthest left</param>
+            <param name="y">Y location of the Cell index to get, starting with 0 as the top</param>
+            <returns>An index for the Cell at the specified location useful if storing Cells in a single dimensional array</returns>
+        </member>
+        <member name="M:RogueSharp.Map.IndexFor(RogueSharp.ICell)">
+            <summary>
+            Get the single dimensional array index for the specified Cell
+            </summary>
+            <param name="cell">The Cell to get the index for</param>
+            <returns>An index for the Cell which is useful if storing Cells in a single dimensional array</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown on null cell</exception>
+        </member>
+        <member name="M:RogueSharp.Map.ToString">
+            <summary>
+            Provides a simple visual representation of the map using the following symbols:
+            - `.`: `Cell` is transparent and walkable
+            - `s`: `Cell` is walkable (but not transparent)
+            - `o`: `Cell` is transparent (but not walkable)
+            - `#`: `Cell` is not transparent or walkable
+            </summary>
+            <remarks>
+            This call ignores field-of-view. If field-of-view is important use the ToString overload with a "true" parameter
+            </remarks>
+            <returns>A string representation of the map using special symbols to denote Cell properties</returns>
+        </member>
+        <member name="P:RogueSharp.Map.Width">
+            <summary>
+            How many Cells wide the Map is
+            </summary>
+            <remarks>
+            A Map with a Width of 10 will have Cells with X locations of 0 through 9
+            Cells with an X value of 0 will be the leftmost Cells
+            </remarks>
+        </member>
+        <member name="P:RogueSharp.Map.Height">
+            <summary>
+            How many Cells tall the Map is
+            </summary>
+            <remarks>
+            A Map with a Height of 20 will have Cells with Y locations of 0 through 19
+            Cells with an Y value of 0 will be the topmost Cells
+            </remarks>
+        </member>
+        <member name="T:RogueSharp.MapCreation.RandomRoomsMapCreationStrategy`1">
+            <summary>
+            The RandomRoomsMapCreationStrategy creates a Map of the specified type by placing rooms randomly and then connecting them with cooridors
+            </summary>
+            <typeparam name="T">The type of IMap that will be created</typeparam>
+        </member>
+        <member name="M:RogueSharp.MapCreation.RandomRoomsMapCreationStrategy`1.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,RogueSharp.Random.IRandom)">
+            <summary>
+            Constructs a new RandomRoomsMapCreationStrategy with the specified parameters
+            </summary>
+            <param name="width">The width of the Map to be created</param>
+            <param name="height">The height of the Map to be created</param>
+            <param name="maxRooms">The maximum number of rooms that will exist in the generated Map</param>
+            <param name="roomMaxSize">The maximum width and height of each room that will be generated in the Map</param>
+            <param name="roomMinSize">The minimum width and height of each room that will be generated in the Map</param>
+            <param name="random">A class implementing IRandom that will be used to generate pseudo-random numbers necessary to create the Map</param>
+        </member>
+        <member name="M:RogueSharp.MapCreation.RandomRoomsMapCreationStrategy`1.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Constructs a new RandomRoomsMapCreationStrategy with the specified parameters
+            </summary>
+            <param name="width">The width of the Map to be created</param>
+            <param name="height">The height of the Map to be created</param>
+            <param name="maxRooms">The maximum number of rooms that will exist in the generated Map</param>
+            <param name="roomMaxSize">The maximum width and height of each room that will be generated in the Map</param>
+            <param name="roomMinSize">The minimum width and height of each room that will be generated in the Map</param>
+            <remarks>Uses DotNetRandom as its RNG</remarks>
+        </member>
+        <member name="M:RogueSharp.MapCreation.RandomRoomsMapCreationStrategy`1.CreateMap">
+            <summary>
+            Creates a new IMap of the specified type.
+            </summary>
+            <remarks>
+            The Map will be generated by trying to place rooms up to the maximum number specified in random locations around the Map.
+            Each room will have a height and width between the minimum and maximum room size.
+            If a room would be placed in such a way that it overlaps another room, it will not be placed.
+            Once all rooms have have been placed, or thrown out because they overlap, cooridors will be created between rooms in a random manner.
+            </remarks>
+            <returns>An IMap of the specified type</returns>
+        </member>
+        <member name="T:RogueSharp.MapCreation.StringDeserializeMapCreationStrategy`1">
+            <summary>
+            The StringDeserializeMapCreationStrategy creates a Map of the specified type from a string representation of the Map
+            </summary>
+            <typeparam name="T">The type of IMap that will be created</typeparam>
+        </member>
+        <member name="M:RogueSharp.MapCreation.StringDeserializeMapCreationStrategy`1.#ctor(System.String)">
+            <summary>
+            Constructs a new StringDeserializeMapCreationStrategy with the specified parameters
+            </summary>
+            <param name="mapRepresentation">A string representation of the Map to be created</param>
+        </member>
+        <member name="M:RogueSharp.MapCreation.StringDeserializeMapCreationStrategy`1.CreateMap">
+            <summary>
+            Creates a Map of the specified type from a string representation of the Map
+            </summary>
+            <remarks>
+            The following symbols represent Cells on the Map:
+            - `.`: `Cell` is transparent and walkable
+            - `s`: `Cell` is walkable (but not transparent)
+            - `o`: `Cell` is transparent (but not walkable)
+            - `#`: `Cell` is not transparent or walkable
+            </remarks>
+            <returns>An IMap of the specified type</returns>
+        </member>
+        <member name="T:RogueSharp.Path">
+            <summary>
+            A class representing an ordered list of Cells from Start to End
+            The path can be traversed by the StepForward and StepBackward methods
+            Implemented by a doubly linked list
+            </summary>
+        </member>
+        <member name="M:RogueSharp.Path.#ctor(System.Collections.Generic.IEnumerable{RogueSharp.ICell})">
+            <summary>
+            Construct a new Path from the specified ordered list of Cells
+            </summary>
+            <param name="steps">An IEnumerable of Cells that represent the ordered steps along this Path from Start to End</param>
+            <exception cref="T:System.ArgumentNullException">Thrown when the specified steps parameter is null</exception>
+            <exception cref="T:System.ArgumentException">Thrown when the specified steps parameter is empty</exception>
+        </member>
+        <member name="M:RogueSharp.Path.StepForward">
+            <summary>
+            Move forward along this Path and advance the CurrentStep to the next Step in the Path
+            </summary>
+            <returns>A Cell representing the Step that was moved to as we advanced along the Path</returns>
+            <exception cref="T:RogueSharp.NoMoreStepsException">Thrown when attempting to move forward along a Path on which we are currently at the End</exception>
+        </member>
+        <member name="M:RogueSharp.Path.TryStepForward">
+            <summary>
+            Move forward along this Path and advance the CurrentStep to the next Step in the Path
+            </summary>
+            <returns>A Cell representing the Step that was moved to as we advanced along the Path. If there is not another Cell in the path to advance to null is returned</returns>
+        </member>
+        <member name="M:RogueSharp.Path.StepBackward">
+            <summary>
+            Move backwards along this Path and rewind the CurrentStep to the previous Step in the Path
+            </summary>
+            <returns>A Cell representing the Step that was moved to as we back up along the Path</returns>
+            <exception cref="T:RogueSharp.NoMoreStepsException">Thrown when attempting to move backward along a Path on which we are currently at the Start</exception>
+        </member>
+        <member name="M:RogueSharp.Path.TryStepBackward">
+            <summary>
+            Move backwards along this Path and rewind the CurrentStep to the next Step in the Path
+            </summary>
+            <returns>A Cell representing the Step that was moved to as we back up along the Path. If there is not another Cell in the path to back up to null is returned</returns>
+        </member>
+        <member name="P:RogueSharp.Path.Start">
+            <summary>
+            The Cell representing the first step or Start of this Path
+            </summary>
+        </member>
+        <member name="P:RogueSharp.Path.End">
+            <summary>
+            The Cell representing the last step or End of this Path
+            </summary>
+        </member>
+        <member name="P:RogueSharp.Path.Length">
+            <summary>
+            The number of steps in this Path
+            </summary>
+        </member>
+        <member name="P:RogueSharp.Path.CurrentStep">
+            <summary>
+            The Cell represeting the step that is currently occupied in this Path
+            </summary>
+        </member>
+        <member name="P:RogueSharp.Path.Steps">
+            <summary>
+            All of the Cells representing the Steps in this Path from Start to End as an IEnumerable
+            </summary>
+        </member>
+        <member name="T:RogueSharp.NoMoreStepsException">
+            <summary>
+            Exception that is thrown when attempting to move along a Path when there are no more Steps in that direction
+            </summary>
+        </member>
+        <member name="M:RogueSharp.NoMoreStepsException.#ctor">
+            <summary>
+            Initializes a new instance of the NoMoreStepsException class
+            </summary>
+        </member>
+        <member name="M:RogueSharp.NoMoreStepsException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the NoMoreStepsException class with a specified error message.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="M:RogueSharp.NoMoreStepsException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the NoMoreStepsException class with a specified error message and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception. If the innerException parameter is not a null reference, the current exception is raised in a catch block that handles the inner exception.</param>
+        </member>
+        <member name="T:RogueSharp.PathNotFoundException">
+            <summary>
+            Exception that is thrown when attempting to find a Path from a Source to a Destination but one does not exist
+            </summary>
+        </member>
+        <member name="M:RogueSharp.PathNotFoundException.#ctor">
+            <summary>
+            Initializes a new instance of the PathNotFoundException class
+            </summary>
+        </member>
+        <member name="M:RogueSharp.PathNotFoundException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the PathNotFoundException class with a specified error message.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="M:RogueSharp.PathNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the PathNotFoundException class with a specified error message and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception. If the innerException parameter is not a null reference, the current exception is raised in a catch block that handles the inner exception.</param>
+        </member>
+        <member name="T:RogueSharp.PathFinder">
+            <summary>
+            A class which can be used to find shortest path from a source to a destination in a Map
+            </summary>
+        </member>
+        <member name="M:RogueSharp.PathFinder.#ctor(RogueSharp.IMap)">
+            <summary>
+            Constructs a new PathFinder instance for the specified Map that will not consider diagonal movements to be valid.
+            </summary>
+            <param name="map">The Map that this PathFinder instance will run shortest path algorithms on</param>
+            <exception cref="T:System.ArgumentNullException">Thrown when a null map parameter is passed in</exception>
+        </member>
+        <member name="M:RogueSharp.PathFinder.#ctor(RogueSharp.IMap,System.Double)">
+            <summary>
+            Constructs a new PathFinder instance for the specified Map that will consider diagonal movement by using the specified diagonalCost
+            </summary>
+            <param name="map">The Map that this PathFinder instance will run shortest path algorithms on</param>
+            <param name="diagonalCost">
+            The cost of diagonal movement compared to horizontal or vertical movement. 
+            Use 1.0 if you want the same cost for all movements.
+            On a standard cartesian map, it should be sqrt(2) (1.41)
+            </param>
+            <exception cref="T:System.ArgumentNullException">Thrown when a null map parameter is passed in</exception>
+        </member>
+        <member name="M:RogueSharp.PathFinder.ShortestPath(RogueSharp.ICell,RogueSharp.ICell)">
+            <summary>
+            Returns a shortest Path containing a list of Cells from a specified source Cell to a destination Cell
+            </summary>
+            <param name="source">The Cell which is at the start of the path</param>
+            <param name="destination">The Cell which is at the end of the path</param>
+            <exception cref="T:System.ArgumentNullException">Thrown when source or destination is null</exception>
+            <exception cref="T:RogueSharp.PathNotFoundException">Thrown when there is not a path from the source to the destination</exception>
+            <returns>Returns a shortest Path containing a list of Cells from a specified source Cell to a destination Cell</returns>
+        </member>
+        <member name="M:RogueSharp.PathFinder.TryFindShortestPath(RogueSharp.ICell,RogueSharp.ICell)">
+            <summary>
+            Returns a shortest Path containing a list of Cells from a specified source Cell to a destination Cell
+            </summary>
+            <param name="source">The Cell which is at the start of the path</param>
+            <param name="destination">The Cell which is at the end of the path</param>
+            <exception cref="T:System.ArgumentNullException">Thrown when source or destination is null</exception>
+            <returns>Returns a shortest Path containing a list of Cells from a specified source Cell to a destination Cell. If no path is found null will be returned</returns>
+        </member>
+        <member name="T:RogueSharp.Point">
+            <summary>
+              A struct that defines a point in 2D space
+            </summary>
+        </member>
+        <member name="M:RogueSharp.Point.#ctor(System.Int32,System.Int32)">
+            <summary>
+              Constructs a point with X and Y from two values.
+            </summary>
+            <param name="x">The x coordinate in 2d-space.</param>
+            <param name="y">The y coordinate in 2d-space.</param>
+        </member>
+        <member name="M:RogueSharp.Point.#ctor(System.Int32)">
+            <summary>
+              Constructs a point with X and Y set to the same value.
+            </summary>
+            <param name="value">The x and y coordinates in 2d-space.</param>
+        </member>
+        <member name="M:RogueSharp.Point.op_Addition(RogueSharp.Point,RogueSharp.Point)">
+            <summary>
+              Adds two points.
+            </summary>
+            <param name="value1">Source <see cref="T:RogueSharp.Point"/> on the left of the add sign.</param>
+            <param name="value2">Source <see cref="T:RogueSharp.Point"/> on the right of the add sign.</param>
+            <returns>Sum of the points.</returns>
+        </member>
+        <member name="M:RogueSharp.Point.op_Subtraction(RogueSharp.Point,RogueSharp.Point)">
+            <summary>
+              Subtracts a <see cref="T:RogueSharp.Point"/> from a <see cref="T:RogueSharp.Point"/>.
+            </summary>
+            <param name="value1">Source <see cref="T:RogueSharp.Point"/> on the left of the sub sign.</param>
+            <param name="value2">Source <see cref="T:RogueSharp.Point"/> on the right of the sub sign.</param>
+            <returns>Result of the subtraction.</returns>
+        </member>
+        <member name="M:RogueSharp.Point.op_Multiply(RogueSharp.Point,RogueSharp.Point)">
+            <summary>
+              Multiplies the components of two points by each other.
+            </summary>
+            <param name="value1">Source <see cref="T:RogueSharp.Point"/> on the left of the mul sign.</param>
+            <param name="value2">Source <see cref="T:RogueSharp.Point"/> on the right of the mul sign.</param>
+            <returns>Result of the multiplication.</returns>
+        </member>
+        <member name="M:RogueSharp.Point.op_Division(RogueSharp.Point,RogueSharp.Point)">
+            <summary>
+              Divides the components of a <see cref="T:RogueSharp.Point"/> by the components of another <see cref="T:RogueSharp.Point"/>.
+            </summary>
+            <param name="source">Source <see cref="T:RogueSharp.Point"/> on the left of the div sign.</param>
+            <param name="divisor">Divisor <see cref="T:RogueSharp.Point"/> on the right of the div sign.</param>
+            <returns>The result of dividing the points.</returns>
+        </member>
+        <member name="M:RogueSharp.Point.op_Equality(RogueSharp.Point,RogueSharp.Point)">
+            <summary>
+              Compares whether two <see cref="T:RogueSharp.Point"/> instances are equal.
+            </summary>
+            <param name="a"><see cref="T:RogueSharp.Point"/> instance on the left of the equal sign.</param>
+            <param name="b"><see cref="T:RogueSharp.Point"/> instance on the right of the equal sign.</param>
+            <returns><c>true</c> if the instances are equal; <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:RogueSharp.Point.op_Inequality(RogueSharp.Point,RogueSharp.Point)">
+            <summary>
+              Compares whether two <see cref="T:RogueSharp.Point"/> instances are not equal.
+            </summary>
+            <param name="a"><see cref="T:RogueSharp.Point"/> instance on the left of the not equal sign.</param>
+            <param name="b"><see cref="T:RogueSharp.Point"/> instance on the right of the not equal sign.</param>
+            <returns><c>true</c> if the instances are not equal; <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:RogueSharp.Point.Add(RogueSharp.Point,RogueSharp.Point)">
+            <summary>
+              Adds two points.
+            </summary>
+            <param name="value1">Source <see cref="T:RogueSharp.Point"/> on the left of the add sign.</param>
+            <param name="value2">Source <see cref="T:RogueSharp.Point"/> on the right of the add sign.</param>
+            <returns>Sum of the points.</returns>
+        </member>
+        <member name="M:RogueSharp.Point.Subtract(RogueSharp.Point,RogueSharp.Point)">
+            <summary>
+              Subtracts a <see cref="T:RogueSharp.Point"/> from a <see cref="T:RogueSharp.Point"/>.
+            </summary>
+            <param name="value1">Source <see cref="T:RogueSharp.Point"/> on the left of the sub sign.</param>
+            <param name="value2">Source <see cref="T:RogueSharp.Point"/> on the right of the sub sign.</param>
+            <returns>Result of the subtraction.</returns>
+        </member>
+        <member name="M:RogueSharp.Point.Multiply(RogueSharp.Point,RogueSharp.Point)">
+            <summary>
+              Multiplies the components of two points by each other.
+            </summary>
+            <param name="value1">Source <see cref="T:RogueSharp.Point"/> on the left of the mul sign.</param>
+            <param name="value2">Source <see cref="T:RogueSharp.Point"/> on the right of the mul sign.</param>
+            <returns>Result of the multiplication.</returns>
+        </member>
+        <member name="M:RogueSharp.Point.Divide(RogueSharp.Point,RogueSharp.Point)">
+            <summary>
+              Divides the components of a <see cref="T:RogueSharp.Point"/> by the components of another <see cref="T:RogueSharp.Point"/>.
+            </summary>
+            <param name="source">Source <see cref="T:RogueSharp.Point"/> on the left of the div sign.</param>
+            <param name="divisor">Divisor <see cref="T:RogueSharp.Point"/> on the right of the div sign.</param>
+            <returns>The result of dividing the points.</returns>
+        </member>
+        <member name="M:RogueSharp.Point.Equals(System.Object)">
+            <summary>
+              Compares whether current instance is equal to specified <see cref="T:System.Object"/>.
+            </summary>
+            <param name="obj">The <see cref="T:System.Object"/> to compare.</param>
+            <returns><c>true</c> if the instances are equal; <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:RogueSharp.Point.Equals(RogueSharp.Point)">
+            <summary>
+              Compares whether current instance is equal to specified <see cref="T:RogueSharp.Point"/>.
+            </summary>
+            <param name="other">The <see cref="T:RogueSharp.Point"/> to compare.</param>
+            <returns><c>true</c> if the instances are equal; <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:RogueSharp.Point.GetHashCode">
+            <summary>
+              Gets the hash code of this <see cref="T:RogueSharp.Point"/>.
+            </summary>
+            <returns>Hash code of this <see cref="T:RogueSharp.Point"/>.</returns>
+        </member>
+        <member name="M:RogueSharp.Point.ToString">
+            <summary>
+              Returns a <see cref="T:System.String"/> representation of this <see cref="T:RogueSharp.Point"/> in the format:
+              {X:[<see cref="P:RogueSharp.Point.X"/>] Y:[<see cref="P:RogueSharp.Point.Y"/>]}
+            </summary>
+            <returns><see cref="T:System.String"/> representation of this <see cref="T:RogueSharp.Point"/>.</returns>
+        </member>
+        <member name="M:RogueSharp.Point.Distance(RogueSharp.Point,RogueSharp.Point)">
+            <summary>
+              Calculates the distance between two points.
+            </summary>
+            <param name="value1">Source vector.</param>
+            <param name="value2">Source vector.</param>
+            <returns>The distance between two points.</returns>
+        </member>
+        <member name="M:RogueSharp.Point.Negate(RogueSharp.Point)">
+            <summary>
+              Creates a new <see cref="T:RogueSharp.Point"/> that contains the specified vector inversion.
+            </summary>
+            <param name="value">Source <see cref="T:RogueSharp.Point"/>.</param>
+            <returns>The result of the vector inversion.</returns>
+        </member>
+        <member name="P:RogueSharp.Point.X">
+            <summary>
+              The x coordinate of this <see cref="T:RogueSharp.Point"/>.
+            </summary>
+        </member>
+        <member name="P:RogueSharp.Point.Y">
+            <summary>
+              The y coordinate of this <see cref="T:RogueSharp.Point"/>.
+            </summary>
+        </member>
+        <member name="P:RogueSharp.Point.Zero">
+            <summary>
+              Returns the point (0,0)
+            </summary>
+        </member>
+        <member name="T:RogueSharp.Random.DotNetRandom">
+            <summary>
+            A class implementing IRandom which used for generating pseudo-random numbers 
+            using the System.Random class from the .Net framework
+            </summary>
+        </member>
+        <member name="T:RogueSharp.Random.IRandom">
+            <summary>
+            An Interface for pseudo-random number generators to implement.
+            Useful when mocking out systems for tests, as the the random number generator can be swapped for
+            a mock implimentation that returns known and expected values
+            </summary>
+            <remarks>
+            Pseudo-random number generators are devices that produces a sequence of numbers 
+            that meet certain statistical requirements for randomness
+            </remarks>
+        </member>
+        <member name="M:RogueSharp.Random.IRandom.Next(System.Int32)">
+            <summary>
+            Gets the next pseudo-random integer between 0 and the specified maxValue inclusive
+            </summary>
+            <param name="maxValue">Inclusive maximum result</param>
+            <returns>Returns a pseudo-random integer between 0 and the specified maxValue inclusive</returns>
+        </member>
+        <member name="M:RogueSharp.Random.IRandom.Next(System.Int32,System.Int32)">
+            <summary>
+            Gets the next pseudo-random integer between the specified minValue and maxValue inclusive
+            </summary>
+            <param name="minValue">Inclusive minimum result</param>
+            <param name="maxValue">Inclusive maximum result</param>
+            <returns>Returns a pseudo-random integer between the specified minValue and maxValue inclusive</returns>
+        </member>
+        <member name="M:RogueSharp.Random.IRandom.Save">
+            <summary>
+            Saves the current state of the pseudo-random number generator
+            </summary>
+            <example>
+            If you generated three random numbers and then called Save to store the state and 
+            followed that up by generating 10 more numbers before calling Restore with the previously saved RandomState
+            the Restore method should return the generator back to the state when Save was first called.
+            This means that if you went on to generate 10 more numbers they would be the same 10 numbers that were
+            generated the first time after Save was called.
+            </example>
+            <returns>A RandomState class representing the current state of this pseudo-random number generator</returns>
+        </member>
+        <member name="M:RogueSharp.Random.IRandom.Restore(RogueSharp.Random.RandomState)">
+            <summary>
+            Restores the state of the pseudo-random number generator based on the specified state parameter
+            </summary>
+            <example>
+            If you generated three random numbers and then called Save to store the state and 
+            followed that up by generating 10 more numbers before calling Restore with the previously saved RandomState
+            the Restore method should return the generator back to the state when Save was first called.
+            This means that if you went on to generate 10 more numbers they would be the same 10 numbers that were
+            generated the first time after Save was called.
+            </example>
+            <param name="state">The state to restore to, usually obtained from calling the Save method</param>
+        </member>
+        <member name="M:RogueSharp.Random.DotNetRandom.#ctor">
+            <summary>
+            Constructs a new pseudo-random number generator 
+            with a seed based on the number of milliseconds elapsed since the system started
+            </summary>
+        </member>
+        <member name="M:RogueSharp.Random.DotNetRandom.#ctor(System.Int32)">
+            <summary>
+            Constructs a new pseudo-random number generator with the specified seed
+            </summary>
+            <param name="seed">An integer used to calculate a starting value for the pseudo-random number sequence</param>
+        </member>
+        <member name="M:RogueSharp.Random.DotNetRandom.Next(System.Int32)">
+            <summary>
+            Gets the next pseudo-random integer between 0 and the specified maxValue inclusive
+            </summary>
+            <param name="maxValue">Inclusive maximum result</param>
+            <returns>Returns a pseudo-random integer between 0 and the specified maxValue inclusive</returns>
+        </member>
+        <member name="M:RogueSharp.Random.DotNetRandom.Next(System.Int32,System.Int32)">
+            <summary>
+            Gets the next pseudo-random integer between the specified minValue and maxValue inclusive
+            </summary>
+            <param name="minValue">Inclusive minimum result</param>
+            <param name="maxValue">Inclusive maximum result</param>
+            <returns>Returns a pseudo-random integer between the specified minValue and maxValue inclusive</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown if maxValue equals Int32.MaxValue</exception>
+        </member>
+        <member name="M:RogueSharp.Random.DotNetRandom.Save">
+            <summary>
+            Saves the current state of the pseudo-random number generator
+            </summary>
+            <example>
+            If you generated three random numbers and then called Save to store the state and 
+            followed that up by generating 10 more numbers before calling Restore with the previously saved RandomState
+            the Restore method should return the generator back to the state when Save was first called.
+            This means that if you went on to generate 10 more numbers they would be the same 10 numbers that were
+            generated the first time after Save was called.
+            </example>
+            <returns>A RandomState class representing the current state of this pseudo-random number generator</returns>
+        </member>
+        <member name="M:RogueSharp.Random.DotNetRandom.Restore(RogueSharp.Random.RandomState)">
+            <summary>
+            Restores the state of the pseudo-random number generator based on the specified state parameter
+            </summary>
+            <example>
+            If you generated three random numbers and then called Save to store the state and 
+            followed that up by generating 10 more numbers before calling Restore with the previously saved RandomState
+            the Restore method should return the generator back to the state when Save was first called.
+            This means that if you went on to generate 10 more numbers they would be the same 10 numbers that were
+            generated the first time after Save was called.
+            </example>
+            <param name="state">The state to restore to, usually obtained from calling the Save method</param>
+            <exception cref="T:System.ArgumentNullException">RandomState cannot be null</exception>
+        </member>
+        <member name="T:RogueSharp.Random.GaussianRandom">
+            <summary>
+            A class implementing IRandom which uses the Box-Muller transformation 
+            to help generate Gaussian pseudo-random numbers
+            </summary>
+            <remarks>
+            Gaussian pseudo-random generation can be useful if you want a bell shaped curve distribution of numbers.
+            What this means is numbers half way between the min and max values are much more likely than
+            numbers on the extreme edge. If you were to generate numbers between 1 and 10, it would be more
+            likely a 5 would be generated than a 1 or a 10.
+            </remarks>
+        </member>
+        <member name="M:RogueSharp.Random.GaussianRandom.#ctor">
+            <summary>
+            Constructs a new Gaussian pseudo-random number generator 
+            with a seed based on the number of milliseconds elapsed since the system started
+            </summary>
+        </member>
+        <member name="M:RogueSharp.Random.GaussianRandom.#ctor(System.Int32)">
+            <summary>
+            Constructs a new Gaussian pseudo-random number generator with the specified seed
+            </summary>
+            <param name="seed">An integer used to calculate a starting value for the pseudo-random number sequence</param>
+        </member>
+        <member name="M:RogueSharp.Random.GaussianRandom.Next(System.Int32)">
+            <summary>
+            Will approximately give the next Gaussian pseudo-random integer between 0 and that specified max value inclusively
+            so that min and max are at 3.5 deviations from the mean (half-way of min and max).
+            </summary>
+            <param name="maxValue">Inclusive maximum result</param>
+            <returns>Returns a Gaussian pseudo-random integer between 0 and the specified maxValue inclusive</returns>
+        </member>
+        <member name="M:RogueSharp.Random.GaussianRandom.Next(System.Int32,System.Int32)">
+            <summary>
+            Will approximately give the next random Gaussian integer between the specified min and max values inclusively 
+            so that min and max are at 3.5 deviations from the mean (half-way of min and max).
+            </summary>
+            <param name="minValue">Inclusive minimum result</param>
+            <param name="maxValue">Inclusive maximum result</param>
+            <returns>Returns a pseudo-random integer between the specified minValue and maxValue inclusive</returns>
+        </member>
+        <member name="M:RogueSharp.Random.GaussianRandom.Save">
+            <summary>
+            Saves the current state of the pseudo-random number generator
+            </summary>
+            <example>
+            If you generated three random numbers and then called Save to store the state and 
+            followed that up by generating 10 more numbers before calling Restore with the previously saved RandomState
+            the Restore method should return the generator back to the state when Save was first called.
+            This means that if you went on to generate 10 more numbers they would be the same 10 numbers that were
+            generated the first time after Save was called.
+            </example>
+            <returns>A RandomState class representing the current state of this pseudo-random number generator</returns>
+        </member>
+        <member name="M:RogueSharp.Random.GaussianRandom.Restore(RogueSharp.Random.RandomState)">
+            <summary>
+            Restores the state of the pseudo-random number generator based on the specified state parameter
+            </summary>
+            <example>
+            If you generated three random numbers and then called Save to store the state and 
+            followed that up by generating 10 more numbers before calling Restore with the previously saved RandomState
+            the Restore method should return the generator back to the state when Save was first called.
+            This means that if you went on to generate 10 more numbers they would be the same 10 numbers that were
+            generated the first time after Save was called.
+            </example>
+            <param name="state">The state to restore to, usually obtained from calling the Save method</param>
+            <exception cref="T:System.ArgumentNullException">Thrown on null RandomState</exception>
+        </member>
+        <member name="T:RogueSharp.Random.RandomState">
+            <summary>
+            A class representing the state of a pseudo-random number generation algorithm 
+            at a point in time. This POCO (Plain Old C# Object) can be easily serialized and deserialized
+            </summary>
+        </member>
+        <member name="P:RogueSharp.Random.RandomState.Seed">
+            <summary>
+            The seed that was originally used to create the pseudo-random number generator
+            </summary>
+            <remarks>
+            Most generators only use 1 seed, but some like the KnownSeriesRandom generator may use multiple seeds
+            so that is why Seed is expressed as an array of integers here
+            </remarks>
+        </member>
+        <member name="P:RogueSharp.Random.RandomState.NumberGenerated">
+            <summary>
+            The number of times that the Next method has been called on the pseudo-random number generator being used
+            </summary>
+        </member>
+        <member name="T:RogueSharp.Random.KnownSeriesRandom">
+            <summary>
+            A class implementing IRandom which cycles through a specified series of integers each
+            time the Next random number is asked for.
+            </summary>
+            <remarks>
+            This class is normally used for unit tests and not production code.
+            </remarks>
+        </member>
+        <member name="M:RogueSharp.Random.KnownSeriesRandom.#ctor(System.Int32[])">
+            <summary>
+            Constructs a new integer generator with the specified series of integers in an array.
+            When the Next method is called on this generator it will return the first integer in the series,
+            followed by the next integer and so on until it reaches the end of the array.
+            If the Next method is called once it is at the end of the array, it will start back over at the beginning.
+            </summary>
+            <param name="series">A known series of integers that will be returned in order from this generator</param>
+            <exception cref="T:System.ArgumentNullException">Thrown on null series</exception>
+        </member>
+        <member name="M:RogueSharp.Random.KnownSeriesRandom.Next(System.Int32)">
+            <summary>
+            Return the first integer in the series that was specified when this generator was constructed,
+            followed by the next integer and so on until it reaches the end of the array.
+            If the Next method is called once it is at the end of the array, it will start back over at the beginning.
+            </summary>
+            <param name="maxValue">Inclusive maximum result</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            Thrown when the Next integer in the series for this generator is not between 0 and the specified maxValue inclusive
+            </exception>
+            <returns>The next integer in the series specified upon construction of this class</returns>
+        </member>
+        <member name="M:RogueSharp.Random.KnownSeriesRandom.Next(System.Int32,System.Int32)">
+            <summary>
+            Return the first integer in the series that was specified when this generator was constructed,
+            followed by the next integer and so on until it reaches the end of the array.
+            If the Next method is called once it is at the end of the array, it will start back over at the beginning.
+            </summary>
+            <param name="minValue">Inclusive minimum result</param>
+            <param name="maxValue">Inclusive maximum result</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            Thrown when the Next integer in the series for this generator is not between 
+            the specified minValue and maxValue inclusive
+            </exception>
+            <returns>The next integer in the series specified upon construction of this class</returns>
+        </member>
+        <member name="M:RogueSharp.Random.KnownSeriesRandom.Save">
+            <summary>
+            Saves the current state of the number generator
+            </summary>
+            <example>
+            If you generated three random numbers and then called Save to store the state and 
+            followed that up by generating 10 more numbers before calling Restore with the previously saved RandomState
+            the Restore method should return the generator back to the state when Save was first called.
+            This means that if you went on to generate 10 more numbers they would be the same 10 numbers that were
+            generated the first time after Save was called.
+            </example>
+            <returns>A RandomState class representing the current state of this number generator</returns>
+        </member>
+        <member name="M:RogueSharp.Random.KnownSeriesRandom.Restore(RogueSharp.Random.RandomState)">
+            <summary>
+            Restores the state of the number generator based on the specified state parameter
+            </summary>
+            <example>
+            If you generated three random numbers and then called Save to store the state and 
+            followed that up by generating 10 more numbers before calling Restore with the previously saved RandomState
+            the Restore method should return the generator back to the state when Save was first called.
+            This means that if you went on to generate 10 more numbers they would be the same 10 numbers that were
+            generated the first time after Save was called.
+            </example>
+            <param name="state">The state to restore to, usually obtained from calling the Save method</param>
+            <exception cref="T:System.ArgumentNullException">Thrown on null RandomState</exception>
+        </member>
+        <member name="T:RogueSharp.Random.MaxRandom">
+            <summary>
+            A class implementing IRandom which always returns the highest possible result 
+            </summary>
+        </member>
+        <member name="M:RogueSharp.Random.MaxRandom.Next(System.Int32)">
+            <summary>
+            Gets the next integer in the series which will always be maxValue
+            </summary>
+            <param name="maxValue">Inclusive maximum result which is always returned in this case</param>
+            <returns>Returns the integer maxValue</returns>
+        </member>
+        <member name="M:RogueSharp.Random.MaxRandom.Next(System.Int32,System.Int32)">
+            <summary>
+            Gets the next integer in the series which will always be maxValue
+            </summary>
+            <param name="minValue">Inclusive minimum result which is never used in this case</param>
+            <param name="maxValue">Inclusive maximum result which is always returned in this case</param>
+            <returns>Returns the integer maxValue</returns>
+        </member>
+        <member name="M:RogueSharp.Random.MaxRandom.Save">
+            <summary>
+            Save the current state of the generator which is essentially a no-op for this generator
+            </summary>
+            <returns>A new RandomState object</returns>
+        </member>
+        <member name="M:RogueSharp.Random.MaxRandom.Restore(RogueSharp.Random.RandomState)">
+            <summary>
+            Restores the state of the generator which is essentially a no-op for this generator
+            </summary>
+            <param name="state">Not used</param>
+        </member>
+        <member name="T:RogueSharp.Random.MinRandom">
+            <summary>
+            A class implementing IRandom which always returns the lowest possible result 
+            </summary>
+        </member>
+        <member name="M:RogueSharp.Random.MinRandom.Next(System.Int32)">
+            <summary>
+            Gets the next integer in the series which will always be 0
+            </summary>
+            <param name="maxValue">Inclusive maximum result which is not used in this case</param>
+            <returns>Returns the integer 0</returns>
+        </member>
+        <member name="M:RogueSharp.Random.MinRandom.Next(System.Int32,System.Int32)">
+            <summary>
+            Gets the next integer in the series which will always be minValue
+            </summary>
+            <param name="minValue">Inclusive minimum result which is always returned in this case</param>
+            <param name="maxValue">Inclusive maximum result which is never used in this case</param>
+            <returns>Returns the integer minValue</returns>
+        </member>
+        <member name="M:RogueSharp.Random.MinRandom.Save">
+            <summary>
+            Save the current state of the generator which is essentially a no-op for this generator
+            </summary>
+            <returns>A new RandomState object</returns>
+        </member>
+        <member name="M:RogueSharp.Random.MinRandom.Restore(RogueSharp.Random.RandomState)">
+            <summary>
+            Restores the state of the generator which is essentially a no-op for this generator
+            </summary>
+            <param name="state">Not used</param>
+        </member>
+        <member name="T:RogueSharp.Random.Singleton">
+            <summary>
+            The Singleton class is a public static class that holds the DefaultRandom generator.
+            </summary>
+        </member>
+        <member name="F:RogueSharp.Random.Singleton.DefaultRandom">
+            <summary>
+            The DefaultRandom generator is DotNetRandom from System.Random
+            </summary>
+            CA2104 is thrown incorrectly on this line. Singleton.DefaultRandom is immutable.
+        </member>
+        <member name="T:RogueSharp.Rectangle">
+            <summary>
+            A struct that defines a rectangle
+            </summary>
+        </member>
+        <member name="M:RogueSharp.Rectangle.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Creates a new instance of <see cref="T:RogueSharp.Rectangle"/> struct, with the specified
+            position, width, and height.
+            </summary>
+            <param name="x">The x coordinate of the top-left corner of the created <see cref="T:RogueSharp.Rectangle"/>.</param>
+            <param name="y">The y coordinate of the top-left corner of the created <see cref="T:RogueSharp.Rectangle"/>.</param>
+            <param name="width">The width of the created <see cref="T:RogueSharp.Rectangle"/>.</param>
+            <param name="height">The height of the created <see cref="T:RogueSharp.Rectangle"/>.</param>
+        </member>
+        <member name="M:RogueSharp.Rectangle.#ctor(RogueSharp.Point,RogueSharp.Point)">
+            <summary>
+            Creates a new instance of <see cref="T:RogueSharp.Rectangle"/> struct, with the specified
+            location and size.
+            </summary>
+            <param name="location">The x and y coordinates of the top-left corner of the created <see cref="T:RogueSharp.Rectangle"/>.</param>
+            <param name="size">The width and height of the created <see cref="T:RogueSharp.Rectangle"/>.</param>
+        </member>
+        <member name="M:RogueSharp.Rectangle.Equals(RogueSharp.Rectangle)">
+            <summary>
+            Determines whether two Rectangle instances are equal
+            </summary>
+            <param name="other">The Rectangle to compare this instance to</param>
+            <returns>True if the instances are equal; False otherwise</returns>
+        </member>
+        <member name="M:RogueSharp.Rectangle.op_Equality(RogueSharp.Rectangle,RogueSharp.Rectangle)">
+            <summary>
+            Compares two rectangles for equality
+            </summary>
+            <param name="a">Rectangle on the left side of the equals sign</param>
+            <param name="b">Rectangle on the right side of the equals sign</param>
+            <returns>True if the rectangles are equal; False otherwise</returns>
+        </member>
+        <member name="M:RogueSharp.Rectangle.Contains(System.Int32,System.Int32)">
+            <summary>
+            Determines whether this Rectangle contains a specified point represented by its x and y-coordinates
+            </summary>
+            <param name="x">The x-coordinate of the specified point</param>
+            <param name="y">The y-coordinate of the specified point</param>
+            <returns>True if the specified point is contained within this Rectangle; False otherwise</returns>
+        </member>
+        <member name="M:RogueSharp.Rectangle.Contains(RogueSharp.Point)">
+            <summary>
+            Determines whether this Rectangle contains a specified Point
+            </summary>
+            <param name="value">The Point to evaluate</param>
+            <returns>True if the specified Point is contained within this Rectangle; False otherwise</returns>
+        </member>
+        <member name="M:RogueSharp.Rectangle.Contains(RogueSharp.Rectangle)">
+            <summary>
+            Determines whether this Rectangle entirely contains the specified Rectangle
+            </summary>
+            <param name="value">The Rectangle to evaluate</param>
+            <returns>True if this Rectangle entirely contains the specified Rectangle; False otherwise</returns>
+        </member>
+        <member name="M:RogueSharp.Rectangle.op_Inequality(RogueSharp.Rectangle,RogueSharp.Rectangle)">
+            <summary>
+            Compares two rectangles for inequality
+            </summary>
+            <param name="a">Rectangle on the left side of the equals sign</param>
+            <param name="b">Rectangle on the right side of the equals sign</param>
+            <returns>True if the rectangles are not equal; False otherwise</returns>
+        </member>
+        <member name="M:RogueSharp.Rectangle.Offset(RogueSharp.Point)">
+            <summary>
+            Changes the position of the Rectangles by the values of the specified Point
+            </summary>
+            <param name="offsetPoint">The values to adjust the position of the Rectangle by</param>
+        </member>
+        <member name="M:RogueSharp.Rectangle.Offset(System.Int32,System.Int32)">
+            <summary>
+            Changes the position of the Rectangle by the specified x and y offsets
+            </summary>
+            <param name="offsetX">Change in the x-position</param>
+            <param name="offsetY">Change in the y-position</param>
+        </member>
+        <member name="M:RogueSharp.Rectangle.Inflate(System.Int32,System.Int32)">
+            <summary>
+            Pushes the edges of the Rectangle out by the specified horizontal and vertical values
+            </summary>
+            <param name="horizontalValue">Value to push the sides out by</param>
+            <param name="verticalValue">Value to push the top and bottom out by</param>
+            <exception cref="T:System.OverflowException">Thrown if the new width or height exceed Int32.MaxValue, or new X or Y are smaller than int32.MinValue</exception>
+        </member>
+        <member name="M:RogueSharp.Rectangle.Equals(System.Object)">
+            <summary>
+            Compares whether current instance is equal to specified <see cref="T:System.Object"/>.
+            </summary>
+            <param name="obj">The <see cref="T:System.Object"/> to compare.</param>
+            <returns><c>true</c> if the instances are equal; <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:RogueSharp.Rectangle.ToString">
+            <summary>
+            Returns a string that represents the current Rectangle
+            </summary>
+            <returns>A string that represents the current Rectangle</returns>
+        </member>
+        <member name="M:RogueSharp.Rectangle.GetHashCode">
+            <summary>
+            Gets the hash code for this object which can help for quick checks of equality
+            or when inserting this Rectangle into a hash-based collection such as a Dictionary or Hashtable 
+            </summary>
+            <returns>An integer hash used to identify this Rectangle</returns>
+        </member>
+        <member name="M:RogueSharp.Rectangle.Intersects(RogueSharp.Rectangle)">
+            <summary>
+            Determines whether this Rectangle intersects with the specified Rectangle
+            </summary>
+            <param name="value">The Rectangle to evaluate</param>
+            <returns>True if the specified Rectangle intersects with this one; False otherwise</returns>
+        </member>
+        <member name="M:RogueSharp.Rectangle.Intersects(RogueSharp.Rectangle@,System.Boolean@)">
+            <summary>
+            Determines whether this Rectangle intersects with the specified Rectangle
+            </summary>
+            <param name="value">The Rectangle to evaluate</param>
+            <param name="result">True if the specified Rectangle intersects with this one; False otherwise</param>
+        </member>
+        <member name="M:RogueSharp.Rectangle.Intersect(RogueSharp.Rectangle,RogueSharp.Rectangle)">
+            <summary>
+            Creates a Rectangle defining the area where one Rectangle overlaps with another Rectangle
+            </summary>
+            <param name="value1">The first Rectangle to compare</param>
+            <param name="value2">The second Rectangle to compare</param>
+            <returns>The area where the two specified Rectangles overlap. If the two Rectangles do not overlap the resulting Rectangle will be Empty</returns>
+        </member>
+        <member name="M:RogueSharp.Rectangle.Intersect(RogueSharp.Rectangle@,RogueSharp.Rectangle@,RogueSharp.Rectangle@)">
+            <summary>
+            Creates a Rectangle defining the area where one Rectangle overlaps with another Rectangle
+            </summary>
+            <param name="value1">The first Rectangle to compare</param>
+            <param name="value2">The second Rectangle to compare</param>
+            <param name="result">The area where the two specified Rectangles overlap. If the two Rectangles do not overlap the resulting Rectangle will be Empty</param>
+        </member>
+        <member name="M:RogueSharp.Rectangle.Union(RogueSharp.Rectangle,RogueSharp.Rectangle)">
+            <summary>
+            Creates a new Rectangle that exactly contains the specified two Rectangles
+            </summary>
+            <param name="value1">The first Rectangle to contain</param>
+            <param name="value2">The second Rectangle to contain</param>
+            <returns>A new Rectangle that exactly contains the specified two Rectangles</returns>
+        </member>
+        <member name="M:RogueSharp.Rectangle.Union(RogueSharp.Rectangle@,RogueSharp.Rectangle@,RogueSharp.Rectangle@)">
+            <summary>
+            Creates a new <see cref="T:RogueSharp.Rectangle"/> that completely contains two other rectangles.
+            </summary>
+            <param name="value1">The first <see cref="T:RogueSharp.Rectangle"/>.</param>
+            <param name="value2">The second <see cref="T:RogueSharp.Rectangle"/>.</param>
+            <param name="result">The union of the two rectangles as an output parameter.</param>
+        </member>
+        <member name="P:RogueSharp.Rectangle.Height">
+            <summary>
+            Specifies the Height of the Rectangle
+            </summary>
+        </member>
+        <member name="P:RogueSharp.Rectangle.Width">
+            <summary>
+            Specifies the Width of the Rectangle
+            </summary>
+        </member>
+        <member name="P:RogueSharp.Rectangle.X">
+            <summary>
+            Specifies the x-coordinate of the Rectangle with 0 being to the left
+            and increasing as the Rectangle is moved to the right
+            </summary>
+        </member>
+        <member name="P:RogueSharp.Rectangle.Y">
+            <summary>
+            Specifies the y-coordinate of the Rectangle with 0 being at the top 
+            and increasing as the Rectangle is moved downwards
+            </summary>
+        </member>
+        <member name="P:RogueSharp.Rectangle.Empty">
+            <summary>
+            Returns a Rectangle with all of its values set to zero
+            </summary>
+        </member>
+        <member name="P:RogueSharp.Rectangle.Left">
+            <summary>
+            Returns the x-coordinate of the left side of the rectangle
+            </summary>
+        </member>
+        <member name="P:RogueSharp.Rectangle.Right">
+            <summary>
+            Returns the x-coordinate of the right side of the rectangle
+            </summary>
+        </member>
+        <member name="P:RogueSharp.Rectangle.Top">
+            <summary>
+            Returns the y-coordinate of the top of the rectangle
+            </summary>
+        </member>
+        <member name="P:RogueSharp.Rectangle.Bottom">
+            <summary>
+            Returns the y-coordinate of the bottom of the rectangle
+            </summary>
+        </member>
+        <member name="P:RogueSharp.Rectangle.Location">
+            <summary>
+            Gets or sets the Point representing the upper-left value of the Rectangle
+            </summary>
+        </member>
+        <member name="P:RogueSharp.Rectangle.Center">
+            <summary>
+            Returns the Point that specifies the center of the rectangle
+            </summary>
+        </member>
+        <member name="P:RogueSharp.Rectangle.IsEmpty">
+            <summary>
+            Returns a value that indicates whether the Rectangle is empty
+            true if the Rectangle is empty; otherwise false
+            </summary>
+        </member>
+    </members>
+</doc>

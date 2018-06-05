@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RT.Dijkstra</name>
+    </assembly>
+    <members>
+        <member name="T:RT.Dijkstra.DijkstrasAlgorithm">
+            <summary>Provides a method to run Dijkstra’s Algorithm (a generalization of breadth-first search) on an arbitrary directed graph with positive edge weights.</summary>
+        </member>
+        <member name="M:RT.Dijkstra.DijkstrasAlgorithm.Run``2(RT.Dijkstra.Node{``0,``1},``0,System.Func{``0,``0,``0},``0@)">
+            <summary>Runs Dijkstra’s Algorithm (a generalization of breadth-first search) on an arbitrary graph.</summary>
+            <typeparam name="TWeight">Type of the weight (or length or any other quantity to be minimized) of each edge between nodes.</typeparam>
+            <typeparam name="TLabel">Type that is used to identify edges.</typeparam>
+            <param name="startNode">Node to start the search at.</param>
+            <param name="initialWeight">The initial weight to start with (usually zero).</param>
+            <param name="add">Function to add two weights together.</param>
+            <param name="totalWeight">Receives the total weight of the path returned.</param>
+            <returns>The sequence of labels on the edges connecting the start node to the first node encountered that has <see cref="P:RT.Dijkstra.Node`2.IsFinal"/> set to true.</returns>
+            <exception cref="T:System.InvalidOperationException">There is no path from the <paramref name="startNode"/> to any final node.</exception>
+        </member>
+        <member name="T:RT.Dijkstra.NamespaceDocumentation">
+            <summary>
+                <para>
+                    This library allows you to find the shortest path through any kind of graph in which the edges have weights.</para>
+                <heading>
+                    Usage example</heading>
+                <para>
+                    Suppose you have a network of roads that connect cities:</para>
+                <code monospace="true">
+                     From         To            Distance
+                    ═════════════════════════════════════
+                     New York     Chicago            789
+                     New York     Philadelphia        97
+                     Los Angeles  Phoenix            372
+                     Chicago      Houston           1083
+                     Chicago      Philadelphia       759
+                     Houston      Phoenix           1176</code>
+                <para>
+                    Suppose also that this information is stored in a dictionary such as the following:</para>
+                <code>
+                    public static class CityInfo
+                    {
+                        public static Dictionary&lt;string, Dictionary&lt;string, int&gt;&gt; Distances;
+                    
+                        static CityInfo()
+                        {
+                            // Populate Distances here
+                        }
+                    }</code>
+                <para>
+                    Now Dijkstra’s Algorithm lets you find the shortest route to get from any city to any other. First, declare a
+                    type similar to the following:</para>
+                <code>
+                    public sealed class CityNode : Node&lt;int, string&gt;
+                    {
+                        public string City { get; private set; }
+                        public string Destination { get; private set; }
+                    
+                        public CityNode(string city, string destination)
+                        {
+                            City = city;
+                            Destination = destination;
+                        }
+                    
+                        // This function must return true if the two nodes represent the same city.
+                        public override bool Equals(Node&lt;int, string&gt; other)
+                        {
+                            return City.Equals(((CityNode) other).City);
+                        }
+                    
+                        public override int GetHashCode() { return City.GetHashCode(); }
+                    
+                        // This function determines whether we’ve arrived at our intended destination.
+                        public override bool IsFinal { get { return City == Destination; } }
+                    
+                        // This function returns the direct connections from the current city.
+                        public override IEnumerable&lt;Edge&lt;int, string&gt;&gt; Edges
+                        {
+                            get
+                            {
+                                return CityInfo.Distances[City].Select(toCity =&gt; new Edge&lt;int, string&gt;(
+                                    // The weight of this edge is the distance between the cities.
+                                    toCity.Value,
+                                    // The label of this edge is the travel route.
+                                    string.Format("{0} to {1}", City, toCity.Key),
+                                    // The other city the edge leads to.
+                                    new CityNode(toCity.Key, Destination)));
+                            }
+                        }
+                    }</code>
+                <para>
+                    And then a single call to <see cref="M:RT.Dijkstra.DijkstrasAlgorithm.Run``2(RT.Dijkstra.Node{``0,``1},``0,System.Func{``0,``0,``0},``0@)"/> does the actual work. Let’s create a function
+                    that returns a human-readable route:</para>
+                <code>
+                    static string GetRoute(string from, string to)
+                    {
+                        int totalDistance;
+                        var route = DijkstrasAlgorithm.Run(
+                            // The start node to begin our search.
+                            new CityNode(from, to),
+                            // The initial value for the distance traveled.
+                            0,
+                            // How to add two distances.
+                            (a, b) =&gt; a + b,
+                            // The variable to receive the total distance traveled.
+                            out totalDistance);
+                    
+                        return string.Format("{0} ({1} miles)", string.Join(", ", route), totalDistance);
+                    }
+                    
+                    // This example outputs:
+                    // New York to Chicago, Chicago to Houston, Houston to Phoenix (3048 miles)
+                    Console.WriteLine(GetRoute("New York", "Phoenix"));
+                    
+                    // This example outputs:
+                    // Los Angeles to Phoenix, Phoenix to Houston, Houston to Chicago (2631 miles)
+                    Console.WriteLine(GetRoute("Los Angeles", "Chicago"));
+                    
+                    // This example outputs:
+                    // Phoenix to Houston (1176 miles)
+                    Console.WriteLine(GetRoute("Phoenix", "Houston"));
+                    
+                    // This example outputs an empty route, because we’re already at the destination:
+                    //  (0 miles)
+                    Console.WriteLine(GetRoute("Phoenix", "Phoenix"));</code></summary>
+        </member>
+        <member name="T:RT.Dijkstra.Edge`2">
+            <summary>
+                Encapsulates an edge in the graph for Dijkstra’s Algorithm, containing a weight, a label and a target node.</summary>
+            <typeparam name="TWeight">
+                Type of the weight (or length or any other quantity to be minimized) of each edge between nodes.</typeparam>
+            <typeparam name="TLabel">
+                Type that can be used to identify this edge.</typeparam>
+        </member>
+        <member name="P:RT.Dijkstra.Edge`2.Weight">
+            <summary>The weight of this edge. Dijkstra’s Algorithm finds the path with the smallest total weight.</summary>
+        </member>
+        <member name="P:RT.Dijkstra.Edge`2.Label">
+            <summary>The label on this edge.</summary>
+        </member>
+        <member name="P:RT.Dijkstra.Edge`2.Node">
+            <summary>The node this edge points to.</summary>
+        </member>
+        <member name="M:RT.Dijkstra.Edge`2.#ctor(`0,`1,RT.Dijkstra.Node{`0,`1})">
+            <summary>
+                Initializes a new instance of <see cref="T:RT.Dijkstra.Edge`2"/>.</summary>
+            <param name="weight">
+                The weight of this edge.</param>
+            <param name="label">
+                The label on this edge.</param>
+            <param name="node">
+                The node this edge points to.</param>
+        </member>
+        <member name="M:RT.Dijkstra.Edge`2.ToString">
+            <summary>Returns a string representation of this object.</summary>
+        </member>
+        <member name="T:RT.Dijkstra.Node`2">
+            <summary>
+                Base class for nodes in a graph on which Dijkstra’s Algorithm is run using <see cref="M:RT.Dijkstra.DijkstrasAlgorithm.Run``2(RT.Dijkstra.Node{``0,``1},``0,System.Func{``0,``0,``0},``0@)"/>.</summary>
+            <typeparam name="TWeight">
+                Type of the weight (or length or any other quantity to be minimized) of each edge between nodes.</typeparam>
+            <typeparam name="TLabel">
+                Type that can be used to identify edges connecting nodes.</typeparam>
+        </member>
+        <member name="M:RT.Dijkstra.Node`2.Equals(RT.Dijkstra.Node{`0,`1})">
+            <summary>When overridden in a derived class, compares two nodes for equality.</summary>
+        </member>
+        <member name="M:RT.Dijkstra.Node`2.GetHashCode">
+            <summary>When overridden in a derived class, returns a hash code for this node.</summary>
+        </member>
+        <member name="P:RT.Dijkstra.Node`2.IsFinal">
+            <summary>
+                When overridden in a derived class, determines whether this node is “final”. The final nodes are the nodes the
+                algorithm is looking for. The first such node encountered in the search ends the search with success.</summary>
+        </member>
+        <member name="P:RT.Dijkstra.Node`2.Edges">
+            <summary>
+                When overridden in a derived class, returns the set of edges going out from this node. Each edge consists of a
+                label that identifies the edge, and the node that the edge points to.</summary>
+        </member>
+    </members>
+</doc>
